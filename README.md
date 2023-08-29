@@ -1,4 +1,4 @@
-# d`eco`Arqui 👩🏻‍🎨
+# d<strong>eco</strong>Arqui 👩🏻‍🎨
 
 `CURSO: Análise e Desenvolvimento de Sistemas`
 
