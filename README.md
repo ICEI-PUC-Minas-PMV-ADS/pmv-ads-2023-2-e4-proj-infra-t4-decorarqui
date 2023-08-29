@@ -1,23 +1,22 @@
-# TÍTULO DO PROJETO
+# d`eco`Arqui 👩🏻‍🎨
 
-`CURSO`
+`CURSO: Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`DISCIPLINA: Desenvolvimento de uma Aplicação Distribuída`
 
-`SEMESTRE`
+`SEMESTRE: 4º`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+| [<img src="https://avatars.githubusercontent.com/u/101225097?v=4" width=100><br><sub>Cesar Moreira </sub>](https://github.com/cesarluiscostam) | [<img src="https://avatars.githubusercontent.com/u/103225367?v=4" width=100><br><sub>Douglas Simoes </sub>](https://github.com/delarettdouglas) | [<img src="https://avatars.githubusercontent.com/u/53317747?v=4" width=100><br><sub>Pedro Oliveira</sub>](https://github.com/pedroertal) | [<img src="https://avatars.githubusercontent.com/u/60409021?v=4" width=100><br><sub>Karinne Pereira</sub>](https://github.com/KahMassensini) 
+| :----: | :----: | :----: | :----: |
+| [<img src="https://avatars.githubusercontent.com/u/103225907?v=4" width=100><br><sub>Rafael Oliveira</sub>](https://github.com/rafasensacional) | [<img src="https://avatars.githubusercontent.com/u/59944150?v=4" width=100><br><sub>Thais Bezerra</sub>](https://github.com/thatavieira) | [<img src="https://avatars.githubusercontent.com/u/86004024?v=4" width=100><br><sub>Vinicius Ponciano</sub>](https://github.com/Vinicius-S-P)
 
 ## Orientador
 
-* Nome completo do professor 1
+* Pedro Alves de Oliveira
 
 ## Instruções de utilização
 
