@@ -8,7 +8,7 @@ Nos últimos tempos, a tecnologia tem sido uma aliada inestimável, simplificand
 
 ## Problema
 
- O problema que gerou a solução ***decorArqui*** foi a necessidade crescente de contratar profissionais qualificados para projetos de decoração e design de forma conveniente, ao mesmo tempo em que se buscava promover a sustentabilidade e a ecologia nos espaços residenciais e comerciais. O desafio estava em unir essas duas demandas em um único serviço, permitindo que as pessoas encontrassem especialistas confiáveis online e que, ao mesmo tempo, compartilhassem valores de responsabilidade ambiental na concepção de seus projetos. O `decorArqui` surgiu como uma solução inovadora para abordar essa necessidade crescente no mercado.
+ O problema que gerou a solução ***decorArqui*** foi a necessidade crescente de contratar profissionais qualificados para projetos de decoração e design de forma conveniente, ao mesmo tempo em que se buscava promover a sustentabilidade e a ecologia nos espaços residenciais e comerciais. O desafio estava em unir essas duas demandas em um único serviço, permitindo que as pessoas encontrassem especialistas confiáveis online e que, ao mesmo tempo, compartilhassem valores de responsabilidade ambiental na concepção de seus projetos. O ***decorArqui*** surgiu como uma solução inovadora para abordar essa necessidade crescente no mercado.
 
 
 ## Objetivos
