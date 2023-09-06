@@ -1,4 +1,7 @@
-# d<strong>eco</strong>rArqui 👩🏻‍🎨
+# decorArqui 
+
+![Logo_decorArqui_modelo2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/2428b8bd-4c5a-4673-9827-b7fb8fd9aba3)
+
 
 `CURSO: Análise e Desenvolvimento de Sistemas`
 
@@ -6,7 +9,9 @@
 
 `SEMESTRE: 4º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+  O **decorArqui**, é uma plataforma inovadora que visa revolucionar a maneira como as pessoas encontram e contratam profissionais qualificados de decoração e design. Através dessa plataforma online, os clientes podem buscar e selecionar especialistas que atendam às suas necessidades específicas de decoração, ao mesmo tempo em que têm acesso a informações detalhadas sobre o histórico de trabalho desses profissionais, garantindo uma escolha informada. Além disso, o decorAqui promove a criação de projetos sustentáveis e ecologicamente responsáveis, incentivando o uso de práticas e materiais mais amigáveis ao meio ambiente.
+
+  A plataforma não apenas facilita a contratação, mas também estimula a colaboração e a troca de ideias entre clientes e profissionais, promovendo projetos de decoração únicos e inovadores. O **decorAqui** tem como objetivo central conectar uma comunidade de entusiastas da decoração, sustentabilidade e design, promovendo um ambiente de aprendizado e crescimento, ao mesmo tempo em que impulsiona o mercado de decoração em direção a um futuro mais responsável e esteticamente atraente.
 
 ## Integrantes
 
