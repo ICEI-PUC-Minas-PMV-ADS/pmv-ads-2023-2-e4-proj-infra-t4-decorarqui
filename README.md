@@ -11,7 +11,7 @@
 
   O **decorArqui**, é uma plataforma inovadora que visa revolucionar a maneira como as pessoas encontram e contratam profissionais qualificados de decoração e design. Através dessa plataforma online, os clientes podem buscar e selecionar especialistas que atendam às suas necessidades específicas de decoração, ao mesmo tempo em que têm acesso a informações detalhadas sobre o histórico de trabalho desses profissionais, garantindo uma escolha informada. Além disso, o decorAqui promove a criação de projetos sustentáveis e ecologicamente responsáveis, incentivando o uso de práticas e materiais mais amigáveis ao meio ambiente.
 
-  A plataforma não apenas facilita a contratação, mas também estimula a colaboração e a troca de ideias entre clientes e profissionais, promovendo projetos de decoração únicos e inovadores. O **decorAqui** tem como objetivo central conectar uma comunidade de entusiastas da decoração, sustentabilidade e design, promovendo um ambiente de aprendizado e crescimento, ao mesmo tempo em que impulsiona o mercado de decoração em direção a um futuro mais responsável e esteticamente atraente.
+  A plataforma não apenas facilita a contratação, mas também estimula a colaboração e a troca de ideias entre clientes e profissionais, promovendo projetos de decoração únicos e inovadores. O **decorArqui** tem como objetivo central conectar uma comunidade de entusiastas da decoração, sustentabilidade e design, promovendo um ambiente de aprendizado e crescimento, ao mesmo tempo em que impulsiona o mercado de decoração em direção a um futuro mais responsável e esteticamente atraente.
 
 ## Integrantes
 
