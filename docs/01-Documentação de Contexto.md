@@ -1,6 +1,10 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Nos últimos tempos, a tecnologia tem sido uma aliada inestimável, simplificando inúmeras áreas da nossa vida cotidiana. Na busca por comodidade e eficiência, a contratação de serviços não ficou para trás. Hoje em dia, é possível adquirir os serviços de profissionais qualificados sem sequer sair de casa. Mas essa inovação vai além, oferecendo a oportunidade de conhecer o histórico desses profissionais e suas habilidades. 
+
+ À medida que o tempo avança, torna-se cada vez mais imperativo enfatizar a necessidade de projetos que sejam sustentáveis e ecologicamente responsáveis, tanto para residências quanto para estabelecimentos comerciais. A conscientização sobre as questões ambientais está se tornando um componente essencial na maneira como planejamos nossos espaços. Nesse contexto, a convergência da conveniência de contratar um profissional de forma totalmente online com a aspiração de desenvolver projetos que respeitem o meio ambiente gerou uma ideia inovadora: o decorAqui. 
+
+ O decorAqui é a resposta a esse desafio. Ele combina a praticidade da contratação digital de profissionais qualificados com a visão de um futuro mais sustentável e ecológico para nossas casas e negócios. Neste cenário, convidamos você a explorar essa plataforma que não apenas facilitará a busca por especialistas, mas também promoverá a criação de ambientes que cuidam do nosso planeta. A seguir, mergulharemos nos detalhes deste conceito revolucionário e como ele pode transformar a maneira como abordamos a decoração e o design de espaços. 
 
 ## Problema
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
