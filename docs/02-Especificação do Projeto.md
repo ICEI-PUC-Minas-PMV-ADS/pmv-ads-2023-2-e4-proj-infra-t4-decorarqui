@@ -66,15 +66,36 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-01| Permitir que os arquitetos cadastrem seus perfis, incluindo histórico acadêmico, portfólio de projetos e informações profissionais | ALTA | 
+|RF-02| Possibilitar o cadastro de clientes, com a inclusão de um resumo do pedido e uma estimativa de preço para seus projetos           | ALTA |
+|RF-03| Implementar uma funcionalidade que permita que profissionais e clientes iniciem conversas diretas no WhatsApp   | ALTA |
+|RF-04| Permitir que os arquitetos enviem orçamentos e propostas detalhadas em resposta aos projetos dos clientes   | ALTA |
+|RF-05| Desenvolver um sistema de pesquisa que permita aos usuários filtrar por região e tipo de profissional, simplificando a busca por arquitetos  | MÉDIA |
+|RF-06| Habilitar clientes a avaliarem os arquitetos, contribuindo para a reputação e qualidade do serviço prestado  | BAIXA |
+|RF-07| Permitir que arquitetos avaliem os clientes, promovendo avaliações recíprocas que ajudam na escolha de projetos | MÉDIA |
+|RF-08| Dar aos clientes a capacidade de visualizar informações e projetos passados dos arquitetos, oferecendo insights sobre suas habilidades   | MÉDIA |
+|RF-09| Oferecer aos clientes a opção de salvar arquitetos como favoritos, tornando mais fácil o acesso rápido aos profissionais preferidos   | BAIXA |
+|RF-10| Possibilitar o cadastro de lojas de itens de decoração, permitindo que elas incluam informações sobre produtos, localização e opções de patrocínio   | ALTA |
+|RF-11| Implementar diferentes planos de patrocínio para as lojas, garantindo que elas possam aparecer como referência na pesquisa de móveis e outros itens de decoração   | MÉDIA |
+|RF-12| Permitir que os usuários visualizem os produtos das lojas patrocinadoras diretamente na plataforma das lojas   | MÉDIA |
+
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-01| O sistema deve ser responsivo para rodar em um dispositivos móvel | ALTA | 
+|RNF-02| Deve processar requisições do usuário em no máximo 3s | BAIXA |
+|RNF-03| O sistema deve ser acessado pelos sistemas operacionais Windows e IOS | MÉDIA |  
+|RNF-04| Garantir que a aplicação seja compatível com uma variedade de navegadores web (Chrome, Edge, Mozila e Firefox) | ALTA |
+|RNF-05| Garantir que a aplicação possa integrar-se facilmente com outros sistemas ou serviços, como serviços de pagamento online ou sistemas de mapeamento | MÉDIA | 
+|RNF-06| Criar uma interface de usuário intuitiva e de fácil navegação para garantir que os usuários possam utilizar a aplicação com facilidade, independentemente de sua experiência técnica | BAIXA |
+|RNF-07| Garantir que os dados dos usuários, como informações de perfil e histórico de projetos, sejam protegidos com medidas de segurança robustas, como criptografia de dados | ALTA |
+|RNF-08| Projetar a aplicação de forma modular e com código bem documentado para facilitar a manutenção e atualizações futuras | MÉDIA |
+|RNF-09| Realizar testes de qualidade para identificar e corrigir problemas antes do lançamento, garantindo uma experiência de usuário livre de erros | BAIXA |
+
+
+
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
