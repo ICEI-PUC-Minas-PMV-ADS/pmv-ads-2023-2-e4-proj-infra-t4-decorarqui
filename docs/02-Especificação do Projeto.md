@@ -123,6 +123,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 O diagrama de casos de uso utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
 
+![decorArqui drawio](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/220b05e7-049e-44ef-8170-3f2c1440bb5b)
 
 
 # Matriz de Rastreabilidade
