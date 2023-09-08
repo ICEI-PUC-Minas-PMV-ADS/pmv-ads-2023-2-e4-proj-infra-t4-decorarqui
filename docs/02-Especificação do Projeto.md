@@ -55,11 +55,11 @@ Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em segu
 |INDICADOR                | OBJETIVO                  | DESCRIÇÃO                         | FONTE DE DADOS            | PERSPECTIVA               |
 |-------------------------|---------------------------|-----------------------------------|---------------------------|---------------------------|
 |Taxa de Retenção dos Usuários  | Manter as pessoas usando o aplicativo. | Verificamos quantos arquitetos e clientes continuam a usar o aplicativo após o registro inicial. | Analisamos a atividade contínua dos usuários e verificamos quantos deles permanecem ativos. | Fidelização de Usuários |
-|Satisfação do Cliente  |                    |                      |                           |                           |                        |
-|Eficiência na Comunicação e Orçamento   |                         |                          |                            |                           |
-|                         |                         |                          |                            |                           |
-|                         |                         |                          |                            |                           |
-|                         |                         |                          |                            |                           |
+|Satisfação do Cliente  | Deixar os clientes satisfeitos. | Avaliamos o quão felizes os clientes estão com os serviços oferecidos no aplicativo. | As avaliações e comentários dos clientes. | Feedback do Cliente |                        |
+|Eficiência na Comunicação e Orçamento   | Tornar a interação entre arquitetos e clientes mais eficiente. | Avaliamos quão bem o aplicativo facilita a comunicação e o processo de orçamentação, tornando-o mais suave e eficaz.| Observamos o número de projetos e orçamentos concluídos com sucesso no aplicativo. | Foco na Eficácia Operacional. |
+| Parcerias de Lojas |Estabelecer parcerias com lojas para expandir os serviços oferecidos pelo aplicativo.  | Este indicador mede a quantidade de novas parcerias firmadas com lojas que agora estão listadas no aplicativo, ampliando as opções para os usuários. |  Registro de novas parcerias e inclusão de lojas no aplicativo.    |  Crescimento de Parcerias. |
+| Sustentabilidade Promovida | Promover práticas sustentáveis por meio do aplicativo. | Este indicador avalia o impacto das iniciativas de sustentabilidade promovidas pelo aplicativo, como redução de resíduos ou consumo consciente. |              Monitoramento das ações sustentáveis e feedback dos usuários em relação a essas iniciativas. | Responsabilidade Ambiental. |
+| Eficácia de Divulgação | Avaliar a eficácia das estratégias de divulgação do aplicativo. | Este indicador mede o alcance e o impacto das campanhas de marketing e divulgação do aplicativo, incluindo o aumento no número de downloads e registros. | Dados de desempenho de campanhas de marketing e métricas de crescimento de usuários. | Sucesso na Divulgação. |
 
 ## Requisitos
 
