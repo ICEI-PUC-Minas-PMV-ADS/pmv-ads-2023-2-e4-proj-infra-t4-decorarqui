@@ -31,21 +31,19 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+A crescente necessidade de contratar profissionais altamente qualificados para projetos de decoração e design, combinada com o desejo de promover a sustentabilidade e a ecologia em ambientes residenciais e comerciais é a principal razão da criação do DecorArqui. No processo de negócio atual, a maioria do público desconhece de métodos ou aplicações que facilitem o acesso à serviços de design de interiores, portanto, essas pessoas são compelidas à procurar por profissionais por conta própria; muitas vezes, por falta de acesso ou contato, pessoas que querem fazer uma reforma acabam por fazer todo o processo de design e planejamento por conta própria, sem consultar um profissional antes de começar a construir. Apesar de simples, o processo atual é extremamente trabalhoso pois demanda bastante do cliente.
+
+![Fluxo de processos BPMN - Fluxo de processos BPMN](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/86004024/b9e54066-bce3-4762-b432-fe2472248572)
 
 ### Descrição Geral da Proposta
 
 Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
 
-### Processo 1 – Situação Atual
+Nossa visão para o DecorArqui é desenvolver uma aplicação distribuída que atue como um facilitador para a busca de arquitetos especializados em projetos de reforma residencial e, ao mesmo tempo, como uma plataforma de acesso a lojas que oferecem móveis sustentáveis, ecologicamente responsáveis. Pretendemos apresentar portfólios de arquitetos que possam ser filtrados de diversas maneiras pelos usuários. Além disso, vamos incluir sugestões de móveis e peças que foram usados em alguns dos projetos desses arquitetos, os poderão ser acessados via link para lojas parceiras.
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+### Processo 1 – Proposta DecorArqui
 
-![Fluxo de processos BPMN - Fluxo de processos BPMN](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/86004024/b9e54066-bce3-4762-b432-fe2472248572)
-
-### Processo 2 – Proposta DecorArqui
-
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+Este processo descreve o fluxo padrão desde o primeiro acesso do cliente ao site, até o início de sua reforma. O objetivo do DecorArqui não é ser uma plataforma onde clientes possam conversar com arquitetos em tempo real, mas sim uma forma rápida de ver o que os profissionais de arquitetura tem a oferecer e obter seus respectivos contatos. Por causa disso, toda a interação entre cliente e arquiteto é feita fora da camada do DecorArqui.
 
 ![DecorArqui Fluxo de processos BPMN - Fluxo de processos BPMN](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/86004024/7b6becfd-67eb-46b8-8c13-5eca8ffe07ac)
 
