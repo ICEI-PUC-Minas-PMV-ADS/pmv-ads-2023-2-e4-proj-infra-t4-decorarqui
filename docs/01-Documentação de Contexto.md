@@ -42,22 +42,45 @@ Os objetivos da solução ***decorArqui*** são:
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A criação do ***decorArqui***, é motivada pelo desejo de atender às necessidades crescentes dos clientes, democratizar o design de interiores, aproveitar as tendências tecnológicas e tornar o processo de design mais eficiente e colaborativo. Acreditamos que nosso aplicativo será uma valiosa contribuição para o setor e ainda ajudará as pessoas a transformar seus espaços em ambientes funcionais, esteticamente agradáveis e sustentáveis.   
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+O mercado de Decoração e Design de Interiores é uma indústria em constante evolução e crescimento. À medida que as pessoas se tornam mais conscientes da importância do ambiente em que vivem e trabalham, a demanda por serviços de design de interiores aumentou substancialmente. A criação deste aplicativo é motivada por diversas razões importantes e oportunidades significativas dentro deste setor em expansão.    
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Elencamos abaixo aspectos importantes para o uso do ***decorArqui***, dentro de um projeto de Design ou de Arquitetura:   
+
+`Melhoria do Ambiente de Vida:` 
+Um profissional de Design de Interiores desempenha um papel crucial na melhoria do ambiente de vida das pessoas. Eles têm a expertise necessária para transformar espaços comuns em lugares funcionais, confortáveis e visualmente atraentes. Isso não apenas aumenta o conforto dos moradores, mas também promove o bem-estar e a qualidade de vida.   
+
+`Maximização do Espaço:` 
+Em residências, muitas vezes é necessário otimizar o espaço disponível, especialmente em áreas urbanas onde o espaço é limitado. Um designer de interiores é treinado para aproveitar ao máximo cada centímetro quadrado, garantindo que o espaço seja utilizado de forma eficiente e que atenda às necessidades dos moradores. 
+  
+`Economia de Tempo e Dinheiro:` 
+Contratar um designer de interiores pode economizar tempo e dinheiro a longo prazo. Eles têm conhecimento sobre materiais, fornecedores e custos, o que pode ajudar os clientes a evitarem escolhas caras e erros dispendiosos. Além disso, um projeto bem planejado e executado pode aumentar o valor de revenda de uma propriedade. Um estudo conduzido pela Houzz, nos EUA em 2020, mostrou que 87% dos proprietários que contrataram um designer de interiores ficaram satisfeitos com o resultado final de seus projetos. A satisfação do cliente não apenas leva a avaliações positivas e recomendações, mas também pode resultar em oportunidades de trabalho repetido e referências valiosas.   
+
+`Melhoria do Valor da Propriedade:`
+De acordo com a National Association of Realtors (NAR) dos Estados Unidos, em 2019, 22% dos compradores de casas disseram estar dispostos a pagar mais por uma casa com um design de interiores bem feito. A NAR também relatou que casas com design de interiores atraente e bem-cuidado geralmente vendem mais rápido e com maior valor de venda.   
+
+`Soluções Personalizadas:` 
+Cada projeto residencial é único, com suas próprias necessidades e desafios específicos. Um designer de interiores personaliza cada projeto para atender às preferências e estilo de vida dos clientes. Eles ouvem as necessidades do cliente, criam conceitos e planos sob medida e acompanham a execução para garantir que a visão do cliente seja realizada. 
+
+
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+O público-alvo do projeto ***decorArqui*** pode ser segmentado da seguinte forma:
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+`Arquitetos e Designers de Interiores:`
+Profissionais que desejam promover seus serviços de design de interiores e decoração, exibir seu portfólio e interagir com potenciais clientes.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+`Clientes em Busca de Serviços de Decoração e Design:`
+Pessoas que estão procurando por profissionais de decoração e design de interiores para ajudá-los a projetar e decorar seus espaços, como residências, escritórios e estabelecimentos comerciais.
+
+`Lojas de Itens de Decoração e Produtos para Casa:`
+Lojas que oferecem produtos de decoração e itens para casa, que desejam expandir sua visibilidade e alcançar um público mais amplo por meio da plataforma.
+
+`Empreendedores e Empresários do Setor de Decoração:`
+Indivíduos e empresas que desejam anunciar seus produtos e serviços no setor de decoração e design, aproveitando a oportunidade de marketing oferecida pela plataforma.
+
+`Amantes de Decoração e Design:`
+Pessoas apaixonadas por decoração e design de interiores que desejam se inspirar, explorar tendências e descobrir produtos novos para suas casas ou projetos pessoais.
+Portanto, o projeto decorAqui visa atender a uma ampla variedade de públicos relacionados ao setor de decoração, proporcionando uma plataforma de interação e negócios que atenda às necessidades de arquitetos, clientes, lojas e entusiastas da decoração.
