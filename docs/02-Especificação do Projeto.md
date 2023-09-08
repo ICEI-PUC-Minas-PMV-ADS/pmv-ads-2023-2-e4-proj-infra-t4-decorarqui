@@ -37,8 +37,6 @@ A crescente necessidade de contratar profissionais altamente qualificados para p
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
-
 Nossa visão para o DecorArqui é desenvolver uma aplicação distribuída que atue como um facilitador para a busca de arquitetos especializados em projetos de reforma residencial e, ao mesmo tempo, como uma plataforma de acesso a lojas que oferecem móveis sustentáveis, ecologicamente responsáveis. Pretendemos apresentar portfólios de arquitetos que possam ser filtrados de diversas maneiras pelos usuários. Além disso, vamos incluir sugestões de móveis e peças que foram usados em alguns dos projetos desses arquitetos, os poderão ser acessados via link para lojas parceiras.
 
 ### Processo 1 – Proposta DecorArqui
