@@ -54,7 +54,7 @@ Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em segu
 
 |INDICADOR                | OBJETIVO                  | DESCRIÇÃO                         | FONTE DE DADOS            | PERSPECTIVA               |
 |-------------------------|---------------------------|-----------------------------------|---------------------------|---------------------------|
-|Taxa de Retenção dos Usuários  |                     |                                   |                           |                           |
+|Taxa de Retenção dos Usuários  | Manter as pessoas usando o aplicativo. | Verificamos quantos arquitetos e clientes continuam a usar o aplicativo após o registro inicial. | Analisamos a atividade contínua dos usuários e verificamos quantos deles permanecem ativos. | Fidelização de Usuários |
 |Satisfação do Cliente  |                    |                      |                           |                           |                        |
 |Eficiência na Comunicação e Orçamento   |                         |                          |                            |                           |
 |                         |                         |                          |                            |                           |
