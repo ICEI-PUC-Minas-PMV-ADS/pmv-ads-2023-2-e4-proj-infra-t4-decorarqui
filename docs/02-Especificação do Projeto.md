@@ -77,7 +77,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
+|-------|-------------------------|-------|
 |RF-01| Permitir que os arquitetos cadastrem seus perfis, incluindo histórico acadêmico, portfólio de projetos e informações profissionais| ALTA | 
 |RF-02| Possibilitar o cadastro de clientes, com a inclusão de um resumo do pedido e uma estimativa de preço para seus projetos | ALTA |
 |RF-03| Implementar uma funcionalidade que permita que profissionais e clientes iniciem conversas diretas no WhatsApp | ALTA |
@@ -95,7 +95,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
+|-------|-----------------------|-------|
 |RNF-01| O sistema deve ser responsivo para rodar em um dispositivos móvel | ALTA | 
 |RNF-02| Deve processar requisições do usuário em no máximo 3s | BAIXA |
 |RNF-03| O sistema deve ser acessado pelos sistemas operacionais Windows e IOS | MÉDIA |  
