@@ -23,7 +23,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |EU COMO...                 | QUERO/PRECISO ...                  |PARA ...                                |
 |---------------------------|------------------------------------|----------------------------------------|
 |Carlos Takahara Meirelles  | Divulgar o serviço            | Atrair clientes               |
-|Marina Gonçalves da Silva  | Encontrar um projeto personalizado para o seu gosto      | Se mudar e começar o emprego em uma nova cidade  |
+|Marina Gonçalves da Silva  | Encontrar um projeto arquitetônico personalizado      | Se mudar para sua nova moradia e começar o emprego em uma nova cidade  |
 |Hamilton Andrade Ribeiro   | Agilidade para escolher um projeto arquitetônico              | Construir sua nova casa e iniciar sua nova vida  |
 
 
