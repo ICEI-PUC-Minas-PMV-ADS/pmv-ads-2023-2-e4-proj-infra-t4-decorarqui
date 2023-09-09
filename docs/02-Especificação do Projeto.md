@@ -132,44 +132,67 @@ A matriz deve contemplar todos os elementos relevantes que fazem parte do sistem
 
 # Gerenciamento de Projeto
 
-A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. 
 
- 
-A equipe está organizada da seguinte maneira: 
+## Áreas de Conhecimento
 
-- Scrum Master: Karinne Agnes Massensini Pereira 
-- Product Owner: Thaís Gurgel Bezerra, Rafael de Assis Oliveira 
-- Equipe de Desenvolvimento: César Luis Costa Moreira, Pedro Henrique Ertal de Oliveira, Vinicius de Souza Ponciano 
-- Equipe de Design: Douglas Delareti Simões
+- [x] Integração
+- [ ] Escopo
+- [ ] Cronograma (Tempo)
+- [ ] Custos
+- [ ] Qualidade
+- [ ] Recursos
+- [ ] Comunicações
+- [ ] Riscos
+- [ ] Aquisições
+- [ ] Partes Interessadas
 
+## Descrição do Projeto
 
+O decorArqui é uma plataforma que visa abordar a necessidade crescente de contratar profissionais qualificados para projetos de decoração e design de forma conveniente e ao mesmo tempo promover a sustentabilidade e a ecologia nos espaços residenciais e comerciais. A plataforma permite que os usuários encontrem especialistas confiáveis online, compartilhando valores de responsabilidade ambiental na concepção de seus projetos.
 
-Para organização e distribuição das tarefas do projeto, a equipe está utilizando o GitHub estruturado com as seguintes listas:
+## Objetivos do Projeto
 
-- Recursos: Esta lista mantém template de tarefas recorrentes com as configurações padronizadas que todos devem seguir. O objetivo é permitir a cópia destes templates para agilizar a criação de novos cartões. 
-- Backlog: Recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista. 
-- To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando. 
-- Doing: Quando uma tarefa tiver sido iniciada, ela é movida para cá. 
-- Test: Checagem de Qualidade. Quando as tarefas são concluídas, elas são movidas para o “CQ”. No final da semana, eu revejo essa lista para garantir que tudo saiu perfeito. 
-- Done: Nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação. 
-- Locked: Quando alguma coisa impede a conclusão da tarefa, ela é movida para esta lista juntamente com um comentário sobre o que está travando a tarefa. 
+- Facilitar a contratação de profissionais de decoração e design de forma online.
+- Promover a sustentabilidade e a ecologia nos projetos de decoração.
+- Conectar clientes a especialistas qualificados.
+- Criar ambientes que respeitem o meio ambiente.
 
+## Escopo do Projeto
 
+O escopo do projeto inclui o desenvolvimento da plataforma online decorArqui, onde os usuários podem encontrar e contratar profissionais de decoração e design. Além disso, a plataforma irá incorporar critérios de sustentabilidade e ecologia nos projetos, incentivando práticas responsáveis em design de interiores.
 
-O quadro kanban do grupo no GitHub está disponível através da URL [decorArqui Projects GitHub](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/567/views/1) e é apresentado, no estado atual, na Figura (2).  
-A definição desta estrutura se baseou na proposta feita por Littlefield (2016). 
+## Cronograma (Tempo)
 
+O cronograma do projeto prevê o lançamento da plataforma dentro de 6 meses a partir da data de início. Isso inclui o desenvolvimento da plataforma, testes, marketing e lançamento oficial.
 
+## Custos
 
-![Backlog](img/backlog.png)    
+O orçamento do projeto está estimado em $36.750,00, abrangendo desenvolvimento de software, marketing, recursos humanos e operacionais.
 
+## Qualidade
 
+O projeto prioriza a qualidade, garantindo que os profissionais listados na plataforma sejam qualificados e que os projetos promovam a sustentabilidade e a ecologia.
 
-A tarefas são, ainda, etiquetadas em função da natureza da atividade, e seguem o seguinte esquema de categorias: 
+## Recursos
 
-- Para fazer 
-- Em progresso  
-- Feito 
+Os recursos necessários incluem uma equipe de desenvolvimento de software, profissionais de marketing, pessoal de suporte ao cliente e especialistas em decoração e design.
+
+## Comunicações
+
+Será estabelecido um plano de comunicação para promover a plataforma aos usuários e fornecedores de serviços.
+
+## Riscos
+
+Os principais riscos incluem a concorrência no mercado, a aquisição de profissionais qualificados e a aceitação do mercado em relação aos critérios de sustentabilidade.
+
+## Aquisições
+
+Poderá ser necessário adquirir serviços de desenvolvimento de software, marketing digital e recursos humanos.
+
+## Partes Interessadas
+
+As partes interessadas incluem fundadores da plataforma, usuários, profissionais de decoração e design, investidores e a comunidade preocupada com a sustentabilidade.
+
 
 ## Gerenciamento de Tempo
 
