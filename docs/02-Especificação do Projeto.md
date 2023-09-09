@@ -6,7 +6,7 @@ Definição do problema e ideia de solução a partir da perspectiva do usuário
 
 `Carlos Takahara Meirelles`  
 
-Carlos tem 27 anos e é um profissional de arquitetura, ele trabalhava em uma empresa de arquitetura mas decidiu trabalhar por conta própria e começou a divulgar o seu serviço em algumas redes sociais, com tempo começaram a aparecer alguns serviços mas não muitos, Carlos busca algo mais focado na prestação de serviços, com o app decorArqui o número de serviços dele crescerá, por ser um app focado na parte da arquitetura. 
+Carlos tem 27 anos e é um profissional de arquitetura, ele trabalhava em uma empresa de arquitetura mas decidiu trabalhar por conta própria para realizar o seu sonho de ser um arquiteto de sucesso, ele começou a divulgar o seu serviço em algumas redes sociais, com tempo começaram a aparecer alguns serviços mas não muitos, Carlos busca alguma plataforma/app mais focada na prestação de serviços, com o app decorArqui o número de serviços dele crescerá, por ser um app focado na parte da arquitetura onde ele vai conseguir apresentar os seus projetos e combinar diretamente com os clientes interessados. 
 
 `Marina Gonçalves da Silva`  
 
