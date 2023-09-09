@@ -45,6 +45,17 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 ### Divisão de Papéis
 
+A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. 
+
+ 
+A equipe está organizada da seguinte maneira: 
+
+- Scrum Master: Karinne Agnes Massensini Pereira 
+- Product Owner: Thaís Gurgel Bezerra, Rafael de Assis Oliveira 
+- Equipe de Desenvolvimento: César Luis Costa Moreira, Pedro Henrique Ertal de Oliveira, Vinicius de Souza Ponciano 
+- Equipe de Design: Douglas Delareti Simões
+
+  
 Apresente a divisão de papéis entre os membros do grupo.
 
 Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
