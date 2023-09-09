@@ -60,9 +60,11 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 
 ● `Test:` Checagem de Qualidade. Quando as tarefas são concluídas, elas são movidas para o “CQ”. No final da semana, eu revejo essa lista para garantir que tudo saiu perfeito. 
 
-● `Done:` Nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação. 
- 
+● `Done:` Nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
 
+<img width="726" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/ce8a8812-72e0-4361-91e0-cde2055f8b1a">
+ 
+ 
 ### Ferramentas
 
 As ferramentas empregadas no projeto são:
