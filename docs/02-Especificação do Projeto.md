@@ -133,7 +133,7 @@ A matriz deve contemplar todos os elementos relevantes que fazem parte do sistem
 # Gerenciamento de Projeto
 
 
-## Áreas de Conhecimento
+### Áreas de Conhecimento
 
 - [x] Integração
 - [ ] Escopo
@@ -146,50 +146,50 @@ A matriz deve contemplar todos os elementos relevantes que fazem parte do sistem
 - [ ] Aquisições
 - [ ] Partes Interessadas
 
-## Descrição do Projeto
+### Descrição do Projeto
 
 O decorArqui é uma plataforma que visa abordar a necessidade crescente de contratar profissionais qualificados para projetos de decoração e design de forma conveniente e ao mesmo tempo promover a sustentabilidade e a ecologia nos espaços residenciais e comerciais. A plataforma permite que os usuários encontrem especialistas confiáveis online, compartilhando valores de responsabilidade ambiental na concepção de seus projetos.
 
-## Objetivos do Projeto
+### Objetivos do Projeto
 
 - Facilitar a contratação de profissionais de decoração e design de forma online.
 - Promover a sustentabilidade e a ecologia nos projetos de decoração.
 - Conectar clientes a especialistas qualificados.
 - Criar ambientes que respeitem o meio ambiente.
 
-## Escopo do Projeto
+### Escopo do Projeto
 
 O escopo do projeto inclui o desenvolvimento da plataforma online decorArqui, onde os usuários podem encontrar e contratar profissionais de decoração e design. Além disso, a plataforma irá incorporar critérios de sustentabilidade e ecologia nos projetos, incentivando práticas responsáveis em design de interiores.
 
-## Cronograma (Tempo)
+### Cronograma (Tempo)
 
 O cronograma do projeto prevê o lançamento da plataforma dentro de 6 meses a partir da data de início. Isso inclui o desenvolvimento da plataforma, testes, marketing e lançamento oficial.
 
-## Custos
+### Custos
 
 O orçamento do projeto está estimado em $36.750,00, abrangendo desenvolvimento de software, marketing, recursos humanos e operacionais.
 
-## Qualidade
+### Qualidade
 
 O projeto prioriza a qualidade, garantindo que os profissionais listados na plataforma sejam qualificados e que os projetos promovam a sustentabilidade e a ecologia.
 
-## Recursos
+### Recursos
 
 Os recursos necessários incluem uma equipe de desenvolvimento de software, profissionais de marketing, pessoal de suporte ao cliente e especialistas em decoração e design.
 
-## Comunicações
+### Comunicações
 
 Será estabelecido um plano de comunicação para promover a plataforma aos usuários e fornecedores de serviços.
 
-## Riscos
+### Riscos
 
 Os principais riscos incluem a concorrência no mercado, a aquisição de profissionais qualificados e a aceitação do mercado em relação aos critérios de sustentabilidade.
 
-## Aquisições
+### Aquisições
 
 Poderá ser necessário adquirir serviços de desenvolvimento de software, marketing digital e recursos humanos.
 
-## Partes Interessadas
+### Partes Interessadas
 
 As partes interessadas incluem fundadores da plataforma, usuários, profissionais de decoração e design, investidores e a comunidade preocupada com a sustentabilidade.
 
