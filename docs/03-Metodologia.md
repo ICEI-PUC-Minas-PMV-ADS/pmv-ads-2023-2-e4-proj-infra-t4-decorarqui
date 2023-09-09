@@ -72,22 +72,16 @@ A definição desta estrutura se baseou na proposta feita por Littlefield (2016)
 
 
 
-![Backlog](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/blob/main/docs/img/backlog.png)    
+![Backlog](img/backlog.png)    
 Figura 2 – Tela do Kanban no GitHub utilizada no Projeto decorArqui 
 
 
-Apresente a divisão de papéis entre os membros do grupo.
 
-Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
-- Scrum Master: Felipe Domingos;
-- Product Owner: Rommel Carneiro;
-- Equipe de Desenvolvimento: Pedro Penna, Pedro Ivo, Rodrigo Richard;
-- Equipe de Design: Simone Nogueira.
+A tarefas são, ainda, etiquetadas em função da natureza da atividade, e seguem o seguinte esquema de categorias: 
 
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
+- Para fazer 
+- Em progresso  
+- Feito 
 
 ### Processo
 
