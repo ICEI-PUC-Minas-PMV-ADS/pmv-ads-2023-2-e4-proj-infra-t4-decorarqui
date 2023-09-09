@@ -132,7 +132,44 @@ A matriz deve contemplar todos os elementos relevantes que fazem parte do sistem
 
 # Gerenciamento de Projeto
 
-De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam, de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
+A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. 
+
+ 
+A equipe está organizada da seguinte maneira: 
+
+- Scrum Master: Karinne Agnes Massensini Pereira 
+- Product Owner: Thaís Gurgel Bezerra, Rafael de Assis Oliveira 
+- Equipe de Desenvolvimento: César Luis Costa Moreira, Pedro Henrique Ertal de Oliveira, Vinicius de Souza Ponciano 
+- Equipe de Design: Douglas Delareti Simões
+
+
+
+Para organização e distribuição das tarefas do projeto, a equipe está utilizando o GitHub estruturado com as seguintes listas:
+
+- Recursos: Esta lista mantém template de tarefas recorrentes com as configurações padronizadas que todos devem seguir. O objetivo é permitir a cópia destes templates para agilizar a criação de novos cartões. 
+- Backlog: Recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista. 
+- To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando. 
+- Doing: Quando uma tarefa tiver sido iniciada, ela é movida para cá. 
+- Test: Checagem de Qualidade. Quando as tarefas são concluídas, elas são movidas para o “CQ”. No final da semana, eu revejo essa lista para garantir que tudo saiu perfeito. 
+- Done: Nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação. 
+- Locked: Quando alguma coisa impede a conclusão da tarefa, ela é movida para esta lista juntamente com um comentário sobre o que está travando a tarefa. 
+
+
+
+O quadro kanban do grupo no GitHub está disponível através da URL [decorArqui Projects GitHub](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/567/views/1) e é apresentado, no estado atual, na Figura (2).  
+A definição desta estrutura se baseou na proposta feita por Littlefield (2016). 
+
+
+
+![Backlog](img/backlog.png)    
+
+
+
+A tarefas são, ainda, etiquetadas em função da natureza da atividade, e seguem o seguinte esquema de categorias: 
+
+- Para fazer 
+- Em progresso  
+- Feito 
 
 ## Gerenciamento de Tempo
 
