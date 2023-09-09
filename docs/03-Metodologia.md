@@ -73,7 +73,6 @@ A definição desta estrutura se baseou na proposta feita por Littlefield (2016)
 
 
 ![Backlog](img/backlog.png)    
-Figura 2 – Tela do Kanban no GitHub utilizada no Projeto decorArqui 
 
 
 
