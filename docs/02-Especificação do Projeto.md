@@ -109,7 +109,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
+|01| O projeto deverá ser entregue até 27/11/2023 |
 |02| A capacidade de hospedagem e escalabilidade do servidor deve suportar uma popularização acelerada|
 |03| Mudanças rápidas na tecnologia podem requerer atualizações constantes do aplicativo  |
 |04| A necessidade de cumprir regulamentos de privacidade de dados e outras leis de proteção ao consumidor pode afetar o design e a funcionalidade do aplicativo |
@@ -119,8 +119,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 O diagrama de casos de uso utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
 
-![decorArqui drawio](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/220b05e7-049e-44ef-8170-3f2c1440bb5b)
-
+![decorArqui drawio](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/8ebfe3c7-f6ab-44a9-871e-7b11fb292ef3)
 
 # Matriz de Rastreabilidade
 
