@@ -6,7 +6,7 @@ Definição do problema e ideia de solução a partir da perspectiva do usuário
 
 `Carlos Takahara Meirelles`  
 
-Carlos é um profissional de arquitetura, *adora inovações e tecnologias, recentemente ele decidiu fazer uma reforma em sua casa, está buscando um arquiteto para fazer o projeto, mas não consegue orçamentos rápidos pelas redes sociais, o app decorArqui vai ajudar o Carlos com orçamentos rápidos e acesso ao portfólio de trabalho dos arquitetos que ele desejar um orçamento, além do chat em tempo real.* 
+Carlos é um profissional de arquitetura, ele trabalhava em uma empresa de arquitetura mas decidiu trabalhar por conta própria e começou a divulgar o seu serviço em algumas redes sociais, com tempo começaram a aparecer alguns serviços mas não muitos, Carlos busca algo mais focado na prestação de serviços, com o app decorArqui o número de serviços dele crescerá, por ser um app focado na parte da arquitetura. 
 
 `Marina Gonçalves da Silva`  
 
@@ -22,9 +22,9 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO...                 | QUERO/PRECISO ...                  |PARA ...                                |
 |---------------------------|------------------------------------|----------------------------------------|
-|Carlos Takahara Meirelles  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Marina Gonçalves da Silva  | Alterar permissões                 | Permitir que possam administrar contas |
-|Hamilton Andrade Ribeiro   | Alterar permissões                 | Permitir que possam administrar contas |
+|Carlos Takahara Meirelles  | Divulgar o serviço            | Atrair clientes               |
+|Marina Gonçalves da Silva  | Encontrar um projeto personalizado para o seu gosto      | Se mudar e começar o emprego em uma nova cidade  |
+|Hamilton Andrade Ribeiro   | Agilidade para escolher um projeto arquitetônico              | Construir sua nova casa e iniciar sua nova vida  |
 
 
 ## Modelagem do Processo de Negócio 
