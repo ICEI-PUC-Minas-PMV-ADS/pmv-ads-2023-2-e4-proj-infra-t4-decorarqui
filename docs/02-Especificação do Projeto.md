@@ -135,7 +135,7 @@ A matriz deve contemplar todos os elementos relevantes que fazem parte do sistem
 
 ### Áreas de Conhecimento
 
-- [x] Integração
+- [ ] Integração
 - [ ] Escopo
 - [ ] Cronograma (Tempo)
 - [ ] Custos
