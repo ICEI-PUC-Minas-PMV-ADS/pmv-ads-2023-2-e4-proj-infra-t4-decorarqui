@@ -202,12 +202,6 @@ As partes interessadas incluem fundadores da plataforma, usuários, profissionai
 | Pesquisa de Mercado         | 22/09/2023  | 06/10/2023  | 15             | Planejamento do Projeto   |
 | Desenvolvimento da Plataforma| 07/10/2023  | 21/11/2023  | 45             | Pesquisa de Mercado       |
 | Testes e Depuração          | 22/11/2023  | 27/11/2023  | 6              | Desenvolvimento da Plataforma |
-| Lançamento do decorArqui    | -           | -           | -              | -                         |
-| Marketing e Promoção        | -           | -           | -              | -                         |
-| Aquisição de Usuários       | -           | -           | -              | -                         |
-| Monitoramento e Feedback    | -           | -           | -              | -                         |
-| Melhorias Contínuas         | -           | -           | -              | -                         |
-
 
 ## Gerenciamento de Equipe
 
