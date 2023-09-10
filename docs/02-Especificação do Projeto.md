@@ -196,13 +196,18 @@ As partes interessadas incluem fundadores da plataforma, usuários, profissionai
 
 ## Gerenciamento de Tempo
 
-Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
+| Atividade                   | Início      | Término     | Dias da Tarefa | Predecessores             |
+|-----------------------------|-------------|-------------|----------------|---------------------------|
+| Planejamento do Projeto     | 07/09/2023  | 21/09/2023  | 15             | -                         |
+| Pesquisa de Mercado         | 22/09/2023  | 06/10/2023  | 15             | Planejamento do Projeto   |
+| Desenvolvimento da Plataforma| 07/10/2023  | 21/11/2023  | 45             | Pesquisa de Mercado       |
+| Testes e Depuração          | 22/11/2023  | 27/11/2023  | 6              | Desenvolvimento da Plataforma |
+| Lançamento do decorArqui    | -           | -           | -              | -                         |
+| Marketing e Promoção        | -           | -           | -              | -                         |
+| Aquisição de Usuários       | -           | -           | -              | -                         |
+| Monitoramento e Feedback    | -           | -           | -              | -                         |
+| Melhorias Contínuas         | -           | -           | -              | -                         |
 
-![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
-
-O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
-
-![Gráfico de Gantt](img/02-grafico-gantt.png)
 
 ## Gerenciamento de Equipe
 
