@@ -196,12 +196,14 @@ As partes interessadas incluem fundadores da plataforma, usuários, profissionai
 
 ## Gerenciamento de Tempo
 
-| Atividade                   | Início      | Término     | Dias da Tarefa | Predecessores             |
-|-----------------------------|-------------|-------------|----------------|---------------------------|
-| Planejamento do Projeto     | 07/09/2023  | 21/09/2023  | 15             | -                         |
-| Pesquisa de Mercado         | 22/09/2023  | 06/10/2023  | 15             | Planejamento do Projeto   |
-| Desenvolvimento da Plataforma| 07/10/2023  | 21/11/2023  | 45             | Pesquisa de Mercado       |
-| Testes e Depuração          | 22/11/2023  | 27/11/2023  | 6              | Desenvolvimento da Plataforma |
+| Atividade                   | Início         | Término        | Dias da Tarefa | Predecessores |
+|-----------------------------|----------------|----------------|----------------|---------------|
+| Pesquisa de Mercado         | 07/08/2023     | 21/08/2023     | 15             | -             |
+| Planejamento do Projeto     | 22/08/2023     | 28/08/2023     | 6             | Pesquisa de Mercado  |
+| Documentação do Projeto     | 28/08/2023     | 01/10/2023     | 34             | Planejamento do Projeto |
+| Desenvolvimento da Plataforma | 10/09/2023     | 19/11/2023     | 70             | Documentação do Projeto |
+| Testes e Depuração          | 20/11/2023     | 27/11/2023     | 7             | Desenvolvimento da Plataforma |
+
 
 ## Gerenciamento de Equipe
 
