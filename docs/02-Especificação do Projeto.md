@@ -209,7 +209,7 @@ As partes interessadas incluem fundadores da plataforma, usuários, profissionai
 
 O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
 
-![Simple Project Timeline](img/02-project-timeline.png)
+![Simple Project Timeline](img/gerenciamento-equipe.PNG)
 
 ## Gestão de Orçamento
 
