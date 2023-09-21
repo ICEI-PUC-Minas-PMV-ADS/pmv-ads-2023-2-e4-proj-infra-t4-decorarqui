@@ -100,7 +100,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-06| Criar uma interface de usuário intuitiva e de fácil navegação para garantir que os usuários possam utilizar a aplicação com facilidade, independentemente de sua experiência técnica | BAIXA |
 |RNF-07| Garantir que os dados dos usuários, como informações de perfil e histórico de projetos, sejam protegidos com medidas de segurança robustas, como criptografia de dados | ALTA |
 |RNF-08| Projetar a aplicação de forma modular e com código bem documentado para facilitar a manutenção e atualizações futuras | MÉDIA |
-|RNF-09| Realizar testes de qualidade para identificar e corrigir problemas antes do lançamento, garantindo uma experiência de usuário livre de erros | BAIXA |
 
 
 ## Restrições
