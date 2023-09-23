@@ -74,18 +74,23 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |-------|-------------------------|-------|
-|RF-01| Permitir que os arquitetos cadastrem seus perfis, incluindo histórico acadêmico, portfólio de projetos e informações profissionais| ALTA | 
-|RF-02| Possibilitar o cadastro de clientes, com a inclusão de um resumo do pedido e uma estimativa de preço para seus projetos | ALTA |
-|RF-03| Implementar uma funcionalidade que permita que profissionais e clientes iniciem conversas diretas no WhatsApp | ALTA |
-|RF-04| Permitir que os arquitetos enviem orçamentos e propostas detalhadas em resposta aos projetos dos clientes | ALTA |
-|RF-05| Desenvolver pesquisa que permita aos usuários filtrar por região e tipo de profissional, simplificando a busca por arquitetos  | MÉDIA |
-|RF-06| Habilitar clientes a avaliarem os arquitetos, contribuindo para a reputação e qualidade do serviço prestado  | BAIXA |
-|RF-07| Permitir que arquitetos avaliem os clientes, promovendo avaliações recíprocas que ajudam na escolha de projetos | MÉDIA |
-|RF-08| Dar aos clientes a capacidade de visualizar informações e projetos passados dos arquitetos, oferecendo insights sobre suas habilidades   | MÉDIA |
-|RF-09| Oferecer aos clientes a opção de salvar arquitetos como favoritos, tornando mais fácil o acesso rápido aos profissionais preferidos   | BAIXA |
-|RF-10| Possibilitar o cadastro de lojas de itens de decoração, permitindo que elas incluam informações sobre produtos, localização e opções de patrocínio   | ALTA |
-|RF-11| Implementar diferentes planos de patrocínio para as lojas, garantindo que elas possam aparecer como referência na pesquisa de móveis e outros itens de decoração   | MÉDIA |
-|RF-12| Permitir que os usuários visualizem os produtos das lojas patrocinadoras diretamente na plataforma das lojas   | MÉDIA |
+|RF-01| Permitir que os arquitetos cadastrem seus perfis | ALTA | 
+|RF-02| Possibilitar que os arquitetos incluam histórico acadêmico | ALTA |
+|RF-03| Possibilitar que os arquitetos incluam portfólio de projetos | ALTA |
+|RF-04| Possibilitar que os arquitetos informações profissionais | ALTA |
+|RF-05| Permitir o cadastro de clientes | ALTA |
+|RF-06| Possibilitar que os clientes incluam um resumo do pedido | ALTA |
+|RF-07| Possibilitar que os clientes incluam uma estimativa de preço para seus projetos | ALTA |
+|RF-08| Implementar uma funcionalidade que permita que profissionais e clientes iniciem conversas diretas no WhatsApp | ALTA |
+|RF-09| Permitir que os arquitetos enviem orçamentos e propostas detalhadas em resposta aos projetos dos clientes | ALTA |
+|RF-10| Desenvolver pesquisa que permita aos usuários filtrar por região e tipo de profissional | MÉDIA |
+|RF-11| Habilitar clientes a avaliarem os arquitetos| BAIXA |
+|RF-12| Permitir que arquitetos avaliem os clientes | MÉDIA |
+|RF-13| Dar aos clientes a capacidade de visualizar informações e projetos passados dos arquitetos  | MÉDIA |
+|RF-14| Oferecer aos clientes a opção de salvar arquitetos como favoritos  | BAIXA |
+|RF-15| Possibilitar o cadastro de lojas de itens de decoração  | ALTA |
+|RF-16| Implementar diferentes planos de patrocínio para as lojas | MÉDIA |
+|RF-17| Permitir que os usuários visualizem os produtos das lojas patrocinadoras diretamente na plataforma das lojas  | MÉDIA |
 
 
 ### Requisitos não Funcionais
@@ -97,7 +102,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-03| O sistema deve ser acessado pelos sistemas operacionais Windows e IOS | MÉDIA |  
 |RNF-04| Garantir que a aplicação seja compatível com uma variedade de navegadores web (Chrome, Edge, Mozila e Firefox) | ALTA |
 |RNF-05| Garantir que a aplicação possa integrar-se facilmente com outros sistemas ou serviços, como serviços de pagamento online ou sistemas de mapeamento | MÉDIA | 
-|RNF-06| Criar uma interface de usuário intuitiva e de fácil navegação para garantir que os usuários possam utilizar a aplicação com facilidade, independentemente de sua experiência técnica | BAIXA |
+|RNF-06| Criar uma interface de usuário prática | BAIXA |
 |RNF-07| Garantir que os dados dos usuários, como informações de perfil e histórico de projetos, sejam protegidos com medidas de segurança robustas, como criptografia de dados | ALTA |
 |RNF-08| Projetar a aplicação de forma modular e com código bem documentado para facilitar a manutenção e atualizações futuras | MÉDIA |
 
