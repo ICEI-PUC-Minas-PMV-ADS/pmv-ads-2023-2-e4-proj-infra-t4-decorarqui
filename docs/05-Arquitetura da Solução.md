@@ -58,16 +58,23 @@ A ISO/IEC 25010 é uma norma que sucede a ISO/IEC 9126 e apresenta um modelo atu
 
 ### Usabilidade
 Dado que o DecorArqui busca oferecer uma experiência de usuário moderna e de fácil utilização, a intuitividade e a usabilidade, medidas pelas sub-características abaixo e validadas por meio de testes de usabilidade, desempenharão um papel fundamental no sucesso do projeto.
+
 **Aprendizibilidade**: Grau em que um sistema pode ser usado por usuários para atingir objetivos específicos de aprender a usar o sistema com eficácia, eficiência, livre de riscos e satisfação em um contexto de uso.
+
 **Operabilidade**: Grau em que um produto ou sistema possui atributos que facilitam sua operação e controle.
+
 **Estética da interface do usuário**: Grau em que uma interface do usuário permite uma interação agradável e satisfatória para o usuário.
 
 ### Eficiência de Desempenho
 O projeto DecorArqui propõe a criação de uma plataforma por onde pessoas em busca de um projeto de arquitetura ou design de interiores serão conectadas com profissionais qualificados, dessa forma a aplicação deverá ser capaz de hospedar vários usuários simultâneos e uma grande quantidade de portifólios de arquitetos.
+
 **Capacidade**: Representa o grau em que os limites máximos do sistema atendem aos requisitos.
 
 ### Manutenibilidade
 A nível de desenvolvimento e integração contínua, o projeto DecorArqui, usará de tecnologias e padrões de codificação que promovem as sub-características abaixo. O objetivo é alcançar uma aplicação de baixo acoplamento e alta coesão
+
 **Reusabilidade**: Grau em que um recurso pode ser usado em mais de um sistema ou na construção de outros recursos.
+
 **Modificabilidade**: Grau em que um sistema pode ser modificado de forma eficaz e eficiente sem introduzir defeitos ou degradar a qualidade do produto existente.
+
 **Modularidade**: Grau em que um sistema é composto de componentes discretos, de modo que uma alteração em um componente tenha impacto mínimo em outros componentes.
