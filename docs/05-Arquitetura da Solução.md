@@ -54,15 +54,20 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 ## Qualidade de Software
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+A ISO/IEC 25010 é uma norma que sucede a ISO/IEC 9126 e apresenta um modelo atualizado para a qualidade de produto de software. Para um produto de software relacionado à arquitetura, como o DecorArqui, foram selecionadas algumas das subcaracterísticas de maior importância para a saúde do produto:
 
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+### Usabilidade
+Dado que o DecorArqui busca oferecer uma experiência de usuário moderna e de fácil utilização, a intuitividade e a usabilidade, medidas pelas sub-características abaixo e validadas por meio de testes de usabilidade, desempenharão um papel fundamental no sucesso do projeto.
+**Aprendizibilidade**: Grau em que um sistema pode ser usado por usuários para atingir objetivos específicos de aprender a usar o sistema com eficácia, eficiência, livre de riscos e satisfação em um contexto de uso.
+**Operabilidade**: Grau em que um produto ou sistema possui atributos que facilitam sua operação e controle.
+**Estética da interface do usuário**: Grau em que uma interface do usuário permite uma interação agradável e satisfatória para o usuário.
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
+### Eficiência de Desempenho
+O projeto DecorArqui propõe a criação de uma plataforma por onde pessoas em busca de um projeto de arquitetura ou design de interiores serão conectadas com profissionais qualificados, dessa forma a aplicação deverá ser capaz de hospedar vários usuários simultâneos e uma grande quantidade de portifólios de arquitetos.
+**Capacidade**: Representa o grau em que os limites máximos do sistema atendem aos requisitos.
 
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
+### Manutenibilidade
+A nível de desenvolvimento e integração contínua, o projeto DecorArqui, usará de tecnologias e padrões de codificação que promovem as sub-características abaixo. O objetivo é alcançar uma aplicação de baixo acoplamento e alta coesão
+**Reusabilidade**: Grau em que um recurso pode ser usado em mais de um sistema ou na construção de outros recursos.
+**Modificabilidade**: Grau em que um sistema pode ser modificado de forma eficaz e eficiente sem introduzir defeitos ou degradar a qualidade do produto existente.
+**Modularidade**: Grau em que um sistema é composto de componentes discretos, de modo que uma alteração em um componente tenha impacto mínimo em outros componentes.
