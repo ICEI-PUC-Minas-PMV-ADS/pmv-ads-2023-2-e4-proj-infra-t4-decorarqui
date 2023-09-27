@@ -26,32 +26,25 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Estilos CSS para os campos de perfil do cliente */
-.profile-info {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 10px;
-}
-
-label {
-    font-weight: bold;
-}
-
-/* Estilos CSS para os campos de avaliação e estimativa de preço */
-.rating-container {
-    margin-top: 10px;
-}
-
-.rating-label {
-    margin-right: 10px;
-}
-
+/* Estilos CSS para os campos de estimativa de preço e resumo do pedido */
 .price-estimate-container {
     margin-top: 10px;
 }
 
-/* Estilos CSS para o campo de resumo do pedido */
+input[type="text"] {
+    background-color: rgb(212, 211, 211);
+    width: 23%;
+    border: none;
+    border-radius: 5px;
+}
+
 .order-summary-container {
+    margin-top: 10px;
+}
+
+.profile-info {
+    border: 1px solid #ccc;
+    padding: 10px;
     margin-top: 10px;
 }
 
@@ -61,7 +54,8 @@ textarea {
     resize: vertical;
 }
 
-.btn-edit {
+/* Estilos CSS para o botão de salvar */
+.btn-save {
     background-color: #1c1d1f;
     color: #fff;
     border: none;
@@ -71,6 +65,6 @@ textarea {
     border-radius: 5px;
 }
 
-    .btn-edit:hover {
+    .btn-save:hover {
         background-color: #0d0d0e;
     }

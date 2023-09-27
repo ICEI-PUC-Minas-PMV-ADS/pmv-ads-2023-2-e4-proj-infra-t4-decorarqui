@@ -19,8 +19,8 @@ namespace decorArqui.Controllers
         [HttpPost]
         public async Task<ActionResult> LoginAsync(Login model)
         {
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 var user = await _database.GetCollection<Usuario>("Usuario")
                     .Find(u => u.Email == model.Email && u.Senha == model.Senha && u.Tipo == model.Tipo)
                     .FirstOrDefaultAsync();
@@ -32,7 +32,7 @@ namespace decorArqui.Controllers
                     }
                     else if (user.Tipo == "cliente")
                     {
-                        return RedirectToAction("Cliente", "Home");
+                        return  await DadosDaConta(model);
                     }
                     
                 }
@@ -44,9 +44,33 @@ namespace decorArqui.Controllers
                     ViewBag.ErrorMessage = "Email ou senha inválidos";
                 }
 
-            }
+            //}
             return View("~/Views/Home/Login.cshtml", model);
         }
+
+        public async Task<ActionResult> DadosDaConta(Login model)
+        {
+            // Recupere os dados da conta do MongoDB (substitua pelo seu código real)
+            Usuario dadosDaConta = await _database.GetCollection<Usuario>("Usuario")
+                    .Find(u => u.Email == model.Email && u.Senha == model.Senha && u.Tipo == model.Tipo)
+                    .FirstOrDefaultAsync();
+
+            if (dadosDaConta == null)
+            {
+                // Lida com o caso em que os dados da conta não foram encontrados
+                return NotFound();
+            }
+            else
+            {
+                ViewBag.Nome = dadosDaConta.Nome;
+                ViewBag.Email = dadosDaConta.Email;
+            }                          
+
+            // Envie os dados para a visualização
+            return View("~/Views/Home/Cliente.cshtml", dadosDaConta);
+        }
+
+
         public ActionResult Register(Register model)
         {
             if (ModelState.IsValid)
