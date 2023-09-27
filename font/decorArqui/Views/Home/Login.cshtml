@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+@model Login
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link CSS-->
+    <link rel="stylesheet" href="~/css/login.css">
+
+    <title>Página de Login</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <form asp-controller="Conta" asp-action="Login" method="post">
+        <div class="login-box">
+            <h2>Faça Login</h2>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="Email" placeholder="Seu e-mail" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="Senha" placeholder="Sua senha" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo">Tipo</label>
+                <select name="Tipo" id="tipo">
+                    <option value="cliente">Cliente</option>
+                    <option value="arquiteto">Arquiteto</option>
+                </select>
+            </div>
+            <button type="submit">Login</button>
+
+            <br/>
+
+            @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+            {
+                <div class="alert alert-danger" id="error-message">@ViewBag.ErrorMessage</div>
+            }
+
+            <p>Não tem uma conta? <a asp-controller="Home" asp-action="Cadastro">Cadastre-se</a></p>
+        </div>
+    </form>
+</body>
+</html>
+

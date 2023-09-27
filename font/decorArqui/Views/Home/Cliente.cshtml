@@ -1,0 +1,61 @@
+﻿@page
+@*@model decorArqui.Views.Home.clienteModel*@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/cliente.css">
+    <title>Perfil do Cliente</title>
+</head>
+<body>
+    <header>
+        <h1>Perfil do Cliente</h1>
+    </header>
+    <div class="container">
+        <h2>Dados Pessoais</h2>
+        <div class="profile-info">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <span id="nome">Nome do Cliente</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <span id="email">cliente@example.com</span>
+            </div>
+        </div>
+
+        <h2>Avaliar Arquitetos</h2>
+        <div class="profile-info rating-container">
+            <span class="rating-label">Avaliação:</span>
+            <!-- Adicione aqui os elementos para a avaliação dos arquitetos (por exemplo, estrelas) -->
+        </div>
+
+        <h2>Favoritos</h2>
+        <div class="profile-info">
+            <!-- Adicione aqui a lista de arquitetos favoritos do cliente -->
+        </div>
+
+        <h2>Estimativa de Preço</h2>
+        <div class="profile-info price-estimate-container">
+            <div class="form-group">
+                <label for="preco">Estimativa de Preço:</label>
+                <input type="text" id="preco" name="preco" placeholder="Informe a estimativa de preço">
+            </div>
+        </div>
+
+        <h2>Resumo do Pedido</h2>
+        <div class="profile-info order-summary-container">
+            <div class="form-group">
+                <label for="resumoPedido">Resumo do Pedido:</label>
+                <textarea id="resumoPedido" name="resumoPedido" placeholder="Informe um resumo do seu pedido"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

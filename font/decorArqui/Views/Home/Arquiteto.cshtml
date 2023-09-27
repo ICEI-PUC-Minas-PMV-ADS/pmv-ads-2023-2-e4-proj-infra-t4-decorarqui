@@ -1,0 +1,63 @@
+﻿@page
+@*@model decorArqui.Views.Home.ArquitetoModel*@
+@{
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Arquiteto.css">
+    <title>Perfil do Arquiteto</title>
+</head>
+<body>
+    <header>
+        <h1>Perfil do Arquiteto</h1>
+    </header>
+    <div class="container">
+        <h2>Dados Pessoais</h2>
+        <div class="profile-info">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <span id="nome">Nome do Arquiteto</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <span id="email">arquiteto@example.com</span>
+            </div>
+        </div>
+
+        <h2>Histórico Acadêmico</h2>
+        <div class="profile-info">
+            <div class="form-group">
+                <label for="instituicao">Instituição:</label>
+                <span id="instituicao">Nome da Instituição</span>
+            </div>
+            <div class="form-group">
+                <label for="curso">Curso:</label>
+                <span id="curso">Nome do Curso</span>
+            </div>
+        </div>
+
+        <h2>Portfólio de Projetos</h2>
+        <div class="profile-info">
+            <div class="form-group">
+                <label for="projeto1">Projeto 1:</label>
+                <a href="#" id="projeto1">Link para Projeto 1</a>
+            </div>
+            <div class="form-group">
+                <label for="projeto2">Projeto 2:</label>
+                <a href="#" id="projeto2">Link para Projeto 2</a>
+            </div>
+        </div>
+
+        <a asp-controller="Home" asp-action="ArquitetoEditar"><button>Editar</button></a>
+    </div>
+
+    <!-- Script para preencher os campos de perfil com os dados do arquiteto -->
+</body>
+</html>
