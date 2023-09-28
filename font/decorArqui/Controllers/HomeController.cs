@@ -1,6 +1,7 @@
 ﻿using decorArqui.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor.Compilation;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
 using System.Diagnostics;
 
 namespace decorArqui.Controllers
@@ -47,6 +48,11 @@ namespace decorArqui.Controllers
         public IActionResult ClienteEditar()
         {
             return View("~/Views/Home/ClienteEditar.cshtml");
+        }
+
+        public IActionResult ClienteArquiteto()
+        {
+            return View("~/Views/Home/ClienteArquiteto.cshtml");
         }
 
         public IActionResult Privacy()
