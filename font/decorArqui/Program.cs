@@ -1,4 +1,5 @@
 using decorArqui.Models;
+using decorArqui.Services;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
@@ -7,7 +8,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = null;
+    });
+
 builder.Services.Configure<decorArquiDatabaseSettings>(builder.Configuration.GetSection("DevNetStorageDatabase"));
+
+builder.Services.AddSingleton<ProjetoServices>();
+
 
 builder.Services.AddSingleton<IMongoClient>(sp =>
 {

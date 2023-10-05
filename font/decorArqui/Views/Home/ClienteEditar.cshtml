@@ -39,6 +39,7 @@
             <!-- Adicione aqui a lista de arquitetos favoritos do cliente -->
         </div>
         <h2>Estimativa de Preço</h2>
+        <form asp-controller="Projetos" asp-action="PostProjeto" method="post">
         <div class="profile-info price-estimate-container">
             <div class="form-group">
                 <label for="preco">Estimativa de Preço:</label>
@@ -54,7 +55,8 @@
             </div>
         </div>
 
-        <button class="btn-save">Salvar</button>
+        <button class="btn-save" type="submit">Salvar</button>
+        </form>
     </div>
 </body>
 </html>

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using System.ComponentModel.DataAnnotations;
 
 namespace decorArqui.Models
 {
@@ -21,5 +22,12 @@ namespace decorArqui.Models
         [Required]
         [Display(Name = "Tipo")]
         public string Tipo { get; set; }
+        
+        [BsonElement("Descrição")]
+        public string? Descricao { get; set; }
+
+        [BsonElement("Preço")]
+        public decimal? Preco { get; set; }
+
     }
 }

@@ -1,11 +1,11 @@
-﻿using decorArqui_RF06_07.Models;
-using decorArqui_RF06_07.Services;
+﻿using decorArqui.Models;
+using decorArqui.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using MongoDB.Driver.Core.Authentication;
 
-namespace decorArqui_RF06_07.Controllers
+namespace decorArqui.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -19,16 +19,18 @@ namespace decorArqui_RF06_07.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Projeto>> GetProjetos()
+        public async Task<List<Usuario>> GetProjetos()
             => await _projetoServices.GetAsync();
 
         [HttpPost]
-        public async Task<Projeto> PostProjeto(Projeto projeto)
+        public async Task<Usuario> PostProjeto([FromBody] Usuario projeto)
         {
             await _projetoServices.CreateAsync(projeto);
 
             return projeto;
         }
+
+
 
         [HttpDelete]
         public async void Excluir(string id)
