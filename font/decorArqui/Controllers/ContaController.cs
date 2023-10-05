@@ -82,6 +82,7 @@ namespace decorArqui.Controllers
                     Senha = model.Senha,
                     Tipo = model.Tipo
                 };
+
                 _database.GetCollection<Usuario>("Usuario").InsertOne(Usuario);
 
                 //Registro bem-sucedido
@@ -89,6 +90,5 @@ namespace decorArqui.Controllers
             }
             return View(model);
         }
-
     }
 }

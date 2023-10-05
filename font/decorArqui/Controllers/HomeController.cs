@@ -50,9 +50,13 @@ namespace decorArqui.Controllers
             return View("~/Views/Home/ClienteEditar.cshtml");
         }
 
-        public IActionResult ClienteArquiteto()
+        public IActionResult AvaliacaoArquiteto()
         {
-            return View("~/Views/Home/ClienteArquiteto.cshtml");
+            return View("~/Views/Home/AvaliacaoArquiteto.cshtml");
+        }
+        public IActionResult AvaliacaoCliente()
+        {
+            return View("~/Views/Home/AvaliacaoCliente.cshtml");
         }
 
         public IActionResult Privacy()
