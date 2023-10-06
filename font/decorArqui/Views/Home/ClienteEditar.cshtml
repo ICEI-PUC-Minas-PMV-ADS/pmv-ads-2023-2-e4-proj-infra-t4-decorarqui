@@ -1,6 +1,7 @@
 ﻿@{
     Layout = null;
 }
+@model decorArqui.Models.Usuario
 
 
 <!DOCTYPE html>
@@ -19,12 +20,12 @@
         <h2>Dados Pessoais</h2>
         <div class="profile-info">
             <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" placeholder="Nome" autocomplete="off">
+                <label for="Nome">Nome:</label>
+                <input type="text" id="Nome" name="Nome" value="@Model.Nome" readonly>
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="text" placeholder="Email" autocomplete="off">
+                <label for="Email">Email:</label>
+                <input type="text" id="Email" name="Email" value="@Model.Email" readonly>
             </div>
         </div>
 
@@ -33,17 +34,18 @@
             <span class="rating-label">Avaliação:</span>
             <!-- Adicione aqui os elementos para a avaliação dos arquitetos (por exemplo, estrelas) -->
         </div>
-
         <h2>Favoritos</h2>
         <div class="profile-info">
             <!-- Adicione aqui a lista de arquitetos favoritos do cliente -->
         </div>
-        <h2>Estimativa de Preço</h2>
-        <form asp-controller="Projetos" asp-action="PostProjeto" method="post">
+
+        <form asp-controller="Conta" asp-action="Update" method="post">
+
+        <h2>Estimativa de Preço</h2>     
         <div class="profile-info price-estimate-container">
             <div class="form-group">
                 <label for="preco">Estimativa de Preço:</label>
-                <input type="text" id="preco" name="preco" placeholder="Informe a estimativa de preço">
+                    <input type="text" id="preco" name="Preco" placeholder="Informe a estimativa de preço" value="@Model.Preco">
             </div>
         </div>
 
@@ -51,11 +53,16 @@
         <div class="profile-info order-summary-container">
             <div class="form-group">
                 <label for="resumoPedido">Resumo do Pedido:</label>
-                <textarea id="resumoPedido" name="resumoPedido" placeholder="Informe um resumo do seu pedido"></textarea>
+                <input type="text" id="descricao" name="Descricao" placeholder="Informe um resumo do seu pedido" value="@Model.Descricao">
             </div>
         </div>
 
-        <button class="btn-save" type="submit">Salvar</button>
+                <div class="alert alert-danger" id="error-message">@ViewBag.ErrorMessage</div>
+            
+            <input type="hidden" asp-for="@Model.Id"/>    
+
+            <button class="btn-save" type="submit">Salvar</button>
+
         </form>
     </div>
 </body>

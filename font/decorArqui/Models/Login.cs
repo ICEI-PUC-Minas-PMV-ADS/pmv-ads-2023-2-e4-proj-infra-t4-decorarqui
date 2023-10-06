@@ -8,19 +8,19 @@ namespace decorArqui.Models
 
         [Required]
         [Display(Name = "Nome")]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
         [Required]
         [Display(Name = "Email")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Required]
         [Display(Name = "Senha")]
         [DataType(DataType.Password)]
-        public string Senha { get; set; }
+        public string? Senha { get; set; }
 
         [Required]
         [Display(Name = "Tipo")]
-        public string Tipo { get; set; }
+        public string? Tipo { get; set; }
     }
 }

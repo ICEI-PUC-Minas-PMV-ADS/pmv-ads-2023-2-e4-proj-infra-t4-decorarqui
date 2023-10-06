@@ -30,26 +30,15 @@ namespace decorArqui.Controllers
             return View("~/Views/Home/Cadastro.cshtml");
         }
 
-        public IActionResult Arquiteto()
-        {
-            return View("~/Views/Home/Arquiteto.cshtml");
-        }
-
         public IActionResult ArquitetoEditar()
         {
             return View("~/Views/Home/ArquitetoEditar.cshtml");
         }
 
-        public IActionResult Cliente()
+        public IActionResult Cliente(Usuario model)
         {
-            return View("~/Views/Home/Cliente.cshtml");
+            return View("~/Views/Home/Cliente.cshtml", model);
         }
-
-        public IActionResult ClienteEditar()
-        {
-            return View("~/Views/Home/ClienteEditar.cshtml");
-        }
-
         public IActionResult AvaliacaoArquiteto()
         {
             return View("~/Views/Home/AvaliacaoArquiteto.cshtml");

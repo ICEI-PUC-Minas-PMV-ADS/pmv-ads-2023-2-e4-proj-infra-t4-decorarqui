@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/css/cliente.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Perfil do Cliente</title>
 </head>
 <body>
@@ -20,11 +21,11 @@
         <div class="profile-info">
             <div class="form-group">
                 <label for="nome">Nome:</label>
-                <span id="nome">@ViewBag.Nome</span>
+                <span id="nome">@Model.Nome</span>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <span id="email">@ViewBag.Email</span>
+                <span id="email">@Model.Email</span>
             </div>
         </div>
 
@@ -43,7 +44,7 @@
         <div class="profile-info price-estimate-container">
             <div class="form-group">
                 <label for="preco">Estimativa de Preço:</label>
-                <span type="text" id="preco" name="preco" placeholder="Informe a estimativa de preço"></span>
+                <span type="text" id="preco" name="Preco" placeholder="Informe a estimativa de preço">@Model.Preco</span>
             </div>
         </div>
 
@@ -51,15 +52,35 @@
         <div class="profile-info order-summary-container">
             <div class="form-group">
                 <label for="resumoPedido">Resumo do Pedido:</label>
-                <span id="resumoPedido" name="resumoPedido" placeholder="Informe um resumo do seu pedido"></span>
+                <span id="resumoPedido" name="resumoPedido" placeholder="Informe um resumo do seu pedido">@Model.Descricao</span>
             </div>
         </div>
 
-        <button class="btn-edit" onclick="location.href = '@Url.Action("ClienteEditar", "Home")';">Editar</button>
+        <a asp-controller="Conta" asp-action="ClienteEditar" asp-route-id="@Model.Id"><button class="btn-edit">Editar</button></a>
         <button class="btn-edit" onclick="location.href = '@Url.Action("AvaliacaoArquiteto", "Home")';">Arquitetos</button>
 
 
     </div>
 </body>
+
+@*<script>
+    $(document).ready(function () {
+        $("#atualizarDados").click(function () {
+            $.ajax({
+                url: "/Conta/DadosDaConta", // URL do método que busca os dados do usuário
+                type: "GET",
+                dataType: "html",
+                success: function (data) {
+                    $("#dadosUsuario").html(data); // Atualize a div com os dados do usuário
+                },
+                error: function () {
+                    alert("Erro ao buscar dados do usuário.");
+                }
+            });
+        });
+    });
+</script>*@
+
+
 </html>
 

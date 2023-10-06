@@ -68,3 +68,10 @@ textarea {
     .btn-save:hover {
         background-color: #0d0d0e;
     }
+
+#error-message {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: red;
+    margin-top: 10px;
+}
