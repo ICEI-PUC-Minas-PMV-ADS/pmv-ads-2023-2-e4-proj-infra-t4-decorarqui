@@ -77,7 +77,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-01| Permitir que os arquitetos cadastrem seus perfis | ALTA | 
 |RF-02| Possibilitar que os arquitetos incluam histórico acadêmico | ALTA |
 |RF-03| Possibilitar que os arquitetos incluam portfólio de projetos | ALTA |
-|RF-04| Possibilitar que os arquitetos informações profissionais | ALTA |
+|RF-04| Possibilitar que os arquitetos incluam informações profissionais | ALTA |
 |RF-05| Permitir o cadastro de clientes | ALTA |
 |RF-06| Possibilitar que os clientes incluam um resumo do pedido | ALTA |
 |RF-07| Possibilitar que os clientes incluam uma estimativa de preço para seus projetos | ALTA |
