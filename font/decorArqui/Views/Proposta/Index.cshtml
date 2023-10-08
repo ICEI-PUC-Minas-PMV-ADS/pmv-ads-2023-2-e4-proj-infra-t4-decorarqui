@@ -1,0 +1,73 @@
+﻿@page
+@{
+    Layout = null;
+    var clientesAguardandoSuaProposta = ViewBag.Clientes as List<Usuario>;
+    var propostasAguardandoAceiteDeCliente = ViewBag.Propostas as List<Proposta>;
+    var ArquitetoId = ViewBag.ArquitetoId as string;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/clienteArquiteto.css">
+    <title>Propostas</title>
+</head>
+<body>
+<header>
+    <h1>Propostas</h1>
+</header>
+
+<div class="container">
+    <h1>Clientes Aguardando Proposta</h1>
+    <div class="architects-container">
+        
+        @foreach (var cliente in clientesAguardandoSuaProposta)
+        {
+            <div class="architect-card">
+                <h2>@cliente.Nome</h2>
+                <p>Descrição: @cliente.Descricao</p>
+                <p>Preço: @cliente.Preco</p>
+                <p>Email: @cliente.Email</p>
+                
+                    <form asp-controller="Home" asp-action="PropostaClienteGerarProposta" method="get">
+                        <div class="form-group">
+                            <div class="form-group"><input style="display: none;" name="ArquitetoId" id="ArquitetoId" value="@ArquitetoId"></div>
+                            <div class="form-group"><input style="display: none;" name="ClientId" id="ClientId" value="@cliente.Id"></div>
+                            <button type="submit">criar proposta</button>
+                        </div>
+                    </form>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="container">
+    <h1>Propostas Aguardando Aprovação</h1>
+    <div class="architects-container">
+        
+            @foreach (var proposta in propostasAguardandoAceiteDeCliente)
+            {
+                <div class="architect-card">
+                    <h2>@proposta.Cliente.Nome</h2>
+                    <p>Descrição: @proposta.Cliente.Descricao</p>
+                    <p>proposta: @proposta.Descricao</p>
+                    <p>Preço : @proposta.Cliente.Preco</p>
+                    <p>Orçamento : @proposta.Orcamento</p>
+                    <p>Email do cliente: @proposta.Cliente.Email</p>
+                    
+                        <form asp-controller="Home" asp-action="PropostaClienteDeletarProposta" method="get">
+                                            <div class="form-group">
+                                                <div class="form-group"><input style="display: none;" name="ArquitetoId" id="ArquitetoId" value="@ArquitetoId"></div>
+                                                <div class="form-group"><input style="display: none;" name="PropostaId" id="PropostaId" value="@proposta.Id"></div>
+                                                <button type="submit">deletar proposta</button>
+                                            </div>
+                                        </form>
+                </div>
+            }
+    </div>
+</div>
+</body>
+</html>
