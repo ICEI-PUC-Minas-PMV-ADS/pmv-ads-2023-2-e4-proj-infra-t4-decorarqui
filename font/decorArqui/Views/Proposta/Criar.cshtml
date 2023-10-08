@@ -1,0 +1,42 @@
+﻿@page
+
+@{
+    Layout = null;
+    var Proposta = ViewBag.Proposta as Proposta;
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Proposta</title>
+    <link rel="stylesheet" href="~/css/ArquitetoEditar.css">
+</head>
+<body>
+    <header>
+        <h1>Criar proposta para o cliente @Proposta.Cliente.Nome (@Proposta.Cliente.Id)</h1>
+    </header>
+    <div class="container">
+            <form asp-controller="Home" asp-action="PropostaClienteSalvarProposta" method="get">
+        <h2>Dados da Proposta</h2>
+        <div class="academic-history">
+            <div class="form-group">
+                <input type="text" id="Orcamento" name="Orcamento" placeholder="preço referente a solicitação do cliente">
+                <div class="form-group"><input style="display: none;" name="ArquitetoId" id="ArquitetoId" value="@Proposta.Arquiteto.Id"></div>
+                <div class="form-group"><input style="display: none;" name="ClientId" id="ClientId" value="@Proposta.Cliente.Id"></div>
+            </div>
+        </div>
+
+        <h2>Descrição</h2>
+        <div class="infoProfissional">
+            <div class="form-group">
+                <input type="text" id="Descricao" name="Descricao" placeholder="descrição da proposta referente a solicitação do cliente" style="height: 100px; vertical-align: top; width: 97%">
+            </div>
+        </div>
+        
+        <button type="submit">Salvar</button>
+            </form>
+    </div>
+</body>
+</html>
+

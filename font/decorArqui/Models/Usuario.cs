@@ -32,7 +32,10 @@ namespace decorArqui.Models
    
         [Display(Name = "Preco")]
         public double? Preco { get; set; }
-
+        
+        public bool AceiteProposta { get; set; }
+        
+        public string? PropostaId { get; set; }
 
     }
 }
