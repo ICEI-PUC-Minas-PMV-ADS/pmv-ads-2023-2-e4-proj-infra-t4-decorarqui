@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using decorArqui.Models;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace decorArqui.Controllers
@@ -25,48 +26,50 @@ namespace decorArqui.Controllers
                 return NotFound();
             }
 
-            var favoritoDoUsuario = database.GetFavoriteListByUserId(idUsuario);
+            var usuario = await _database.GetCollection<Usuario>("Usuario")
+                    .Find(u => u.Id == idUsuario)
+                    .FirstOrDefaultAsync();
 
-            if (favoritoDoUsuario == null)
+            if (usuario.ListaDeFavoritos == null)
             {
                 return NotFound();
             }
 
-            return View(favoritoDoUsuario);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(FavoriteList favoritoDoUsuario, string idUsuario)
-        {
-            if (ModelState.IsValid)
-            {
-                favoritoDoUsuario.UserId = idUsuario;
-                _favoriteListRepository.CreateFavoriteList(favoritoDoUsuario);
-                return RedirectToAction("Index");
-            }
-            return View(favoriteList);
+            return View(usuario.ListaDeFavoritos);
         }
 
         [HttpPut]
-        [ValidateAntiForgeryToken]
-        public IActionResult Update(string idUsuario, string[] listOfFavorites)
+        public IActionResult Update(string idUsuario, string[] listaDeFavoritos)
         {
-            if (string.IsNullOrEmpty(idUsuario) || listOfFavorites == null)
+            if (string.IsNullOrEmpty(idUsuario) || listaDeFavoritos == null)
             {
                 return NotFound();
             }
 
-            var favoritoDoUsuario = database.GetFavoriteListById(idUsuario);
+            var collection = await _database.GetCollection<Usuario>("Usuario");
 
-            if (favoritoDoUsuario == null)
+            var usuario = collection.Find(u => u.Id == idUsuario).FirstOrDefaultAsync();
+
+            if (usuario == null)
             {
                 return NotFound();
             }
 
-            favoritoDoUsuario.ListOfFavorites = listOfFavorites.ToList();
+            var filtroArquitetos = Builders<Usuario>.Filter.In("Id", listaDeFavoritos);
 
-            database.UpdateFavoriteList(favoritoDoUsuario);
+
+            var arquitetosEncontrados = collection.Find(filtroArquitetos).ToList();
+
+            if (arquitetosEncontrados.Count != listaDeFavoritos.Count)
+            {
+                return NotFound();
+            }
+
+            var filtroUsuario = Builders<Usuario>.Filter.Eq("Id", idUsuario);
+
+            var update = Builders<Usuario>.Update.Set("ListaDeFavoritos", listaDeFavoritos);
+
+            await collection.UpdateOne(filtro, update);
 
             return RedirectToAction("Index");
         }
