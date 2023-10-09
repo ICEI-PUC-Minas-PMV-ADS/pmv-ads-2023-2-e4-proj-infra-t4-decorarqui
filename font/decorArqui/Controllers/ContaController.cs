@@ -23,19 +23,11 @@ namespace decorArqui.Controllers
             return View();
         }
 
-        //public async Task<IActionResult> ClienteEditarAsync(Usuario model)
-        //{
-        //    Usuario dadosDaConta = await _database.GetCollection<Usuario>("Usuario")
-        //            .Find(u => u.Email == model.Email && u.Senha == model.Senha && u.Tipo == model.Tipo)
-        //            .FirstOrDefaultAsync();
-
-        //    model.Nome = dadosDaConta.Nome;
-        //    model.Email = dadosDaConta.Email;
-        //    model.Tipo = dadosDaConta.Tipo;
-
-        //    Console.WriteLine($"Nome: {model.Nome}, Email: {model.Email}, Preco: {model.Preco}, Descricao: {model.Descricao}");
-        //    return View("~/Views/Home/ClienteEditar.cshtml", model);
-        //}
+        [HttpGet]
+        public ActionResult Register()
+        {
+            return View();
+        }
 
         public async Task<IActionResult> ClienteEditarAsync(string Id)
         {
@@ -74,11 +66,10 @@ namespace decorArqui.Controllers
                         Console.WriteLine($"Nome: {model.Nome}, Email: {model.Email}");                       
                         return  await DadosDaConta(model);
                     }
-                    else if (user.Tipo == "loja")
-                {
-                    model.Nome = user.Nome;
-                    return RedirectToAction("Index", "Home", model);
-                }
+                    else if ( user.Tipo == "loja")
+                    {
+                        return RedirectToAction ("Index", "Home", model);
+                    }
                     
                 }
                 else
@@ -108,8 +99,6 @@ namespace decorArqui.Controllers
             { 
                 ViewBag.Nome = dadosDaConta.Nome;
                 ViewBag.Email = dadosDaConta.Email;
-                ViewBag.Descricao = dadosDaConta?.Descricao;
-                ViewBag.Preco = dadosDaConta?.Preco;
             }                          
 
             // Envie os dados para a visualização
@@ -117,7 +106,7 @@ namespace decorArqui.Controllers
         }
 
 
-        public ActionResult Register(Register model)
+        public ActionResult Register(Usuario model)
         {
             if (ModelState.IsValid)
             {
@@ -129,15 +118,26 @@ namespace decorArqui.Controllers
                     Tipo = model.Tipo
                 };
 
+                if (model.Tipo == "cliente")
+                {
+                    Usuario.Descricao = model.Descricao;
+                    Usuario.Preco = model.Preco;
+                }
+                else if (model.Tipo == "arquiteto")
+                {
+                    Usuario.Instituicao = model.Instituicao;
+                    Usuario.Cursos = model.Cursos;
+                }
+
                 _database.GetCollection<Usuario>("Usuario").InsertOne(Usuario);
 
                 //Registro bem-sucedido
-                return View("~/Views/Home/Login.cshtml");
+                return RedirectToAction("Login", "Home", model);
             }
             return View(model);
         }
 
-        public async Task<ActionResult> Update(string Id, string Descricao, double Preco)
+        public async Task<ActionResult> Update(string Id, string Descricao, double Preco, string Cursos, string Instituicao)
         {
             Usuario model = await _database.GetCollection<Usuario>("Usuario")
                 .Find(u => u.Id == Id)
@@ -149,10 +149,12 @@ namespace decorArqui.Controllers
                 // Crie um objeto de atualização com os campos que deseja modificar (Descricao e Preco).
                 var atualizacao = Builders<Usuario>.Update
                     .Set(u => u.Descricao, Descricao)
-                    .Set(u => u.Preco, Preco);
+                    .Set(u => u.Preco, Preco)
+                    .Set(u => u.Cursos, Cursos)
+                    .Set(u => u.Instituicao, Instituicao);
 
-                // Use o método UpdateOneAsync para aplicar a atualização no banco de dados.
-                var resultado = await _database.GetCollection<Usuario>("Usuario")
+            // Use o método UpdateOneAsync para aplicar a atualização no banco de dados.
+            var resultado = await _database.GetCollection<Usuario>("Usuario")
                     .UpdateOneAsync(filtro, atualizacao);
 
             Usuario modelUpdated = await _database.GetCollection<Usuario>("Usuario")

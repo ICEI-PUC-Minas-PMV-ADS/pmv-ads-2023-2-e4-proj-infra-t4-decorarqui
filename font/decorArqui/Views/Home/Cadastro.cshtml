@@ -4,7 +4,7 @@
     Layout = null;
 }
 
-@model Register
+@model Usuario
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,10 +41,29 @@
             <option value="loja">Loja</option>
             </select>
             </div>
-            <button type="submit">Cadastrar</button>
+            <button type="submit" id="btnRegistrar">Cadastrar</button>
             <p>Já tem uma conta? <a asp-controller="Home" asp-action="Login">Faça Login</a></p>
         </div>
     </form>
 </body>
+
+@*<script>
+    document.getElementById("btnRegistrar").addEventListener("click", function () {
+        // Obtém o valor do tipo de usuário selecionado
+        var tipoUsuario = document.querySelector('input[name="Tipo"]:checked');
+
+        if (tipoUsuario) {
+            // Redireciona o usuário com base no tipo de usuário selecionado
+            if (tipoUsuario.value === "cliente") {
+                window.location.href = "/Conta/Register?tipo=cliente";
+            } else if (tipoUsuario.value === "arquiteto") {
+                window.location.href = "/Conta/Register?tipo=arquiteto";
+            }
+        } else {
+            alert("Selecione o tipo de usuário antes de registrar.");
+        }
+    });
+</script>*@
+
 </html>
 
