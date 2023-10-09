@@ -4,8 +4,7 @@
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
-<img width="779" alt="Arquitetura da Solução_decorArqui" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/103225367/3fd841b2-a931-4c6c-a084-cca79d29c5c9">
-
+<img width="779" alt="Desenho" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/103225367/33acb50d-9a39-460e-8898-c7b6e3fe9439">
 
 ## Diagrama de Classes
 
