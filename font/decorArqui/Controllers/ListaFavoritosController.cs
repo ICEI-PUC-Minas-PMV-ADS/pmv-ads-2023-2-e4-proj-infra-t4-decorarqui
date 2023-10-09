@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using decorArqui.Models;
-using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
@@ -12,14 +11,14 @@ namespace decorArqui.Controllers
 {
     public class ListaFavoritosController : Controller
     {
-        private readonly IMongoDatabase _database;
+        private  IMongoDatabase _database;
         public ListaFavoritosController(IMongoDatabase database)
         {
             _database = database;
         }
 
 
-        public IActionResult Get(string idUsuario)
+        public async Task<IActionResult> Get(string idUsuario)
         {
             if (string.IsNullOrEmpty(idUsuario))
             {
@@ -38,41 +37,42 @@ namespace decorArqui.Controllers
             return View(usuario.ListaDeFavoritos);
         }
 
-        [HttpPut]
-        public IActionResult Update(string idUsuario, string[] listaDeFavoritos)
-        {
-            if (string.IsNullOrEmpty(idUsuario) || listaDeFavoritos == null)
-            {
-                return NotFound();
-            }
+        //To Do
+        //[HttpPut]
+        //public async Task<IActionResult> Update(string idUsuario, string[] listaDeFavoritos)
+        //{
+        //    if (string.IsNullOrEmpty(idUsuario) || listaDeFavoritos == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var collection = await _database.GetCollection<Usuario>("Usuario");
+        //    var collection = await _database.GetCollection<Usuario>("Usuario");
 
-            var usuario = collection.Find(u => u.Id == idUsuario).FirstOrDefaultAsync();
+        //    var usuario = collection.Find(u => u.Id == idUsuario).FirstOrDefaultAsync();
 
-            if (usuario == null)
-            {
-                return NotFound();
-            }
+        //    if (usuario == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var filtroArquitetos = Builders<Usuario>.Filter.In("Id", listaDeFavoritos);
+        //    var filtroArquitetos = Builders<Usuario>.Filter.In("Id", listaDeFavoritos);
 
 
-            var arquitetosEncontrados = collection.Find(filtroArquitetos).ToList();
+        //    var arquitetosEncontrados = collection.Find(filtroArquitetos).ToList();
 
-            if (arquitetosEncontrados.Count != listaDeFavoritos.Count)
-            {
-                return NotFound();
-            }
+        //    if (arquitetosEncontrados.Count != listaDeFavoritos.Count)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var filtroUsuario = Builders<Usuario>.Filter.Eq("Id", idUsuario);
+        //    var filtroUsuario = Builders<Usuario>.Filter.Eq("Id", idUsuario);
 
-            var update = Builders<Usuario>.Update.Set("ListaDeFavoritos", listaDeFavoritos);
+        //    var update = Builders<Usuario>.Update.Set("ListaDeFavoritos", listaDeFavoritos);
 
-            await collection.UpdateOne(filtro, update);
+        //    await collection.UpdateOne(filtroUsuario, update);
 
-            return RedirectToAction("Index");
-        }
+        //    return RedirectToAction("Index");
+        //}
     }
 }
 
