@@ -4,7 +4,7 @@
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
-![Arquitetura da Solução](img/Arquitetura_Solução.png)
+<img width="779" alt="Arquitetura da Solução_decorArqui" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/103225367/0b07642a-063c-4d78-9f06-9e8d1265c688">
 
 ## Diagrama de Classes
 
@@ -24,7 +24,8 @@ O Modelo ER representa através de um diagrama como as entidades (coisas, objeto
 
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
 
-<img width="551" alt="Esquema relacional decorArqui- Copiar" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/103225367/21ab7788-09cf-466f-bf50-68f25aac8881">
+<img width="551" alt="Esquema relacional decorArqui- Copiar (1)" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/103225367/8a3752cc-8472-4cff-9d4e-84045b44d4fb">
+
 
 
 > - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)

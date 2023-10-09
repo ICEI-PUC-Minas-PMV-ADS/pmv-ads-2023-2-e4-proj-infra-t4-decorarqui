@@ -13,7 +13,10 @@ Nos últimos tempos, a tecnologia tem sido uma aliada inestimável, simplificand
 
 ## Objetivos
 
-Os objetivos da solução ***decorArqui*** são:
+
+O objetivo central da solução ***decorArqui*** é criar uma plataforma abrangente e inovadora que simplifica a busca, contratação e colaboração entre profissionais de decoração e design e seus clientes, ao mesmo tempo em que promove a sustentabilidade e a criatividade no setor. 
+
+Os objetivos que complementam o ***decorArqui*** são:
 
 `Facilitar a Contratação de Profissionais:` Permitir que os clientes encontrem e contratem profissionais qualificados de decoração e design de forma rápida e conveniente através de uma plataforma online, assim como esses profissionais podem sugerir suas soluções aos clientes.
 

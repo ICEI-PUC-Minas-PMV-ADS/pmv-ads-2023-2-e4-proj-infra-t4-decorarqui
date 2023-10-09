@@ -74,6 +74,11 @@ namespace decorArqui.Controllers
                         Console.WriteLine($"Nome: {model.Nome}, Email: {model.Email}");                       
                         return  await DadosDaConta(model);
                     }
+                    else if (user.Tipo == "loja")
+                {
+                    model.Nome = user.Nome;
+                    return RedirectToAction("Index", "Home", model);
+                }
                     
                 }
                 else
