@@ -25,7 +25,12 @@
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Segue um passo a passo para a utilização:
+- Baixe o MongoDB Community Server: https://www.mongodb.com/try/download/community
+- Baixe o Visual Studio Community 2022: https://visualstudio.microsoft.com/pt-br/vs/community/
+- Clone a aplicação no GitHub:  
+- Abra o Visual Studio e em Get Started selecione "Clone a repository" e cole a URL
+- Execute a aplicação no compilador IIS Express
 
 # Documentação
 
