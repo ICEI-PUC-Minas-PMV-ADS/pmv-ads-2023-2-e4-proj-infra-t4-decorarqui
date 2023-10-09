@@ -46,5 +46,6 @@ namespace decorArqui.Models
         
         public string? PropostaId { get; set; }
 
+        public string[]? ListaDeFavoritos { get; set; }
     }
 }
