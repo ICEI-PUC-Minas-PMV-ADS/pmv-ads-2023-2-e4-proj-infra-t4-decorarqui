@@ -1,7 +1,4 @@
-﻿@page
-@model decorArqui.Models.Usuario
-@{
-}
+﻿@model decorArqui.Models.Usuario
 @{
     Layout = null;
 }
@@ -23,11 +20,11 @@
         <div class="profile-info">
             <div class="form-group">
                 <label for="nome">Nome:</label>
-                <span id="nome">Nome do Arquiteto</span>
+                <span id="nome">@Model.Nome</span>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <span id="email">arquiteto@example.com</span>
+                <span id="email">@Model.Email</span>
             </div>
         </div>
 
@@ -55,7 +52,7 @@
             </div>
         </div>
 
-        <a asp-controller="Home" asp-action="ArquitetoEditar"><button>Editar</button></a>
+        <a asp-controller="Home" asp-action="ArquitetoEditar" asp-route-id="@Model.Id"><button>Editar</button></a>
         <button class="btn-edit" onclick="location.href = '@Url.Action("AvaliacaoCliente", "Home")';">Clientes</button>
         <button class="btn-edit" onclick="location.href = '@Url.Action("PropostaCliente", "Home", new { ArquitetoId = "65218f3bb836786a5e8e1808"})';">Solicitações</button>
     </div>
