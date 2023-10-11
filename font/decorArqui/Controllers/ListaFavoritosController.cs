@@ -37,42 +37,43 @@ namespace decorArqui.Controllers
             return View(usuario.ListaDeFavoritos);
         }
 
-        //To Do
-        //[HttpPut]
-        //public async Task<IActionResult> Update(string idUsuario, string[] listaDeFavoritos)
-        //{
-        //    if (string.IsNullOrEmpty(idUsuario) || listaDeFavoritos == null)
-        //    {
-        //        return NotFound();
-        //    }
+        
+        [HttpPut]
+        public async Task<IActionResult> Update(string idUsuario, string[] listaDeFavoritos)
+        {
+            if (string.IsNullOrEmpty(idUsuario) || listaDeFavoritos == null)
+            {
+                return NotFound();
+            }
 
-        //    var collection = await _database.GetCollection<Usuario>("Usuario");
+            Usuario usuario = await _database.GetCollection<Usuario>("Usuario")
+                .Find(u => u.Id == idUsuario).FirstOrDefaultAsync();
 
-        //    var usuario = collection.Find(u => u.Id == idUsuario).FirstOrDefaultAsync();
+            if (usuario == null)
+            {
+                return NotFound();
+            }
 
-        //    if (usuario == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var filtroArquitetos = Builders<Usuario>.Filter.In("Id", listaDeFavoritos);
+            var filtroArquitetos = Builders<Usuario>.Filter.In("Id", listaDeFavoritos);
 
 
-        //    var arquitetosEncontrados = collection.Find(filtroArquitetos).ToList();
+            List<Usuario> arquitetosEncontrados = _database.GetCollection<Usuario>("Usuario")
+                .Find(filtroArquitetos).ToList();
 
-        //    if (arquitetosEncontrados.Count != listaDeFavoritos.Count)
-        //    {
-        //        return NotFound();
-        //    }
+            if (arquitetosEncontrados.Count != listaDeFavoritos.Count())
+            {
+                return NotFound();
+            }
 
-        //    var filtroUsuario = Builders<Usuario>.Filter.Eq("Id", idUsuario);
+            var filtroUsuario = Builders<Usuario>.Filter.Eq("Id", idUsuario);
 
-        //    var update = Builders<Usuario>.Update.Set("ListaDeFavoritos", listaDeFavoritos);
+            var update = Builders<Usuario>.Update.Set("ListaDeFavoritos", listaDeFavoritos);
 
-        //    await collection.UpdateOne(filtroUsuario, update);
+            _database.GetCollection<Usuario>("Usuario")
+                .UpdateOne(filtroUsuario, update);
 
-        //    return RedirectToAction("Index");
-        //}
+            return RedirectToAction("Index");
+        }
     }
 }
 
