@@ -112,7 +112,7 @@
             body: JSON.stringify(userData)
         })
             .then(response => response.json())
-            .then(data => {
+            .then(-data => {
                 console.log("Arquiteto criado com sucesso:", data);
                 window.location.href = "/";
             })
@@ -136,8 +136,8 @@
             "Content-Type": "application/json"
         },
             body: JSON.stringify(userData)
-            })
-                .then(response => response.json())
+                                })
+                                    .then(response => response.json())
         .then(data => {
             console.log("Arquiteto criado com sucesso:", data);
             window.location.href = "/";
@@ -146,7 +146,7 @@
             console.log("Erro ao criar arquiteto:", error);
             window.location.href = "/Views/Home/Login.cshtml";
         });
-        }
+                            }
 </script>
 
 
