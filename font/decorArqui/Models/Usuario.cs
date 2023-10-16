@@ -26,13 +26,33 @@ namespace decorArqui.Models
         [Required]
         [Display(Name = "Tipo")]
         public string? Tipo { get; set; }
-       
+    }
+
+    public class Cliente : Usuario
+    {
         [Display(Name = "Descricao")]
         public string? Descricao { get; set; }
-   
+
         [Display(Name = "Preco")]
         public double? Preco { get; set; }
 
-
+        public string[]? ListaDeFavoritos { get; set; }
     }
+
+    public class Arquiteto : Usuario
+    {
+        [Display(Name = "Instituicao")]
+        public string? Instituicao { get; set; }
+
+        [Display(Name = "Cursos")]
+        public string? Cursos { get; set; }
+
+        [Display(Name = "ResumoProfissional")]
+        public string? ResumoProfissional { get; set; }
+
+        public bool AceiteProposta { get; set; }
+
+        public string? PropostaId { get; set; }
+    }
+
 }

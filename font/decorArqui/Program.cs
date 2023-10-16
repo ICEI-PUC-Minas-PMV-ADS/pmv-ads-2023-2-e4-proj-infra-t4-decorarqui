@@ -18,6 +18,10 @@ builder.Services.Configure<decorArquiDatabaseSettings>(builder.Configuration.Get
 
 builder.Services.AddSingleton<ProjetoServices>();
 
+builder.Services.AddMvc().AddJsonOptions(options => {
+    options.JsonSerializerOptions.PropertyNamingPolicy = null;
+});
+
 
 builder.Services.AddSingleton<IMongoClient>(sp =>
 {

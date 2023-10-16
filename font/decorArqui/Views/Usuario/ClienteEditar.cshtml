@@ -1,7 +1,7 @@
 ﻿@{
     Layout = null;
 }
-@model decorArqui.Models.Usuario
+@model decorArqui.Models.Cliente
 
 
 <!DOCTYPE html>
@@ -45,7 +45,7 @@
         <div class="profile-info price-estimate-container">
             <div class="form-group">
                 <label for="preco">Estimativa de Preço:</label>
-                    <input type="text" id="preco" name="Preco" placeholder="Informe a estimativa de preço" value="@Model.Preco">
+                    <input type="text" id="preco" name="Preco" placeholder="Informe a estimativa de preço" value="@Model.Preco" autocomplete="off">
             </div>
         </div>
 
@@ -53,7 +53,7 @@
         <div class="profile-info order-summary-container">
             <div class="form-group">
                 <label for="resumoPedido">Resumo do Pedido:</label>
-                <input type="text" id="descricao" name="Descricao" placeholder="Informe um resumo do seu pedido" value="@Model.Descricao">
+                <input type="text" id="descricao" name="Descricao" placeholder="Informe um resumo do seu pedido" value="@Model.Descricao" autocomplete="off">
             </div>
         </div>
 
