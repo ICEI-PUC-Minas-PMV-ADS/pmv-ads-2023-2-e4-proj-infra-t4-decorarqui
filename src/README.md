@@ -2,7 +2,13 @@
 
 ## Instalação do Site
 
-O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em servidores...
+Segue um passo a passo para a utilização:
+
+- Baixe o MongoDB Community Server: https://www.mongodb.com/try/download/community
+- Baixe o Visual Studio Community 2022: https://visualstudio.microsoft.com/pt-br/vs/community/
+- Clone a aplicação no GitHub:
+- Abra o Visual Studio e em Get Started selecione "Clone a repository" e cole a URL
+- Execute a aplicação no compilador IIS Express
 
 ## Histórico de versões
 
