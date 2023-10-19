@@ -12,6 +12,10 @@ Segue um passo a passo para a utilização:
 
 ## Histórico de versões
 
-### [0.1.0] - DD/MM/AAAA
-#### Adicionado
+### [0.1.0] - 15/10/2023
+#### Adicionado Back-End 
+- Adicionado ...
+
+### [0.1.1] - 15/10/2023
+#### Adicionado banco de dados 
 - Adicionado ...
