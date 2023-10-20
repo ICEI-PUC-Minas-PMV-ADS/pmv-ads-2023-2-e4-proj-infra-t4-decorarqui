@@ -104,6 +104,8 @@
 //            // Envie os dados para a visualização
 //            return View("~/Views/Home/Cliente.cshtml", dadosDaConta);
 //        }
+                ViewBag.Preco = dadosDaConta?.Preco;
+            }                          
 
 
 //        public ActionResult Register(Usuario model)
@@ -116,8 +118,6 @@
 //                    Email = model.Email,
 //                    Senha = model.Senha,
 //                    Tipo = model.Tipo
-//                };
-
 //                if (model.Tipo == "cliente")
 //                {
 //                    Usuario.Descricao = model.Descricao;
@@ -128,7 +128,7 @@
 //                    Usuario.Instituicao = model.Instituicao;
 //                    Usuario.Cursos = model.Cursos;
 //                }
-
+                    Tipo = model.Tipo
 //                _database.GetCollection<Usuario>("Usuario").InsertOne(Usuario);
 
 //                //Registro bem-sucedido
@@ -136,26 +136,28 @@
 //            }
 //            return View(model);
 //        }
-
+            return View(model);
 //        public async Task<ActionResult> Update(string Id, string Descricao, double Preco, string Cursos, string Instituicao)
 //        {
 //            Usuario model = await _database.GetCollection<Usuario>("Usuario")
 //                .Find(u => u.Id == Id)
 //                .FirstOrDefaultAsync();
+                .Find(u => u.Id == Id)
+                .FirstOrDefaultAsync();
 
 //            // Recupere o usuário atual do banco de dados com base em algum critério exclusivo, como o email.
-//            var filtro = Builders<Usuario>.Filter.Eq(u => u.Id, model.Id); // Substitua pelo critério exclusivo apropriado.
-
 //                // Crie um objeto de atualização com os campos que deseja modificar (Descricao e Preco).
 //                var atualizacao = Builders<Usuario>.Update
 //                    .Set(u => u.Descricao, Descricao)
 //                    .Set(u => u.Preco, Preco)
 //                    .Set(u => u.Cursos, Cursos)
 //                    .Set(u => u.Instituicao, Instituicao);
-
+                    .Set(u => u.Descricao, Descricao)
 //            // Use o método UpdateOneAsync para aplicar a atualização no banco de dados.
 //            var resultado = await _database.GetCollection<Usuario>("Usuario")
 //                    .UpdateOneAsync(filtro, atualizacao);
+                var resultado = await _database.GetCollection<Usuario>("Usuario")
+                    .UpdateOneAsync(filtro, atualizacao);
 
 //            Usuario modelUpdated = await _database.GetCollection<Usuario>("Usuario")
 //                .Find(u => u.Id == Id)

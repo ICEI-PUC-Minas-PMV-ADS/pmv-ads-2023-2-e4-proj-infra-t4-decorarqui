@@ -127,6 +127,73 @@ namespace decorArqui.Controllers
 
             return RedirectToAction("PropostaCliente", new { ArquitetoId = ArquitetoId });
         }
+        
+        public async Task<ActionResult> PropostaCliente(string ArquitetoId)
+        {
+            var clientesAguardandoSuaProposta =  await _database.GetCollection<Usuario>("Usuario")
+                .Find(u => u.AceiteProposta == false && u.Tipo == "cliente").ToListAsync();
+            
+            var propostasAguardandoAceiteDeCliente =  await _database.GetCollection<Proposta>("Proposta")
+                .Find(u => u.AceiteProposta == false && u.ArquitetoId == ArquitetoId).ToListAsync();
+
+            ViewBag.Clientes = clientesAguardandoSuaProposta;
+            ViewBag.Propostas = propostasAguardandoAceiteDeCliente;
+            ViewBag.ArquitetoId = ArquitetoId;
+            
+            return View("~/Views/Proposta/Index.cshtml");
+        }
+        
+        public async Task<ActionResult> PropostaClienteGerarProposta(string ArquitetoId, string ClientId)
+        {
+            var cliente =  await _database.GetCollection<Usuario>("Usuario")
+                .Find(u => u.Id == ClientId).FirstOrDefaultAsync();
+            
+            var arquiteto =  await _database.GetCollection<Usuario>("Usuario")
+                .Find(u => u.Id == ArquitetoId).FirstOrDefaultAsync();
+
+            var proposta = new Proposta();
+
+            proposta.Arquiteto = arquiteto;
+            proposta.Cliente = cliente;
+            proposta.ClienteId = cliente.Id;
+            proposta.ArquitetoId = arquiteto.Id;
+            ViewBag.Proposta = proposta;
+
+            return View("~/Views/Proposta/Criar.cshtml");
+        }
+        
+        public async Task<ActionResult> PropostaClienteSalvarProposta(string ArquitetoId, string ClientId, string Descricao, double Orcamento)
+        {
+            
+            var cliente =  await _database.GetCollection<Usuario>("Usuario")
+                .Find(u => u.Id == ClientId).FirstOrDefaultAsync();
+            
+            var arquiteto =  await _database.GetCollection<Usuario>("Usuario")
+                .Find(u => u.Id == ArquitetoId).FirstOrDefaultAsync();
+            
+                var novaProposta = new Proposta
+                {
+                    Cliente = cliente,
+                    ClienteId = cliente.Id,
+                    Arquiteto = arquiteto,
+                    ArquitetoId = arquiteto.Id,
+                    Descricao = Descricao,
+                    Orcamento = Orcamento,
+                    AceiteProposta = false
+                };
+
+                _database.GetCollection<Proposta>("Proposta").InsertOne(novaProposta);
+                
+                return RedirectToAction("PropostaCliente", new { ArquitetoId = arquiteto.Id });
+        }
+        
+        public async Task<ActionResult> PropostaClienteDeletarProposta(string PropostaId, string ArquitetoId)
+        {
+
+            _database.GetCollection<Proposta>("Proposta").DeleteOneAsync(x=> x.Id == PropostaId);
+
+            return RedirectToAction("PropostaCliente", new { ArquitetoId = ArquitetoId });
+        }
 
         public IActionResult Privacy()
         {
