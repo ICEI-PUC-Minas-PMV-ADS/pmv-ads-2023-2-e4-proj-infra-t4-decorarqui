@@ -29,6 +29,7 @@ namespace decorArqui.Models
         [Display(Name = "Descricao")]
         public string? Descricao { get; set; }
 
+
         [Display(Name = "Preco")]
         public double? Preco { get; set; }
 
