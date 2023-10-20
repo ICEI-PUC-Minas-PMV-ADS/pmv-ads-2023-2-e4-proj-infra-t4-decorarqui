@@ -1,5 +1,4 @@
-﻿@page
-@model decorArqui.Models.Usuario
+﻿@model Login
 @{
 }
 @{
@@ -23,11 +22,11 @@
         <div class="profile-info">
             <div class="form-group">
                 <label for="nome">Nome:</label>
-                <span id="nome">Nome do Arquiteto</span>
+                <span id="nome">@Context.Session.GetString("Nome")</span>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <span id="email">arquiteto@example.com</span>
+                <span id="email">@Context.Session.GetString("Email")</span>
             </div>
         </div>
 

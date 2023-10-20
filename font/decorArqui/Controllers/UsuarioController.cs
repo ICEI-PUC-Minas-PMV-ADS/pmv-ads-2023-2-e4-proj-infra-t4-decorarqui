@@ -1,9 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using decorArqui.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
-using decorArqui.Models;
-using static decorArqui.Models.Usuario;
 
 namespace decorArqui.Controllers
 {
@@ -18,7 +16,7 @@ namespace decorArqui.Controllers
             _database = database;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet]
         public async Task<ActionResult<Usuario>> GetUsuario(string id)
         {
             var usuario = await _database.GetCollection<Usuario>("Usuario").Find(u => u.Id == id).FirstOrDefaultAsync();
@@ -28,61 +26,54 @@ namespace decorArqui.Controllers
             }
             return Ok(usuario);
         }
-
-        [HttpPost("CreateCliente")]
-        public async Task<IActionResult> CreateCliente(Cliente model)
+        [HttpPost("Login")]
+        public async Task<ActionResult> Login(Login model)
         {
             try
             {
-                // Verifique se o email não está duplicado, se necessário.
-                var existingUsuario = await _database.GetCollection<Cliente>("Usuario").Find(u => u.Email == model.Email).FirstOrDefaultAsync();
-                if (existingUsuario != null)
+                if (model.Tipo == "cliente")
                 {
-                    ModelState.AddModelError("Email", "Este email já está em uso.");
-                    return BadRequest(ModelState);
+                    // Lógica para login de cliente
+                    var cliente = await _database.GetCollection<Cliente>("Usuario")
+                        .Find(c => c.Email == model.Email && c.Senha == model.Senha && c.Tipo == model.Tipo /*&& c.Nome == model.Nome*/)
+                        .FirstOrDefaultAsync();
+
+                    if (cliente != null)
+                    {
+                        // Cliente logado com sucesso
+                        // Redirecione para a página de cliente
+                        HttpContext.Session.SetString("Nome", cliente.Nome);
+                        HttpContext.Session.SetString("Email", cliente.Email);
+                        return RedirectToAction("Cliente", "Home", model);
+                    }
                 }
+                else if (model.Tipo == "arquiteto")
+                {
+                    // Lógica para login de arquiteto
+                    var arquiteto = await _database.GetCollection<Arquiteto>("Usuario")
+                        .Find(a => a.Email == model.Email && a.Senha == model.Senha)
+                        .FirstOrDefaultAsync();
 
-                // Agora você tem um objeto de Cliente, basta inseri-lo no banco de dados.
-                await _database.GetCollection<Cliente>("Usuario").InsertOneAsync(model);
-
-                return RedirectToAction("Login", "Home", model);
+                    if (arquiteto != null)
+                    {
+                        // Arquiteto logado com sucesso
+                        // Redirecione para a página de arquiteto
+                        HttpContext.Session.SetString("Nome", arquiteto.Nome);
+                        HttpContext.Session.SetString("Email", arquiteto.Email);
+                        return RedirectToAction("Arquiteto", "Home", model);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                // Log do erro, se necessário.
-                return StatusCode(500, "Ocorreu um erro interno ao criar o cliente.");
+                Console.WriteLine("Erro: " + ex.Message);
+                return BadRequest(new { mensagem = "Ocorreu um erro durante o login: " + ex.Message });
             }
+            return BadRequest(new { mensagem = "Email ou senha incorretos" });
+
         }
 
-        [HttpPost("CreateArquiteto")]
-        public async Task<IActionResult> CreateArquiteto(Arquiteto model)
-        {
-            try
-            {
-                // Verifique se o email não está duplicado, se necessário.
-                var existingUsuario = await _database.GetCollection<Arquiteto>("Usuario").Find(u => u.Email == model.Email).FirstOrDefaultAsync();
-                if (existingUsuario != null)
-                {
-                    ModelState.AddModelError("Email", "Este email já está em uso.");
-                    return BadRequest(ModelState);
-                }
-
-                // Agora você tem um objeto de Arquiteto, basta inseri-lo no banco de dados.
-                await _database.GetCollection<Arquiteto>("Usuario").InsertOneAsync(model);
-
-                return RedirectToAction("Login", "Home", model);
-            }
-            catch (Exception ex)
-            {
-                // Log do erro, se necessário.
-                return StatusCode(500, "Ocorreu um erro interno ao criar o arquiteto.");
-            }
-        }
-
-        // Outros métodos do controlador API
-
-
-        [HttpPut("{id}")]
+        [HttpPut]
         public async Task<IActionResult> UpdateUsuario(string id, Usuario model)
         {
             var existingUsuario = await _database.GetCollection<Usuario>("Usuario").Find(u => u.Id == id).FirstOrDefaultAsync();
@@ -97,7 +88,7 @@ namespace decorArqui.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public async Task<IActionResult> DeleteUsuario(string id)
         {
             var result = await _database.GetCollection<Usuario>("Usuario").DeleteOneAsync(u => u.Id == id);

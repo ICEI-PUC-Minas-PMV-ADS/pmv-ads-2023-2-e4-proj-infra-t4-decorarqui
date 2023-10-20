@@ -64,7 +64,7 @@
             createLoja();
         }
         else {
-            console.error("Tipo de usuário inválido.");
+            console.log("Tipo de usuário inválido.");
         }
     });
 
@@ -77,7 +77,7 @@
         };
 
         // Faça uma solicitação HTTP POST para o controlador CreateCliente
-        fetch("/api/usuario/CreateCliente", {
+        fetch("/api/cliente/CreateCliente", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -97,14 +97,14 @@
 
     function createArquiteto() {
         const userData = {
-            tipo: "cliente",
+            tipo: "arquiteto",
             nome: document.getElementById("nome").value,
             email: document.getElementById("email").value,
             senha: document.getElementById("senha").value
         };
 
         // Faça uma solicitação HTTP POST para o controlador CreateArquiteto
-        fetch("/api/usuario/CreateArquiteto", {
+        fetch("/api/arquiteto/CreateArquiteto", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -112,41 +112,41 @@
             body: JSON.stringify(userData)
         })
             .then(response => response.json())
-            .then(-data => {
+            .then(data => {
                 console.log("Arquiteto criado com sucesso:", data);
                 window.location.href = "/";
             })
             .catch(error => {
                 console.log("Erro ao criar arquiteto:", error);
-                window.location.href = "/Views/Home/Login.cshtml";
+                window.location.href = "/";
             });
     }
 
-    function createLoja {
-        const userData = {
-            tipo: "loja",
-            nome: document.getElementById("nome").value,
-            email: document.getElementById("email").value,
-            senha: document.getElementById("senha").value
-        };
+    //function createLoja {
+    //    const userData = {
+    //        tipo: "loja",
+    //        nome: document.getElementById("nome").value,
+    //        email: document.getElementById("email").value,
+    //        senha: document.getElementById("senha").value
+    //    };
 
-        fetch("/api/usuario/CreateLoja", {
-            method: "POST",
-            headers {
-            "Content-Type": "application/json"
-        },
-            body: JSON.stringify(userData)
-                                })
-                                    .then(response => response.json())
-        .then(data => {
-            console.log("Arquiteto criado com sucesso:", data);
-            window.location.href = "/";
-        })
-        .catch(error => {
-            console.log("Erro ao criar arquiteto:", error);
-            window.location.href = "/Views/Home/Login.cshtml";
-        });
-                            }
+    //    fetch("/api/loja/CreateLoja", {
+    //        method: "POST",
+    //        headers {
+    //        "Content-Type": "application/json"
+    //    },
+    //        body: JSON.stringify(userData)
+    //                            })
+    //                                .then(response => response.json())
+    //    .then(data => {
+    //        console.log("Arquiteto criado com sucesso:", data);
+    //        window.location.href = "/";
+    //    })
+    //    .catch(error => {
+    //        console.log("Erro ao criar arquiteto:", error);
+    //        window.location.href = "/Views/Home/Login.cshtml";
+    //    });
+    //                        }
 </script>
 
 

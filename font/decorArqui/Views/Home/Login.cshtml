@@ -1,8 +1,7 @@
-﻿@{
+﻿@model Login
+@{
     Layout = null;
 }
-@model Usuario
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +18,7 @@
     </style>
 </head>
 <body>
-    <form asp-controller="Conta" asp-action="Login" method="post">
+    <form method="post">
         <div class="login-box">
             <h2>Faça Login</h2>
             <div class="form-group">
@@ -28,7 +27,7 @@
             </div>
             <div class="form-group">
                 <label for="password">Senha:</label>
-                <input type="password" id="password" name="Senha" placeholder="Sua senha" required>
+                <input type="password" id="senha" name="Senha" placeholder="Sua senha" required>
             </div>
             <div class="form-group">
                 <label for="tipo">Tipo</label>
@@ -38,18 +37,59 @@
                     <option value="loja">Loja</option>
                 </select>
             </div>
-            <button type="submit">Login</button>
 
-            <br/>
+            <div class="alert alert-danger" id="error-message"></div>
 
-            @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
-            {
-                <div class="alert alert-danger" id="error-message">@ViewBag.ErrorMessage</div>
-            }
+            <button type="button" id="login-button" @*asp-route-id="@Model.Id"*@>Login</button>
+
+            <br />        
 
             <p>Não tem uma conta? <a asp-controller="Home" asp-action="Cadastro">Cadastre-se</a></p>
         </div>
     </form>
+    <script>
+        document.getElementById("login-button").addEventListener("click", async (event) => {
+            event.preventDefault();
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+            const tipo = document.getElementById("tipo").value;
+
+            const userData = {
+                email,
+                senha,
+                tipo
+            };
+
+            try {
+                const response = await fetch("/api/usuario/Login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(userData)
+                });
+
+                if (response.ok) {
+                    
+                    if (tipo == "cliente"){
+                        window.location.href = '@Url.Action("Cliente", "Home")';
+                        console.log("Deu bom!! C");
+                    }
+                    else if (tipo == "arquiteto") {
+                        window.location.href = '@Url.Action("Arquiteto", "Home")';
+                        console.log("Deu bom!! A");
+                    }
+                    
+                } else {
+                    const errorData = await response.json();
+                    document.getElementById("error-message").innerText = errorData.mensagem;
+                    document.getElementById("error-message").style.display = "block"; // Mostrar a mensagem de erro
+                }
+            } catch (error) {
+                console.error("Erro ao fazer login:", error);
+            }
+        });
+    </script>
 </body>
 </html>
 

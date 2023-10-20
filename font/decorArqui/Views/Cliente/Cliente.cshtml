@@ -1,7 +1,7 @@
 ﻿@{
     Layout = null;
 }
-@model decorArqui.Models.Cliente
+@model Login
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,11 +21,11 @@
         <div class="profile-info">
             <div class="form-group">
                 <label for="nome">Nome:</label>
-                <span id="nome">@Model.Nome</span>
+                <span id="nome">@Context.Session.GetString("Nome")</span>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <span id="email">@Model.Email</span>
+                <span id="email">@Context.Session.GetString("Email")</span>
             </div>
         </div>
 
@@ -56,31 +56,10 @@
             </div>
         </div>
 
-        <a asp-controller="Conta" asp-action="ClienteEditar" asp-route-id="@Model.Id"><button class="btn-edit">Editar</button></a>
+        <button class="btn-edit" onclick="location.href = '@Url.Action("ClienteEditar", "Home")';">Editar</button>
         <button class="btn-edit" onclick="location.href = '@Url.Action("AvaliacaoArquiteto", "Home")';">Arquitetos</button>
-
 
     </div>
 </body>
-
-@*<script>
-    $(document).ready(function () {
-        $("#atualizarDados").click(function () {
-            $.ajax({
-                url: "/Conta/DadosDaConta", // URL do método que busca os dados do usuário
-                type: "GET",
-                dataType: "html",
-                success: function (data) {
-                    $("#dadosUsuario").html(data); // Atualize a div com os dados do usuário
-                },
-                error: function () {
-                    alert("Erro ao buscar dados do usuário.");
-                }
-            });
-        });
-    });
-</script>*@
-
-
 </html>
 

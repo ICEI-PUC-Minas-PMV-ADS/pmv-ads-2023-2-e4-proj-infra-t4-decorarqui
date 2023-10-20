@@ -18,6 +18,13 @@ builder.Services.Configure<decorArquiDatabaseSettings>(builder.Configuration.Get
 
 builder.Services.AddSingleton<ProjetoServices>();
 
+builder.Services.AddMvc().AddSessionStateTempDataProvider();
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Defina o tempo limite da sessão conforme necessário.
+});
+
 builder.Services.AddMvc().AddJsonOptions(options => {
     options.JsonSerializerOptions.PropertyNamingPolicy = null;
 });
@@ -45,6 +52,8 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+app.UseSession();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
