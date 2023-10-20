@@ -1,0 +1,76 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos CSS para os campos de perfil do cliente */
+.profile-info {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Estilos CSS para os campos de avaliação e estimativa de preço */
+.rating-container {
+    margin-top: 10px;
+}
+
+.rating-label {
+    margin-right: 10px;
+}
+
+.price-estimate-container {
+    margin-top: 10px;
+}
+
+/* Estilos CSS para o campo de resumo do pedido */
+.order-summary-container {
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    resize: vertical;
+}
+
+.btn-edit {
+    background-color: #1c1d1f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .btn-edit:hover {
+        background-color: #0d0d0e;
+    }

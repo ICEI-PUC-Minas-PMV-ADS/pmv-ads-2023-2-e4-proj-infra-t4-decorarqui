@@ -1,0 +1,136 @@
+﻿@page
+@*@model decorArqui.Views.Home.ClienteArquitetoModel*@
+@{
+    Layout = null;
+}
+
+@model Avaliacao
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/clienteArquiteto.css">
+    <title>Arquitetos</title>
+</head>
+<body>
+    <header>
+        <h1>Arquitetos</h1>
+    </header>
+
+    <div class="container">
+        <h1>Conheça nossos arquitetos</h1>
+        <div class="architects-container">
+            <form asp-controller="Avaliacao" asp-action="Register" method="post">
+            <!-- Exemplo de card de arquiteto -->
+            <div class="architect-card">
+                    <h2>Pedro Ertal</h2>
+                    <p>Formação: Superior Completo</p>
+                    <p>Especialização: Obra Civil</p>
+                    <input type="hidden" id="nome" name="Nome" value="Pedro Ertal">
+                    <input type="hidden" id="nota" name="Nota" value="">
+                    <input type="hidden" id="tipo" name="Tipo" value="arquiteto">
+                    <h2>Avaliar Arquiteto</h2>
+                    <div class="profile-info rating-container">
+                        <div class="rating-stars">
+                            <span style="cursor: pointer;" class="star" data-rating="1">&#9733;</span>
+                            <span style="cursor: pointer;" class="star" data-rating="2">&#9733;</span>
+                            <span style="cursor: pointer;" class="star" data-rating="3">&#9733;</span>
+                            <span style="cursor: pointer;" class="star" data-rating="4">&#9733;</span>
+                            <span style="cursor: pointer;" class="star" data-rating="5">&#9733;</span>
+                        </div>
+                    </div>
+                    <button type="submit">Avaliar</button>
+            </div>
+
+            <div class="architect-card">
+                    <h2>Cesar Moreira</h2>
+                    <p>Formação: Tecnologo Completo</p>
+                    <p>Especialização: Edificacoes</p>
+                    <input type="hidden" id="nome" name="Nome" value="Cesar Moreira">
+                    <input type="hidden" id="nota" name="Nota" value="">
+                    <input type="hidden" id="tipo" name="Tipo" value="arquiteto">
+                    <h2>Avaliar Arquiteto</h2>
+                    <div class="profile-info rating-container">
+                        <div class="rating-stars">
+                            <span style="cursor: pointer;" class="star" data-rating="1">&#9733;</span>
+                            <span style="cursor: pointer;" class="star" data-rating="2">&#9733;</span>
+                            <span style="cursor: pointer;" class="star" data-rating="3">&#9733;</span>
+                            <span style="cursor: pointer;" class="star" data-rating="4">&#9733;</span>
+                            <span style="cursor: pointer;" class="star" data-rating="5">&#9733;</span>
+                        </div>
+                    </div>
+                    <button type="submit">Avaliar</button>
+            </div>
+
+            <div class="architect-card">
+                    <h2>Douglas Delaretti</h2>
+                    <p>Formação: Superior Completo</p>
+                    <p>Especialização: Engenharia de Acesso</p>
+                    <input type="hidden" id="nome" name="Nome" value="Douglas Delaretti">
+                    <input type="hidden" id="nota" name="Nota" value="">
+                    <input type="hidden" id="tipo" name="Tipo" value="arquiteto">
+                    <h2>Avaliar Arquiteto</h2>
+                    <div class="profile-info rating-container">
+                        <div class="rating-stars">
+                            <span style="cursor: pointer;" class="star" data-rating="1">&#9733;</span>
+                            <span style="cursor: pointer;" class="star" data-rating="2">&#9733;</span>
+                            <span style="cursor: pointer;" class="star" data-rating="3">&#9733;</span>
+                            <span style="cursor: pointer;" class="star" data-rating="4">&#9733;</span>
+                            <span style="cursor: pointer;" class="star" data-rating="5">&#9733;</span>
+                        </div>
+                    </div>
+                    <button type="submit">Avaliar</button>
+            </div>
+            <div class="architect-card">
+                    <h2>Karinne Massensini</h2>
+                <p>Formação: Superior Completo</p>
+                <p>Especialização: Obra Civil</p>
+                    <input type="hidden" id="nome" name="Nome" value="Karinne Massensini">
+                    <input type="hidden" id="nota" name="Nota" value="">
+                    <input type="hidden" id="tipo" name="Tipo" value="arquiteto">
+                <h2>Avaliar Arquiteto</h2>
+                <div class="profile-info rating-container">
+                    <div class="rating-stars">
+                        <span style="cursor: pointer;" class="star" data-rating="1">&#9733;</span>
+                        <span style="cursor: pointer;" class="star" data-rating="2">&#9733;</span>
+                        <span style="cursor: pointer;" class="star" data-rating="3">&#9733;</span>
+                        <span style="cursor: pointer;" class="star" data-rating="4">&#9733;</span>
+                        <span style="cursor: pointer;" class="star" data-rating="5">&#9733;</span>
+                    </div>
+                </div>
+                    <button type="submit">Avaliar</button>
+                
+            </div>
+            </form>
+            <!-- ... -->
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    // Adicione um ouvinte de eventos para cada estrela
+    const stars = document.querySelectorAll('.star');
+    const ratingInput = document.getElementById('nota');
+
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            const rating = star.getAttribute('data-rating');
+
+            // Atualize o valor do input com a classificação (rating) clicada
+            ratingInput.value = rating;
+
+            // Você também pode exibir a classificação selecionada, se desejar
+            console.log('Classificação selecionada: ' + rating);
+
+            // Execute qualquer outra lógica que você queira aqui
+
+            // Por exemplo, você pode enviar o valor do input para o servidor via AJAX
+            // ou realizar qualquer outra ação que seja necessária com a classificação selecionada
+        });
+    });
+</script>
