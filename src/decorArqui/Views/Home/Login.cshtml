@@ -3,93 +3,88 @@
     Layout = null;
 }
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Link CSS-->
-    <link rel="stylesheet" href="~/css/login.css">
-
-    <title>Página de Login</title>
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="~/css/login.css" />
 </head>
+
 <body>
-    <form method="post">
-        <div class="login-box">
-            <h2>Faça Login</h2>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="Email" placeholder="Seu e-mail" autocomplete="off" required>
+    <div class="login-cliente">
+        <div class="overlap-group-wrapper">
+            <div class="overlap-group">
+                <div class="rectangle"></div>
+                <div class="frame">
+                    <select class="custom-select" aria-label="Large select example" id="tipo">
+                        <option selected>Selecione o tipo</option>
+                        <option value="cliente">Cliente</option>
+                        <option value="arquiteto">Arquiteto</option>
+                        <option value="loja">Loja</option>
+                    </select>
+                </div>
+                <div class="div-wrapper">
+                    <input type="text" class="custom-input" placeholder="Email" id="email" autocomplete="off" />
+                </div>
+                <div class="frame-2">
+                    <input type="password" class="custom-input" placeholder="Senha" id="senha" autocomplete="off" />
+                </div>
+                <div class="text-wrapper-4">Faça Login</div>
+                <div class="text-wrapper-5">Seja bem-vindo ao</div>
+
+                <img class="logo-decorarqui" src="~/img/Logo_decorArqui_modelo2.png" />
+                <div class="frame-4">
+                    <button type="submit" id="login-button" class="custom-button">Entrar</button>
+                </div>
+                <p class="text-wrapper-8">Não tem uma conta? <a asp-controller="Home" asp-action="Cadastro">Crie uma aqui</a></p>
+                <img class="line" src="img/line-4.svg" />
+                <img class="img" src="img/line-5.svg" />
             </div>
-            <div class="form-group">
-                <label for="password">Senha:</label>
-                <input type="password" id="senha" name="Senha" placeholder="Sua senha" required>
-            </div>
-            <div class="form-group">
-                <label for="tipo">Tipo</label>
-                <select name="Tipo" id="tipo">
-                    <option value="cliente">Cliente</option>
-                    <option value="arquiteto">Arquiteto</option>
-                    <option value="loja">Loja</option>
-                </select>
-            </div>
-
-            <div class="alert alert-danger" id="error-message"></div>
-
-            <button type="button" id="login-button" @*asp-route-id="@Model.Id"*@>Login</button>
-
-            <br />        
-
-            <p>Não tem uma conta? <a asp-controller="Home" asp-action="Cadastro">Cadastre-se</a></p>
         </div>
-    </form>
-    <script>
-        document.getElementById("login-button").addEventListener("click", async (event) => {
-            event.preventDefault();
-            const email = document.getElementById("email").value;
-            const senha = document.getElementById("senha").value;
-            const tipo = document.getElementById("tipo").value;
-
-            const userData = {
-                email,
-                senha,
-                tipo
-            };
-
-            try {
-                const response = await fetch("/api/usuario/Login", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(userData)
-                });
-
-                if (response.ok) {
-                    
-                    if (tipo == "cliente"){
-                        window.location.href = '@Url.Action("Cliente", "Home")';
-                        console.log("Deu bom!! C");
-                    }
-                    else if (tipo == "arquiteto") {
-                        window.location.href = '@Url.Action("Arquiteto", "Home")';
-                        console.log("Deu bom!! A");
-                    }
-                    
-                } else {
-                    const errorData = await response.json();
-                    document.getElementById("error-message").innerText = errorData.mensagem;
-                    document.getElementById("error-message").style.display = "block"; // Mostrar a mensagem de erro
-                }
-            } catch (error) {
-                console.error("Erro ao fazer login:", error);
-            }
-        });
-    </script>
+    </div>
 </body>
-</html>
 
+<script>
+    document.getElementById("login-button").addEventListener("click", async (event) => {
+        event.preventDefault();
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+        const tipo = document.getElementById("tipo").value;
+
+        const userData = {
+            email,
+            senha,
+            tipo
+        };
+
+        try {
+            const response = await fetch("/api/usuario/Login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(userData)
+            });
+
+            if (response.ok) {
+
+                if (tipo == "cliente") {
+                    window.location.href = '@Url.Action("Cliente", "Home")';
+                    console.log("Deu bom!! C");
+                }
+                else if (tipo == "arquiteto") {
+                    window.location.href = '@Url.Action("Arquiteto", "Home")';
+                    console.log("Deu bom!! A");
+                }
+
+            } else {
+                const errorData = await response.json();
+                document.getElementById("error-message").innerText = errorData.mensagem;
+                document.getElementById("error-message").style.display = "block"; // Mostrar a mensagem de erro
+            }
+        } catch (error) {
+            console.error("Erro ao fazer login:", error);
+        }
+    });
+</script>
+
+</html>

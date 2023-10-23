@@ -1,64 +1,282 @@
 ﻿body {
+    background-image: url(../img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-body {
-    margin: 0;
-    padding: 0;
+
+.login-cliente {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+    width: 100%;
 }
 
-.login-box {
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .login-cliente .overlap-group-wrapper {
+        width: 1440px;
+        height: 1024px;
+    }
+
+    .login-cliente .overlap-group {
+        position: relative;
+        height: 1024px;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    .login-cliente .rectangle {
+        position: absolute;
+        width: 590px;
+        height: 1024px;
+        top: 0;
+        left: 425px;
+        background-color: #7f7c6bcc;
+    }
+
+    .login-cliente .frame {
+        height: 46px;
+        top: 745px;
+        left: 566px;
+        position: absolute;
+        width: 309px;
+        background-color: #afbd77bf;
+        border-radius: 10px;
+    }
+
+.custom-select {
     text-align: center;
+    height: 46px;
+    width: 309px;
+    background-color: #afbd77bf;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    padding: 0 10px;
 }
 
-.form-group {
-    margin-bottom: 20px;
+    .custom-select option {
+        background-color: #96a266bf;
+        font-family: "Roboto-Bold", Helvetica;
+    }
+
+.custom-input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #afbd77bf;
+    text-align: center;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border: 2px solid transparent;
+    transition: border;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-}
+    .custom-input:focus {
+        outline: none;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
 
-input[type="text"],
-input[type="password"] {
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
+.custom-button {
+    height: 100%;
+    width: 100%;
+    background-color: #afbd77bf;
     border: none;
-    border-radius: 5px;
+    color: #ffffff;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    text-align: center;
     cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.2s;
 }
 
-button:hover {
-    background-color: #0056b3;
+    .custom-button:hover {
+        background-color: #96a266bf;
+    }
+
+.login-cliente .text-wrapper {
+    position: absolute;
+    top: 13px;
+    left: 140px;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
 }
 
-#tipo {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.login-cliente .div-wrapper {
+    height: 46px;
+    top: 560px;
+    left: 565px;
+    position: absolute;
+    width: 309px;
+    align-items: center;
+    background-color: #afbd77bf;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-#error-message {
-    font-family: Arial, sans-serif; 
-    font-size: 14px; 
-    color: red; 
-    margin-top: 10px;
+.div-wrapper input {
+    position: absolute;
+    background: none;
+    border: none;
 }
 
+.login-cliente .frame-2 {
+    height: 46px;
+    top: 649px;
+    left: 565px;
+    position: absolute;
+    width: 309px;
+    background-color: #afbd77bf;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login-cliente .text-wrapper-2 {
+    position: absolute;
+    top: 14px;
+    left: 135px;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.login-cliente .text-wrapper-4 {
+    position: absolute;
+    width: 356px;
+    top: 166px;
+    left: 543px;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.login-cliente .text-wrapper-5 {
+    position: absolute;
+    width: 557px;
+    top: 315px;
+    left: 442px;
+    font-family: "Roboto-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.login-cliente .j-um-membro-login {
+    position: absolute;
+    width: 557px;
+    top: 232px;
+    left: 441px;
+    font-family: "Roboto-Light", Helvetica;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.login-cliente .span {
+    font-family: "Roboto-Light", Helvetica;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0;
+}
+
+.login-cliente .text-wrapper-6 {
+    text-decoration: underline;
+}
+
+.login-cliente .logo-decorarqui {
+    position: absolute;
+    width: 243px;
+    height: 97px;
+    top: 392px;
+    left: 599px;
+    object-fit: cover;
+}
+
+.login-cliente .frame-4 {
+    height: 54px;
+    top: 858px;
+    left: 565px;
+    position: absolute;
+    width: 309px;
+    background-color: #afbd77bf;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login-cliente .text-wrapper-7 {
+    position: absolute;
+    width: 62px;
+    top: 18px;
+    left: 124px;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.login-cliente .line {
+    left: 566px;
+    position: absolute;
+    width: 125px;
+    height: 2px;
+    top: 823px;
+}
+
+.login-cliente .img {
+    left: 750px;
+    position: absolute;
+    width: 125px;
+    height: 2px;
+    top: 823px;
+}
+
+.login-cliente .text-wrapper-8 {
+    position: absolute;
+    top: 916px;
+    left: 565px;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 500; /* Reduz o peso da fonte para torná-la mais leve */
+    color: #ffffff;
+    font-size: 12px; /* Tamanho da fonte menor */
+    text-align: center; /* Alinha o texto ao centro */
+    letter-spacing: 0;
+    line-height: normal;
+}
