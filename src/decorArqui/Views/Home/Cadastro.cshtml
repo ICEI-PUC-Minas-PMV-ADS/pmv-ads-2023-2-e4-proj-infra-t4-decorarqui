@@ -1,50 +1,52 @@
-﻿@page
-@*@model WebApiMongoDB.Views.Home.CadastroModel*@
-@{
+﻿@{
     Layout = null;
 }
 
 @model Usuario
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/cadastro.css" />
 
-    <!--Link CSS-->
-    <link rel="stylesheet" href="~/css/cadastro.css">
-
-    <title>Página de Cadastro</title>
 </head>
+
 <body>
-    <form method="post" id="registro-form">
-        <div class="signup-box">
-            <h2>Cadastre-se</h2>
-            <div class="form-group">
-                <label for="username">Usuário:</label>
-                <input type="text" id="nome" name="Nome" placeholder="Escolha um nome de usuário" autocomplete="off" required>
+    <div class="login-cliente">
+        <div class="overlap-group-wrapper">
+            <div class="overlap-group">
+                <div class="rectangle"></div>
+                <div class="frame">
+                    <select class="custom-select" aria-label="Large select example" id="tipo">
+                        <option selected>Selecione o tipo</option>
+                        <option value="cliente">Cliente</option>
+                        <option value="arquiteto">Arquiteto</option>
+                        <option value="loja">Loja</option>
+                    </select>
+                </div>
+                <div class="div-wrapper">
+                    <input type="text" class="custom-input" placeholder="Email" id="email"  autocomplete="off"/>
+                </div>
+                <div class="frame-2">
+                    <input type="password" class="custom-input" placeholder="Senha" id="senha" autocomplete="off" />
+                </div>
+                <div class="frame-3">
+                    <input type="text" class="custom-input" placeholder="Nome" id="nome" autocomplete="off" />
+                </div>
+                <div class="text-wrapper-4">Registre-se</div>
+                <div class="text-wrapper-5">Seja bem vindo ao</div>
+                <p class="j-um-membro-login">
+                    <span class="span">Já é um membro? </span> <span class="text-wrapper-6"><a asp-controller="Home" asp-action="Login">Login</a></span>
+                </p>
+                <img class="logo-decorarqui" src="~/img/Logo_decorArqui_modelo2.png" />
+                <div class="frame-4">
+                    <button type="submit" id="submitForm" class="custom-button">Cadastrar</button>
+                </div>
+                <img class="line" src="img/line-4.svg" />
+                <img class="img" src="img/line-5.svg" />
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="Email" placeholder="Seu endereço de email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Senha:</label>
-                <input type="password" id="senha" name="Senha" placeholder="Escolha uma senha" required>
-            </div>
-            <div class="form-group">
-            <label for="tipo">Tipo</label>
-            <select name="Tipo" id="tipo">
-            <option value="cliente">Cliente</option>
-            <option value="arquiteto">Arquiteto</option>
-            <option value="loja">Loja</option>
-            </select>
-            </div>
-            <button type="submit" id="submitForm">Cadastrar</button>
-            <p>Já tem uma conta? <a asp-controller="Home" asp-action="Login">Faça Login</a></p>
         </div>
-    </form>
+    </div>
 </body>
 
 <script>
@@ -122,34 +124,32 @@
             });
     }
 
-    //function createLoja {
-    //    const userData = {
-    //        tipo: "loja",
-    //        nome: document.getElementById("nome").value,
-    //        email: document.getElementById("email").value,
-    //        senha: document.getElementById("senha").value
-    //    };
+        //function createLoja {
+        //    const userData = {
+        //        tipo: "loja",
+        //        nome: document.getElementById("nome").value,
+        //        email: document.getElementById("email").value,
+        //        senha: document.getElementById("senha").value
+        //    };
 
-    //    fetch("/api/loja/CreateLoja", {
-    //        method: "POST",
-    //        headers {
-    //        "Content-Type": "application/json"
-    //    },
-    //        body: JSON.stringify(userData)
-    //                            })
-    //                                .then(response => response.json())
-    //    .then(data => {
-    //        console.log("Arquiteto criado com sucesso:", data);
-    //        window.location.href = "/";
-    //    })
-    //    .catch(error => {
-    //        console.log("Erro ao criar arquiteto:", error);
-    //        window.location.href = "/Views/Home/Login.cshtml";
-    //    });
-    //                        }
+        //    fetch("/api/loja/CreateLoja", {
+        //        method: "POST",
+        //        headers {
+        //        "Content-Type": "application/json"
+        //    },
+        //        body: JSON.stringify(userData)
+        //                            })
+        //                                .then(response => response.json())
+        //    .then(data => {
+        //        console.log("Arquiteto criado com sucesso:", data);
+        //        window.location.href = "/";
+        //    })
+        //    .catch(error => {
+        //        console.log("Erro ao criar arquiteto:", error);
+        //        window.location.href = "/Views/Home/Login.cshtml";
+        //    });
+        //                        }
 </script>
 
 
-
 </html>
-
