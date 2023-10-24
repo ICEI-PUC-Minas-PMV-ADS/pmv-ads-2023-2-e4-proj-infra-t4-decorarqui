@@ -22,7 +22,7 @@ builder.Services.AddMvc().AddSessionStateTempDataProvider();
 
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Defina o tempo limite da sessão conforme necessário.
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
 });
 
 builder.Services.AddMvc().AddJsonOptions(options => {

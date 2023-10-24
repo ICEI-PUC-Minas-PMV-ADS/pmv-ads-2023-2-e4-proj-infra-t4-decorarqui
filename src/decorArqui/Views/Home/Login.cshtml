@@ -33,7 +33,7 @@
 
                 <a asp-controller="Home" asp-action="Index"><img class="logo-decorarqui" src="~/img/Logo_decorArqui_modelo2.png" /></a>
                 <div class="frame-4">
-                    <button type="submit" id="login-button" class="custom-button">Entrar</button>
+                    <button type="submit" id="login-button" class="custom-button" @*asp-controller="Usuario" asp-action="PerfilCliente" asp-route-id="@Model.Id"*@>Entrar</button>
                 </div>
                 <p class="text-wrapper-8">Não tem uma conta? <a asp-controller="Home" asp-action="Cadastro">Crie uma aqui</a></p>
                 <img class="line" src="img/line-4.svg" />

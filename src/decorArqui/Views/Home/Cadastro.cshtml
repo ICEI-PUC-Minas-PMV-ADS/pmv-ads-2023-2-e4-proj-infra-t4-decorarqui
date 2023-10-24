@@ -89,11 +89,11 @@
             .then(response => response.json())
             .then(data => {
                 console.log("Cliente criado com sucesso:", data);
-                window.location.href = "/";
+                window.location.href = '@Url.Action("Login", "Home")';
             })
             .catch(error => {
                 console.log("Erro ao criar cliente:", error);
-                window.location.href = "/";
+                window.location.href = '@Url.Action("Login", "Home")';
             });
     }
 

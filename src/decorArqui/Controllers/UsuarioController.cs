@@ -42,8 +42,6 @@ namespace decorArqui.Controllers
                     {
                         // Cliente logado com sucesso
                         // Redirecione para a página de cliente
-                        HttpContext.Session.SetString("Nome", cliente.Nome);
-                        HttpContext.Session.SetString("Email", cliente.Email);
                         return RedirectToAction("Cliente", "Home", model);
                     }
                 }
@@ -58,8 +56,6 @@ namespace decorArqui.Controllers
                     {
                         // Arquiteto logado com sucesso
                         // Redirecione para a página de arquiteto
-                        HttpContext.Session.SetString("Nome", arquiteto.Nome);
-                        HttpContext.Session.SetString("Email", arquiteto.Email);
                         return RedirectToAction("Arquiteto", "Home", model);
                     }
                 }
@@ -72,6 +68,15 @@ namespace decorArqui.Controllers
             return BadRequest(new { mensagem = "Email ou senha incorretos" });
 
         }
+
+        //public IActionResult PerfilCliente(string id)
+        //{
+        //    // Lógica para buscar informações do cliente com base no ID (ou outro critério)
+        //    var cliente = _database.GetCollection<Cliente>("Cliente").Find(c => c.Id == id).FirstOrDefault();
+
+        //    return RedirectToAction("Cliente", "Home", cliente);
+        //}
+
 
         [HttpPut]
         public async Task<IActionResult> UpdateUsuario(string id, Usuario model)
