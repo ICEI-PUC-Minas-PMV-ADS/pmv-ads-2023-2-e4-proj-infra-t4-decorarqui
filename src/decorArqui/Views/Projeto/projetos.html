@@ -1,0 +1,139 @@
+
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="../../wwwroot/css/styleProjetos.css">
+    <title>
+        decorArqui | Projetos
+    </title>
+</head>
+<body>
+    <div class="container">
+        <div class="cardPrincipal">
+            <div class="logoproject">
+                <img class="logodecorArqui" src="imgs/Logo_decorArqui_modelo2.png" width="150px" height="90px">
+            </div>
+            <h1>Meus projetos:</h1>
+            <br><br />
+            <table id="projectTable">
+                <thead>
+                    <tr>
+                        <th>Selecionar</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Endereco</th>
+                        <th>Descricao</th>
+                        <th>Preco</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <br><br />
+            <a href="insertProject.html"><button id="novoprojeto">Novo Projeto</button></a>
+            <button id="editarprojeto">Editar Projeto</button>
+            <button id="excluirprojeto">Excluir Projeto</button></a>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    //carregar todos os itens cadastrados no mongodb e mostrar na tela
+    async function carregarProjetos() {
+        try {
+            const response = await fetch('/api/projetos');
+            if (response.ok) {
+                const projetos = await response.json();
+                const projectTableBody = document.querySelector('#projectTable tbody');//preencher todos os itens na tabela
+                projectTableBody.innerHTML = '';
+
+                projetos.forEach(projeto => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td><input type="checkbox" name="selecionarprojeto" value="${projeto.id}"></td>
+                        <td>${projeto.nome}</td>
+                        <td>${projeto.email}</td>
+                        <td>${projeto.endereco}</td>
+                        <td>${projeto.descricao}</td>
+                        <td>${projeto.preco}</td>
+                    `;
+                    projectTableBody.appendChild(row);
+                });
+
+                let projetoSelecionado = null;
+
+                projectTableBody.addEventListener('change', function (event) {
+                    if (event.target.name === 'selecionarprojeto') {
+                        const checkboxes = document.querySelectorAll('input[name="selecionarprojeto"]');
+                        const selecionados = Array.from(checkboxes).filter(checkbox => checkbox.checked);
+
+                        // Verifique se apenas um projeto foi selecionado
+                        if (selecionados.length === 1) {
+                            projetoSelecionado = projetos.find(projeto => projeto.id === selecionados[0].value);
+                        }
+                    }
+                });
+                //para editar projeto
+                document.getElementById('editarprojeto').addEventListener('click', function () {
+                    if (projetoSelecionado) {
+                        // Redirecione o usuário para a página de edição, passando os dados do projeto selecionado como parâmetros na URL
+                        const params = new URLSearchParams();
+                        params.append('id', projetoSelecionado.id);
+                        params.append('nome', projetoSelecionado.nome);
+                        params.append('email', projetoSelecionado.email);
+                        params.append('endereco', projetoSelecionado.endereco);
+                        params.append('descricao', projetoSelecionado.descricao);
+                        params.append('preco', projetoSelecionado.preco);
+                        window.location.href = `editproject.html?${params.toString()}`;
+                    }
+                });
+                //para excluir projeto
+                document.getElementById('excluirprojeto').addEventListener('click', function () {
+                    if (projetoSelecionado) {
+                        document.getElementById('excluirprojeto').disabled = true;
+                        const confirmacao = confirm('Tem certeza de que deseja excluir o projeto?');
+                        if (confirmacao) {
+                            excluirProjeto();
+                            location.reload();
+                        } else {
+                            document.getElementById('excluirprojeto').disabled = false;
+                           
+                        }
+                    } else {
+                        alert('Selecione um projeto para excluir.');
+                    }
+                });
+
+                // Função para excluir o projeto
+                async function excluirProjeto() {
+                    if (projetoSelecionado) {
+                        const idProjeto = projetoSelecionado.id;
+                        try {
+                            const response = await fetch('http://localhost:7018/api/projetos/' + idProjeto, {
+                                method: 'DELETE',
+                            });
+                            if (response.ok) {
+                                // Projeto excluído com sucesso
+                                // Atualize a lista de projetos ou faça qualquer outra ação necessária
+                                carregarProjetos();
+                            } else {
+                                console.error('Falha ao excluir o projeto');
+                            }
+                        } catch (error) {
+                            console.error('Erro na solicitação AJAX:', error);
+                        }
+                    }
+                }
+
+            } else {
+                console.error('Falha ao carregar os projetos');
+            }
+        } catch (error) {
+            console.error('Erro na solicitação AJAX:', error);
+        }
+        
+    }
+    window.onload = carregarProjetos;
+
+    
+</script>
+
+

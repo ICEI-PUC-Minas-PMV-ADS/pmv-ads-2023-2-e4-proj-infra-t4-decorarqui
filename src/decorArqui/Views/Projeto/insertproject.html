@@ -1,0 +1,62 @@
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="../../wwwroot/css/styleInsertproject.css">
+    <title>decorArqui | Incluir Novo Projeto</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cardInsert">
+            <div class="logoproject">
+                <img class="logodecorArqui" src="imgs/Logo_decorArqui_modelo2.png" width="150px" height="90px">
+            </div>
+            <input type="text" id="nome" placeholder="Nome">
+            <br><br>
+            <input type="email" id="email" placeholder="Email">
+            <br><br>
+            <input type="text" id="endereco" placeholder="Endereco do projeto">
+            <br><br>
+            <input type="text" id="descricao" placeholder="Escreva uma breve descricao sobre o projeto">
+            <br><br>
+            <input type="number" id="preco" placeholder="Preco">
+            <br><br>
+            <button id="salvarprojeto">Salvar</button>
+            <a href="index.html"><button id="cancelarprojeto">Cancelar</button></a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('salvarprojeto').addEventListener('click', function() {
+            // coletando os valores de todos os inputs
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var endereco = document.getElementById('endereco').value;
+            var descricao = document.getElementById('descricao').value;
+            var preco = parseFloat(document.getElementById('preco').value);
+
+            //transferindo todos os itens coletados em uma variavel para enviar para o mongodb
+            var projeto = {
+                Nome: nome,
+                Email: email,
+                Endereco: endereco,
+                Descricao: descricao,
+                Preco: preco
+            };
+            var url = 'http://localhost:7018/api/projetos';//url da api
+
+            //usando AJAX para enviar o itens para o backend
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', url, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Aviso para quando der certo para salvar o projeto
+                    alert('Projeto salvo com sucesso!');
+                }
+            };
+
+            console.log(projeto)
+            xhr.send(JSON.stringify(projeto));
+        });
+    </script>
+</body>
+</html>

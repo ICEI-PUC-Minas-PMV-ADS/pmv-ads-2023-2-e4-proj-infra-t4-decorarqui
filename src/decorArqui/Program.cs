@@ -44,6 +44,25 @@ builder.Services.AddScoped(sp =>
 });
 
 var app = builder.Build();
+app.UseDefaultFiles(new DefaultFilesOptions { DefaultFileNames = new List<string> { "index.html" } });
+
+app.UseCors(builder =>
+{
+    builder.WithOrigins("http://localhost:7018/api/projetos")
+           .AllowAnyHeader()
+           .AllowAnyMethod();
+});
+app.UseRouting();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(
+        name: "api",
+        pattern: "api/{controller=Projetos}/{action=Get}/{id?}");
+});
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

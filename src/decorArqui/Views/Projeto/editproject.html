@@ -1,0 +1,92 @@
+<html lang="pt-br">
+    <head>
+        <link rel="stylesheet" href="../../wwwroot/css/styleEditproject.css">
+        <title>
+            decorArqui | Editar Projeto
+        </title>
+    </head>
+    <div class="container">
+        <div class="cardEdit">
+            <div class="logoproject">
+                <img class="logodecorArqui" src="imgs/Logo_decorArqui_modelo2.png" width="150px" height="90px">
+            </div>
+            <body>
+                <input id="idprojetoforedit">
+                <br><br />
+                <input type="text" id="nomeeditar">
+                <br><br />
+                <input type="email" id="emaileditar">
+                <br><br />
+                <input type="text" id="enderecoeditar">
+                <br><br />
+                <input type="text" id="descricaoeditar">
+                <br><br />
+                <input type="text" id="precoeditar">
+                <br><br />
+                <button id="salvarprojetoeditado">Salvar Alterações</button>
+                <a href="index.html"><button id="voltarparatelainicial">Voltar</button></a>
+            </body>
+        </div>
+    </div>
+</html>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const params = new URLSearchParams(window.location.search);
+
+        // Recupere os valores dos parâmetros da URL
+        const idProjeto = params.get('id');
+        const nomeProjeto = params.get('nome');
+        const emailProjeto = params.get('email');
+        const enderecoProjeto = params.get('endereco');
+        const descricaoProjeto = params.get('descricao');
+        const precoProjeto = params.get('preco');
+
+        // Preencha os campos da página de edição com os valores dos parâmetros
+        document.getElementById('idprojetoforedit').value = idProjeto;
+        document.getElementById('nomeeditar').value = nomeProjeto;
+        document.getElementById('emaileditar').value = emailProjeto;
+        document.getElementById('enderecoeditar').value = enderecoProjeto;
+        document.getElementById('descricaoeditar').value = descricaoProjeto;
+        document.getElementById('precoeditar').value = precoProjeto;
+    });
+
+    document.getElementById('salvarprojetoeditado').addEventListener('click', function () {
+        // Capture os novos valores dos campos de edição
+        const idProjeto = document.getElementById('idprojetoforedit').value;
+        const nomeProjeto = document.getElementById('nomeeditar').value;
+        const emailProjeto = document.getElementById('emaileditar').value;
+        const enderecoProjeto = document.getElementById('enderecoeditar').value;
+        const descricaoProjeto = document.getElementById('descricaoeditar').value;
+        const precoProjeto = document.getElementById('precoeditar').value;
+
+        // Crie um objeto com os novos valores
+        const projetoEditado = {
+            _id: idProjeto,
+            Nome: nomeProjeto,
+            Email: emailProjeto,
+            Endereco: enderecoProjeto,
+            Descricao: descricaoProjeto,
+            Preco: precoProjeto,
+        };
+
+        fetch('http://localhost:7018/api/projetos/' + idProjeto,{
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(projetoEditado),
+        })
+            .then(response => {
+                if (response.ok) {
+                    alert('Projeto atualizado com sucesso!');
+                } else {
+                    console.error('Falha ao atualizar o projeto:', response.status, response.statusText);
+                }
+            })
+            .catch(error => console.error('Erro na solicitação AJAX:', error));
+
+        
+    });
+
+</script>
