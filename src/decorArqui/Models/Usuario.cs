@@ -50,6 +50,12 @@ namespace decorArqui.Models
         public bool AceiteProposta { get; set; }
 
         public string? PropostaId { get; set; }
+
+        public string? Cidade { get; set; }
+
+        public string? Estado { get; set; }
+
+        public string? Telefone { get; set; }
     }
 
     public class  Loja : Usuario 

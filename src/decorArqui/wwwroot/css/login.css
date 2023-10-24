@@ -5,6 +5,10 @@
     background-attachment: fixed;
 }
 
+input::placeholder {
+    color: white;
+}
+
 .login-cliente {
     display: flex;
     flex-direction: row;

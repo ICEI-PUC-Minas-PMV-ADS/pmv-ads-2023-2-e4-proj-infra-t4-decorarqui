@@ -1,76 +1,720 @@
 ﻿body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
+    background-image: url(../img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-/* Estilos CSS para os campos de perfil do cliente */
-.profile-info {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 10px;
-}
-
-label {
-    font-weight: bold;
-}
-
-/* Estilos CSS para os campos de avaliação e estimativa de preço */
-.rating-container {
-    margin-top: 10px;
-}
-
-.rating-label {
-    margin-right: 10px;
-}
-
-.price-estimate-container {
-    margin-top: 10px;
-}
-
-/* Estilos CSS para o campo de resumo do pedido */
-.order-summary-container {
-    margin-top: 10px;
-}
-
-textarea {
+.tela-meus-projetos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
-    height: 150px;
-    resize: vertical;
 }
 
-.btn-edit {
-    background-color: #1c1d1f;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+    .tela-meus-projetos .div {
+        overflow: hidden;
+        width: 1440px;
+        height: 2000px;
+        position: relative;
+    }
 
-    .btn-edit:hover {
-        background-color: #0d0d0e;
+    .tela-meus-projetos .overlap-group {
+        position: absolute;
+        width: 1440px;
+        height: 2000px;
+        top: 0;
+        left: 0;
+    }
+
+    .tela-meus-projetos .pexels-photo-by {
+        position: absolute;
+        width: 1440px;
+        height: 1517px;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+
+    .tela-meus-projetos .rectangle {
+        position: absolute;
+        width: 1440px;
+        height: 154px;
+        top: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(255, 250.75, 250.75, 0.6) 0%, rgba(217, 217, 217, 0) 100%);
+    }
+
+    .tela-meus-projetos .rectangle-2 {
+        position: absolute;
+        width: 1440px;
+        height: 191px;
+        top: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(255, 250.75, 250.75, 0.6) 0%, rgba(217, 217, 217, 0) 100%);
+    }
+
+    .tela-meus-projetos .logo-decorarqui {
+        position: absolute;
+        width: 218px;
+        height: 96px;
+        top: 37px;
+        left: 43px;
+        object-fit: cover;
+    }
+
+    .tela-meus-projetos .mdi-search {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 55px;
+        left: 1267px;
+    }
+
+    .tela-meus-projetos .mingcute-menu-fill {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 55px;
+        left: 1371px;
+    }
+
+    .tela-meus-projetos .rectangle-3 {
+        height: 491px;
+        background-color: #3a3838;
+        position: absolute;
+        width: 1440px;
+        top: 1509px;
+        left: 0;
+    }
+
+    .tela-meus-projetos .rectangle-4 {
+        height: 163px;
+        background: linear-gradient(180deg, rgba(133, 128, 113, 0.8) 5.21%, rgba(217, 217, 217, 0) 100%);
+        position: absolute;
+        width: 1440px;
+        top: 1509px;
+        left: 0;
+    }
+
+    .tela-meus-projetos .img {
+        width: 218px;
+        height: 96px;
+        top: 1538px;
+        left: 588px;
+        position: absolute;
+        object-fit: cover;
+    }
+
+    .tela-meus-projetos .text-wrapper {
+        position: absolute;
+        width: 309px;
+        top: 1754px;
+        left: 204px;
+        font-family: "Roboto-Black", Helvetica;
+        font-weight: 900;
+        color: #b5b5ae;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .tela-meus-projetos .text-wrapper-2 {
+        position: absolute;
+        width: 219px;
+        top: 1754px;
+        left: 578px;
+        font-family: "Roboto-Black", Helvetica;
+        font-weight: 900;
+        color: #b5b5ae;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .tela-meus-projetos .frame {
+        display: flex;
+        width: 132px;
+        align-items: flex-start;
+        gap: 3px;
+        position: absolute;
+        top: 1791px;
+        left: 204px;
+    }
+
+    .tela-meus-projetos .uim-whatsapp {
+        position: relative;
+        width: 20px;
+        height: 20px;
+    }
+
+    .tela-meus-projetos .text-wrapper-3 {
+        position: relative;
+        width: 148px;
+        height: 22px;
+        margin-top: -1px;
+        margin-right: -39px;
+        font-family: "Roboto-Medium", Helvetica;
+        font-weight: 500;
+        color: #afbd77;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .tela-meus-projetos .frame-2 {
+        display: flex;
+        width: 218px;
+        align-items: center;
+        gap: 4px;
+        position: absolute;
+        top: 1816px;
+        left: 205px;
+    }
+
+    .tela-meus-projetos .group {
+        position: relative;
+        width: 20px;
+        height: 17px;
+        margin-left: -1px;
+    }
+
+    .tela-meus-projetos .text-wrapper-4 {
+        position: relative;
+        width: 202px;
+        height: 22px;
+        margin-top: -1px;
+        margin-right: -6px;
+        font-family: "Roboto-Medium", Helvetica;
+        font-weight: 500;
+        color: #afbd77;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .tela-meus-projetos .frame-3 {
+        position: absolute;
+        width: 72px;
+        height: 20px;
+        top: 1841px;
+        left: 204px;
+    }
+
+    .tela-meus-projetos .rectangle-5 {
+        position: absolute;
+        width: 242px;
+        height: 30px;
+        top: 1781px;
+        left: 578px;
+        background-color: #3a3838;
+        border-radius: 3px;
+        border: 0.5px solid;
+        border-color: #fffafa;
+    }
+
+    .tela-meus-projetos .rectangle-6 {
+        position: absolute;
+        width: 393px;
+        height: 68px;
+        top: 1781px;
+        left: 843px;
+        background-color: #3a3838;
+        border-radius: 3px;
+        border: 0.5px solid;
+        border-color: #fffafa;
+    }
+
+    .tela-meus-projetos .rectangle-7 {
+        position: absolute;
+        width: 242px;
+        height: 30px;
+        top: 1819px;
+        left: 578px;
+        background-color: #3a3838;
+        border-radius: 3px;
+        border: 0.5px solid;
+        border-color: #fffafa;
+    }
+
+    .tela-meus-projetos .text-wrapper-5 {
+        position: absolute;
+        top: 1788px;
+        left: 848px;
+        font-family: "Roboto-Regular", Helvetica;
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .tela-meus-projetos .text-wrapper-6 {
+        position: absolute;
+        top: 1826px;
+        left: 583px;
+        font-family: "Roboto-Light", Helvetica;
+        font-weight: 300;
+        color: #ffffff;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .tela-meus-projetos .text-wrapper-7 {
+        position: absolute;
+        width: 219px;
+        top: 1920px;
+        left: 1040px;
+        font-family: "Roboto-Black", Helvetica;
+        font-weight: 900;
+        color: #b5b5ae;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: normal;
+        text-decoration: underline;
+        white-space: nowrap;
+    }
+
+    .tela-meus-projetos .rectangle-8 {
+        position: absolute;
+        width: 393px;
+        height: 68px;
+        top: 1781px;
+        left: 843px;
+        background-color: #3a3838;
+        border-radius: 3px;
+        border: 0.5px solid;
+        border-color: #fffafa;
+        transform: rotate(0.74deg);
+    }
+
+    .tela-meus-projetos .text-wrapper-8 {
+        position: absolute;
+        top: 1788px;
+        left: 583px;
+        font-family: "Roboto-Light", Helvetica;
+        font-weight: 300;
+        color: #ffffff;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .tela-meus-projetos .vector {
+        position: absolute;
+        width: 27px;
+        height: 26px;
+        top: 55px;
+        left: 1321px;
+    }
+
+    .tela-meus-projetos .rectangle-9 {
+        position: absolute;
+        width: 1440px;
+        height: 1286px;
+        top: 223px;
+        left: 0;
+        background-color: #7f7c6bcc;
+    }
+
+    .tela-meus-projetos .text-wrapper-9 {
+        position: absolute;
+        width: 236px;
+        top: 268px;
+        left: 602px;
+        font-family: "Roboto-Bold", Helvetica;
+        font-weight: 700;
+        color: #ffffff;
+        font-size: 40px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .tela-meus-projetos .logo-decorarqui-2 {
+        width: 243px;
+        height: 97px;
+        top: 366px;
+        left: 598px;
+        position: absolute;
+        object-fit: cover;
+    }
+
+    .tela-meus-projetos .rectangle-10 {
+        position: absolute;
+        width: 1440px;
+        height: 912px;
+        top: 598px;
+        left: 0;
+        background-color: #fffbfb;
+    }
+
+    .tela-meus-projetos .ellipse {
+        position: absolute;
+        width: 125px;
+        height: 125px;
+        top: 623px;
+        left: 657px;
+    }
+
+    .tela-meus-projetos .p {
+        position: absolute;
+        width: 656px;
+        top: 764px;
+        left: 392px;
+        font-family: "Roboto-Bold", Helvetica;
+        font-weight: 700;
+        color: #000000;
+        font-size: 40px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .tela-meus-projetos .text-wrapper-10 {
+        position: absolute;
+        width: 218px;
+        top: 844px;
+        left: 625px;
+        font-size: 32px;
+        font-family: "Roboto-Regular", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        text-decoration: underline;
+    }
+
+    .tela-meus-projetos .line {
+        width: 1326px;
+        height: 1px;
+        top: 832px;
+        left: 66px;
+        position: absolute;
+        object-fit: cover;
+    }
+
+    .tela-meus-projetos .line-2 {
+        width: 1px;
+        height: 549px;
+        top: 886px;
+        left: 1391px;
+        position: absolute;
+        object-fit: cover;
+    }
+
+    .tela-meus-projetos .line-3 {
+        width: 1px;
+        height: 549px;
+        top: 886px;
+        left: 331px;
+        position: absolute;
+        object-fit: cover;
+    }
+
+    .tela-meus-projetos .frame-4 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 86px;
+        position: absolute;
+        top: 977px;
+        left: 349px;
+        background-color: #c3cd9880;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid;
+        border-color: #0000004c;
+    }
+
+    .tela-meus-projetos .text-wrapper-11 {
+        position: relative;
+        width: 312px;
+        height: 41px;
+        margin-top: -1px;
+        font-family: "Roboto-Bold", Helvetica;
+        font-weight: 700;
+        color: #000000;
+        font-size: 36px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .tela-meus-projetos .frame-5 {
+        display: inline-flex;
+        align-items: flex-start;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .tela-meus-projetos .text-wrapper-12 {
+        position: relative;
+        width: 287px;
+        height: 41px;
+        margin-top: -1px;
+        font-family: "Roboto-Regular", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 32px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .tela-meus-projetos .flat-color-icons-ok {
+        position: relative;
+        width: 40px;
+        height: 40px;
+    }
+
+    .tela-meus-projetos .text-wrapper-13 {
+        position: relative;
+        width: 127px;
+        height: 41px;
+        font-family: "Roboto-Regular", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 32px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        text-decoration: underline;
+    }
+
+    .tela-meus-projetos .frame-6 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 86px;
+        position: absolute;
+        top: 1191px;
+        left: 349px;
+        background-color: #c3cd9880;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid;
+        border-color: #0000004c;
+    }
+
+    .tela-meus-projetos .frame-7 {
+        position: absolute;
+        width: 499px;
+        height: 165px;
+        top: 976px;
+        left: 868px;
+        background-color: #c3cd9880;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid;
+        border-color: #0000004c;
+    }
+
+    .tela-meus-projetos .text-wrapper-14 {
+        position: absolute;
+        width: 312px;
+        top: 10px;
+        left: 94px;
+        font-family: "Roboto-Bold", Helvetica;
+        font-weight: 700;
+        color: #000000;
+        font-size: 36px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .tela-meus-projetos .div-wrapper {
+        display: inline-flex;
+        align-items: flex-start;
+        position: absolute;
+        top: 62px;
+        left: 86px;
+    }
+
+    .tela-meus-projetos .text-wrapper-15 {
+        position: relative;
+        width: 321px;
+        height: 41px;
+        font-family: "Roboto-Regular", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 32px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .tela-meus-projetos .text-wrapper-16 {
+        position: absolute;
+        width: 127px;
+        top: 112px;
+        left: 186px;
+        font-family: "Roboto-Regular", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 32px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        text-decoration: underline;
+    }
+
+    .tela-meus-projetos .vector-2 {
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        top: 62px;
+        left: 410px;
+    }
+
+    .tela-meus-projetos .frame-8 {
+        position: absolute;
+        width: 499px;
+        height: 165px;
+        top: 1191px;
+        left: 868px;
+        background-color: #c3cd9880;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid;
+        border-color: #0000004c;
+    }
+
+    .tela-meus-projetos .frame-9 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 27px;
+        position: absolute;
+        top: 964px;
+        left: 40px;
+    }
+
+    .tela-meus-projetos .frame-10 {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 5px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .tela-meus-projetos .vector-3 {
+        position: relative;
+        width: 30px;
+        height: 30px;
+    }
+
+    .tela-meus-projetos .text-wrapper-17 {
+        position: relative;
+        width: 155px;
+        height: 41px;
+        margin-top: -1px;
+        font-family: "Roboto-Regular", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 24px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        text-decoration: underline;
+    }
+
+    .tela-meus-projetos .frame-11 {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 3px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .tela-meus-projetos .vector-4 {
+        position: relative;
+        width: 31px;
+        height: 31px;
+        margin-top: -0.5px;
+        margin-left: -0.5px;
+    }
+
+    .tela-meus-projetos .text-wrapper-18 {
+        position: relative;
+        width: 171px;
+        height: 41px;
+        margin-top: -1px;
+        font-size: 24px;
+        font-family: "Roboto-Regular", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        text-decoration: underline;
+    }
+
+    .tela-meus-projetos .text-wrapper-19 {
+        position: relative;
+        width: 232px;
+        height: 41px;
+        margin-top: -1px;
+        font-family: "Roboto-Regular", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 24px;
+        text-align: center;
+        letter-spacing: 0;
+        letter-spacing: 0;
+        line-height: normal;
+        text-decoration: underline;
+    }
+
+    .tela-meus-projetos .text-wrapper-20 {
+        position: relative;
+        width: 242px;
+        height: 41px;
+        margin-top: -1px;
+        font-family: "Roboto-Regular", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 24px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        text-decoration: underline;
+    }
+
+    .tela-meus-projetos .text-wrapper-21 {
+        position: relative;
+        width: 118px;
+        height: 41px;
+        margin-top: -1px;
+        font-family: "Roboto-Regular", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 24px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        text-decoration: underline;
+    }
+
+    .tela-meus-projetos .rectangle-11 {
+        position: absolute;
+        width: 1440px;
+        height: 154px;
+        top: 8px;
+        left: -1849px;
+        background: linear-gradient(180deg, rgba(255, 250.75, 250.75, 0.6) 0%, rgba(217, 217, 217, 0) 100%);
     }
