@@ -11,3 +11,4 @@ OLIVEIRA, Amanda da Fonseca; ROCHA, Everardo. Do lar ao trabalho: a mulher na re
 VILAREJO. O papel do designer de interiores e sua importância na construção: Invista em profissionais adequados para ter um resultado incrível!. G1, São Paulo, p. 1-2, 24 dez. 2022. Disponível em: https://g1.globo.com/rj/regiao-dos-lagos/especial-publicitario/vilarejo/vilarejo-solucao-em-casa/noticia/2022/12/24/o-papel-do-designer-de-interiores-e-sua-importancia-na-construcao.ghtml. Acesso em: 6 set. 2023.
 
 GLÓRIA, Paula Barbosa. Relações entre mídias, sociedade e as origens do design de interiores no Brasil. Revista INTRAMUROS, [S. l.], p. 1-2, 30 set. 2021. Disponível em: https://revistaintramuros.com.br/relacoes-entre-midias-sociedade-e-as-origens-do-design-de-interiores-no-brasil/. Acesso em: 6 set. 2023.
+XXXXX
