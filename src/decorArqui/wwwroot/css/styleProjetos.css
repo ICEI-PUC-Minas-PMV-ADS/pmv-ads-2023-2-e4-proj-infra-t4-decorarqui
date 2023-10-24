@@ -1,0 +1,45 @@
+﻿.container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinha verticalmente ao centro */
+    width: 100vw;
+    height: 100vh;
+    background-image: url('imgs/fundodetela.jpg');
+    background-size: cover;
+}
+
+.cardPrincipal {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1100px;
+    height: 800px;
+    border-radius: 15px;
+    background-color: lightgray;
+    align-content: center;
+    text-align:center;
+
+
+}
+body{
+    align-content:center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:black;
+    text-align:center;
+}
+button {
+    background-color: forestgreen;
+    color: white;
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+button:hover {
+        background-color: greenyellow;
+        font-size: 16px;
+        color: black;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

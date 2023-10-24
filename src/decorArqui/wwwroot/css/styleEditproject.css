@@ -1,0 +1,60 @@
+﻿.container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinha verticalmente ao centro */
+    width: 100vw;
+    height: 100vh;
+    background-image: url('imgs/fundodetela.jpg');
+    background-size: cover;
+}
+
+.cardEdit {
+    width: 600px;
+    height: 600px;
+    border-radius: 15px;
+    background-color: lightgray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    position: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    width: 100%;
+}
+    
+input {
+    align-content: center;
+    background-color: AFBD77;
+    border-radius: 15px;
+    width: 500px;
+    height: 35px;
+    text-align:center;
+}
+
+button {
+    background-color: forestgreen;
+    color: white;
+    width: 170px;
+    height: 35px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom:10px;
+}
+
+    button:hover {
+        background-color: greenyellow;
+        font-size: 16px;
+        color: black;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
