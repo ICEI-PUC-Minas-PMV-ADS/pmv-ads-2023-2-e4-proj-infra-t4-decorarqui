@@ -7,10 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\node_module\**" />
-    <Content Remove="wwwroot\node_module\**" />
-    <EmbeddedResource Remove="wwwroot\node_module\**" />
-    <None Remove="wwwroot\node_module\**" />
+    <Compile Remove="Views\Projeto\insertprojeto.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Projeto\deleteproject.cshtml" />
+    <Content Remove="Views\Projeto\editproject.cshtml" />
+    <Content Remove="Views\Projeto\projetos.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,9 +29,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Projeto\deleteproject.cshtml" />
+    <None Include="Views\Projeto\editproject.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
     <PackageReference Include="MongoDB.Driver" Version="2.21.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

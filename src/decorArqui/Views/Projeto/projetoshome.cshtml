@@ -1,13 +1,8 @@
-<<<<<<<< HEAD:src/decorArqui/Views/Projeto/Projetos.cshtml
-@page
-
-
-========
+Ôªø@page
 @{
     Layout = null;
 }
 @model Login
->>>>>>>> 3cd587d2dcda5cee237259a5bfa6cbdfed71ddad:src/decorArqui/Views/Projeto/projetos.cshtml
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="~/css/styleProjetos.css">
@@ -37,9 +32,9 @@
                 <tbody></tbody>
             </table>
             <br><br />
-            <a href="insertProject.html"><button id="novoprojeto">Novo Projeto</button></a>
+            <a asp-controller="Home" asp-action="NovoProjetos" id="novoprojeto"><button>Novo Projeto</button></a>
             <button id="editarprojeto">Editar Projeto</button>
-            <button id="excluirprojeto">Excluir Projeto</button></a>
+            <button id="excluirprojeto">Excluir Projeto</button>
         </div>
     </div>
 </body>
@@ -83,7 +78,7 @@
                 //para editar projeto
                 document.getElementById('editarprojeto').addEventListener('click', function () {
                     if (projetoSelecionado) {
-                        // Redirecione o usu·rio para a p·gina de ediÁ„o, passando os dados do projeto selecionado como par‚metros na URL
+                        // Redirecione o usu√°rio para a p√°gina de edi√ß√£o, passando os dados do projeto selecionado como par√¢metros na URL
                         const params = new URLSearchParams();
                         params.append('id', projetoSelecionado.id);
                         params.append('nome', projetoSelecionado.nome);
@@ -111,7 +106,7 @@
                     }
                 });
 
-                // FunÁ„o para excluir o projeto
+                // Fun√ß√£o para excluir o projeto
                 async function excluirProjeto() {
                     if (projetoSelecionado) {
                         const idProjeto = projetoSelecionado.id;
@@ -120,14 +115,14 @@
                                 method: 'DELETE',
                             });
                             if (response.ok) {
-                                // Projeto excluÌdo com sucesso
-                                // Atualize a lista de projetos ou faÁa qualquer outra aÁ„o necess·ria
+                                // Projeto exclu√≠do com sucesso
+                                // Atualize a lista de projetos ou fa√ßa qualquer outra a√ß√£o necess√°ria
                                 carregarProjetos();
                             } else {
                                 console.error('Falha ao excluir o projeto');
                             }
                         } catch (error) {
-                            console.error('Erro na solicitaÁ„o AJAX:', error);
+                            console.error('Erro na solicita√ß√£o AJAX:', error);
                         }
                     }
                 }
@@ -136,7 +131,7 @@
                 console.error('Falha ao carregar os projetos');
             }
         } catch (error) {
-            console.error('Erro na solicitaÁ„o AJAX:', error);
+            console.error('Erro na solicita√ß√£o AJAX:', error);
         }
 
     }
