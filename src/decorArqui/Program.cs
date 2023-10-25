@@ -16,6 +16,11 @@ builder.Services.AddControllers()
 
 builder.Services.Configure<decorArquiDatabaseSettings>(builder.Configuration.GetSection("DevNetStorageDatabase"));
 
+builder.Services.Configure<ProjetoDatabaseSettings>
+    (builder.Configuration.GetSection("DevNetStorageDatabase"));
+
+builder.Services.AddSingleton<ProjetoServices>();
+
 builder.Services.AddSingleton<ProjetoServices>();
 
 builder.Services.AddMvc().AddSessionStateTempDataProvider();
@@ -48,7 +53,7 @@ app.UseDefaultFiles(new DefaultFilesOptions { DefaultFileNames = new List<string
 
 app.UseCors(builder =>
 {
-    builder.WithOrigins("http://localhost:7018/api/projetos")
+    builder.WithOrigins("http://localhost:7216/api/projetos")
            .AllowAnyHeader()
            .AllowAnyMethod();
 });

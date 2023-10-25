@@ -12,10 +12,10 @@ namespace decorArqui.Services
         public ProjetoServices(IOptions<ProjetoDatabaseSettings> projetoServices)
         {
 
-            var mongoClient = new MongoClient(projetoServices.Value.connectionString);
+            var mongoClient = new MongoClient(projetoServices.Value.ConnectionString);
             var mongoDatabase = mongoClient.GetDatabase(projetoServices.Value.DatabaseName);
 
-            _projetoCollection = mongoDatabase.GetCollection<Projeto>(projetoServices.Value.ProjetoCollectionName);
+            _projetoCollection = mongoDatabase.GetCollection<Projeto>(projetoServices.Value.CollectionName);
         }
 
         public async Task<List<Projeto>> GetAsync() => //listagem dos projetos cadastrados

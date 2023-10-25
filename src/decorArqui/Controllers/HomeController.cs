@@ -60,7 +60,21 @@ namespace decorArqui.Controllers
         {
             return View("~/Views/Arquiteto/AvaliacaoCliente.cshtml");
         }
-        
+        public IActionResult Projetos()
+        {
+            return View("~/Views/Projeto/projetoshome.cshtml");
+        }
+        public IActionResult EditarProjetos()
+        {
+            return View("~/Views/Projeto/editproject.cshtml");
+        }
+        public IActionResult NovoProjetos()
+        {
+            return View("~/Views/Projeto/insertproject.cshtml");
+        }
+
+
+
         public async Task<ActionResult> PropostaCliente(string ArquitetoId)
         {
             var clientesAguardandoSuaProposta =  await _database.GetCollection<Arquiteto>("Usuario")

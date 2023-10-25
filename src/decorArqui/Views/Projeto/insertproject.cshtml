@@ -1,6 +1,8 @@
-<html lang="pt-br">
+﻿@{
+    Layout = null;
+}
 <head>
-    <link rel="stylesheet" href="../../wwwroot/css/styleInsertproject.css">
+    <link rel="stylesheet" href="~/css/styleInsertproject.css">
     <title>decorArqui | Incluir Novo Projeto</title>
 </head>
 <body>
@@ -20,11 +22,11 @@
             <input type="number" id="preco" placeholder="Preco">
             <br><br>
             <button id="salvarprojeto">Salvar</button>
-            <a href="index.html"><button id="cancelarprojeto">Cancelar</button></a>
+            <a asp-controller="Home" asp-action="Projetos" id="cancelarprojeto"><button>Cancelar</button></a>
         </div>
     </div>
     <script>
-        document.getElementById('salvarprojeto').addEventListener('click', function() {
+        document.getElementById('salvarprojeto').addEventListener('click', function () {
             // coletando os valores de todos os inputs
             var nome = document.getElementById('nome').value;
             var email = document.getElementById('email').value;
@@ -40,7 +42,7 @@
                 Descricao: descricao,
                 Preco: preco
             };
-            var url = 'http://localhost:7018/api/projetos';//url da api
+            var url = 'http://localhost:7216/api/projetos';//url da api
 
             //usando AJAX para enviar o itens para o backend
             var xhr = new XMLHttpRequest();

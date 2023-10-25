@@ -7,8 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Projeto\insertprojeto.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Projeto\deleteproject.cshtml" />
+    <Content Remove="Views\Projeto\editproject.cshtml" />
+    <Content Remove="Views\Projeto\projetos.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="wwwroot\node_module\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Projeto\deleteproject.cshtml" />
+    <None Include="Views\Projeto\editproject.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

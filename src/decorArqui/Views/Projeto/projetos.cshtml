@@ -1,7 +1,10 @@
-
+@{
+    Layout = null;
+}
+@model Login
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="../../wwwroot/css/styleProjetos.css">
+    <link rel="stylesheet" href="~/css/styleProjetos.css">
     <title>
         decorArqui | Projetos
     </title>
@@ -95,7 +98,7 @@
                             location.reload();
                         } else {
                             document.getElementById('excluirprojeto').disabled = false;
-                           
+
                         }
                     } else {
                         alert('Selecione um projeto para excluir.');
@@ -129,11 +132,11 @@
         } catch (error) {
             console.error('Erro na solicitação AJAX:', error);
         }
-        
+
     }
     window.onload = carregarProjetos;
 
-    
+
 </script>
 
 
