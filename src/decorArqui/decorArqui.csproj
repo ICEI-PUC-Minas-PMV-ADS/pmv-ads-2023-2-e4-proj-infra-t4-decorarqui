@@ -14,7 +14,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Projeto\Projetos.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Projeto\Projetos.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

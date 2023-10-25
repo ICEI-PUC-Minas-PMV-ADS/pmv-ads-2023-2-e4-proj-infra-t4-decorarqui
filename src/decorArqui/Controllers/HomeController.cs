@@ -60,6 +60,11 @@ namespace decorArqui.Controllers
         {
             return View("~/Views/Arquiteto/AvaliacaoCliente.cshtml");
         }
+
+        public IActionResult Projeto()
+        {
+            return View("~/Views/Projeto/Projeto.cshtml");
+        }
         
         public async Task<ActionResult> PropostaCliente(string ArquitetoId)
         {
