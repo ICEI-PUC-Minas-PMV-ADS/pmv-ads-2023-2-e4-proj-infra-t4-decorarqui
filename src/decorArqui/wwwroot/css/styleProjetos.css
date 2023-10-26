@@ -1,4 +1,10 @@
-﻿.container {
+﻿body {
+    background-image: url(../img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container {
     display: flex;
     justify-content: center;
     align-items: center; /* Alinha verticalmente ao centro */
@@ -9,37 +15,47 @@
 }
 
 .cardPrincipal {
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1100px;
     height: 800px;
     border-radius: 15px;
-    background-color: lightgray;
+    background-color: #7f7c6bcc;
     align-content: center;
-    text-align:center;
-
-
+    text-align: center;
 }
-body{
-    align-content:center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:black;
-    text-align:center;
+
+.logodecorArqui {
+    width: 200px;
+    height: 100px;
+    margin-top: 15px;
+}
+
+body {
+    align-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    text-align: center;
 }
 button {
-    background-color: forestgreen;
+    cursor: pointer;
+    background-color: #509403;
     color: white;
-    width: 150px;
-    height: 35px;
-    border-radius: 20px;
+    width: 290px;
+    height: 44px;
+    font-size: 14px;
+    border-radius: 10px;
+    font-family: "Roboto-Bold", Helvetica;
+    border: none;
     font-size: 16px;
+    font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 button:hover {
         background-color: greenyellow;
         font-size: 16px;
-        color: black;
+        color: dimgray;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

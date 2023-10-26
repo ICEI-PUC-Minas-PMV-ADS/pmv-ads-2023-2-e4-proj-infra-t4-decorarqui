@@ -1,4 +1,11 @@
-﻿.container {
+﻿body {
+    background-image: url(../img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center; /* Alinha verticalmente ao centro */
@@ -8,11 +15,16 @@
     background-size: cover;
 }
 
+.logodecorArqui {
+    width: 250px;
+    height: 150px;
+}
+
 .cardInsert {
     width: 600px;
-    height: 600px;
+    height: 90%;
     border-radius: 15px;
-    background-color: lightgray;
+    background-color: #7f7c6bcc;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -31,26 +43,52 @@ body {
     
 }
 input {
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
     align-content: center;
-    background-color: AFBD77;
+    background-color: #afbd77bf;
     border-radius: 15px;
     width: 350px;
-    height: 35px;
+    height: 40px;
+    border: none;
     text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border: 2px solid transparent;
+    transition: border;
+}
+#descricao {
+    margin-bottom: 30px;
+    height: 200px;
+}
+input:focus {
+    outline: none;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+input::placeholder {
+    color: white;
 }
 button {
-    background-color: forestgreen;
+    cursor: pointer;
+    background-color: #509403;
     color: white;
-    width: 150px;
+    width: 290px;
     height: 35px;
-    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
     font-size: 16px;
+    font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
     button:hover {
         background-color: greenyellow;
         font-size: 16px;
-        color: black;
+        color: dimgray;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }

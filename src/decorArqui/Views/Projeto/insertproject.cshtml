@@ -9,18 +9,17 @@
     <div class="container">
         <div class="cardInsert">
             <div class="logoproject">
-                <img class="logodecorArqui" src="imgs/Logo_decorArqui_modelo2.png" width="150px" height="90px">
+                <img class="logodecorArqui" src="~/img/Logo_decorArqui_modelo2.png">
             </div>
-            <input type="text" id="nome" placeholder="Nome">
+            <input type="text" id="nome" placeholder="Nome" autocomplete="off">
             <br><br>
-            <input type="email" id="email" placeholder="Email">
+            <input type="email" id="email" placeholder="Email" autocomplete="off">
             <br><br>
-            <input type="text" id="endereco" placeholder="Endereco do projeto">
+            <input type="text" id="endereco" placeholder="Endereco do projeto" autocomplete="off">           
             <br><br>
-            <input type="text" id="descricao" placeholder="Escreva uma breve descricao sobre o projeto">
+            <input type="number" id="preco" placeholder="Preco" autocomplete="off">
             <br><br>
-            <input type="number" id="preco" placeholder="Preco">
-            <br><br>
+            <input type="text" id="descricao" placeholder="Escreva uma breve descricao sobre o projeto" autocomplete="off">
             <button id="salvarprojeto">Salvar</button>
             <a asp-controller="Home" asp-action="Projetos" id="cancelarprojeto"><button>Cancelar</button></a>
         </div>
