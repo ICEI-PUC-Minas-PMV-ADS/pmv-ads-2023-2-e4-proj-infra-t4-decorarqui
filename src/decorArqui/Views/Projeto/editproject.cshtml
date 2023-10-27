@@ -45,13 +45,18 @@
         const params = new URLSearchParams(window.location.search);
 
         // Recupere os valores dos parâmetros da URL
-        const idProjeto = params.get('id');
-        const nomeProjeto = params.get('nome');
-        const emailProjeto = params.get('email');
-        const enderecoProjeto = params.get('endereco');
-        const descricaoProjeto = params.get('descricao');
-        const precoProjeto = params.get('preco');
-
+        const idProjeto = params.get('Id');
+        const nomeProjeto = params.get('Nome');
+        const emailProjeto = params.get('Email');
+        const enderecoProjeto = params.get('Endereco');
+        const descricaoProjeto = params.get('Eescricao');
+        const precoProjeto = params.get('Preco');
+        console.log('idProjeto:', idProjeto);
+        console.log('nomeProjeto:', nomeProjeto);
+        console.log('emailProjeto:', emailProjeto);
+        console.log('enderecoProjeto:', enderecoProjeto);
+        console.log('descricaoProjeto:', descricaoProjeto);
+        console.log('precoProjeto:', precoProjeto);
         // Preencha os campos da página de edição com os valores dos parâmetros
         document.getElementById('idprojetoforedit').value = idProjeto;
         document.getElementById('nomeeditar').value = nomeProjeto;

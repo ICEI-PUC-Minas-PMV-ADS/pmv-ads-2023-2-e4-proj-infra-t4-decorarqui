@@ -2,7 +2,6 @@
 @{
     Layout = null;
 }
-@model Login
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="~/css/styleProjetos.css">
@@ -50,15 +49,15 @@
                 projectTableBody.innerHTML = '';
 
                 projetos.forEach(projeto => {
-                    console.log(projeto); // Adicione esta linha
+                    console.log(projeto); 
                     const row = document.createElement('tr');
                     row.innerHTML = `
-                        <td><input type="checkbox" name="selecionarprojeto" value="${projeto.id}"></td>
-                        <td>${projeto.nome}</td>
-                        <td>${projeto.email}</td>
-                        <td>${projeto.endereco}</td>
-                        <td>${projeto.descricao}</td>
-                        <td>${projeto.preco}</td>
+                        <td><input type="checkbox" name="selecionarprojeto" value="${projeto.Id}"></td>
+                        <td>${projeto.Nome}</td>
+                        <td>${projeto.Email}</td>
+                        <td>${projeto.Endereco}</td>
+                        <td>${projeto.Descricao}</td>
+                        <td>${projeto.Preco}</td>
                      `;
                     projectTableBody.appendChild(row);
                 });
@@ -70,25 +69,23 @@
                     if (event.target.name === 'selecionarprojeto') {
                         const checkboxes = document.querySelectorAll('input[name="selecionarprojeto"]');
                         const selecionados = Array.from(checkboxes).filter(checkbox => checkbox.checked);
+                        
 
                         // Verifique se apenas um projeto foi selecionado
                         if (selecionados.length === 1) {
-                            projetoSelecionado = projetos.find(projeto => projeto.id === selecionados[0].value);
+                            projetoSelecionado = projetos.find(projeto => projeto.Id === selecionados[0].value);
+                            console.log(projetoSelecionado)
+                            
                         }
+                        console.log(projetoSelecionado);
                     }
                 });
                 //para editar projeto
                 document.getElementById('editarprojeto').addEventListener('click', function () {
                     if (projetoSelecionado) {
-                        // Redirecione o usuário para a página de edição, passando os dados do projeto selecionado como parâmetros na URL
-                        const params = new URLSearchParams();
-                        params.append('id', projetoSelecionado.id);
-                        params.append('nome', projetoSelecionado.nome);
-                        params.append('email', projetoSelecionado.email);
-                        params.append('endereco', projetoSelecionado.endereco);
-                        params.append('descricao', projetoSelecionado.descricao);
-                        params.append('preco', projetoSelecionado.preco);
-                        window.location.href = `editproject.html?${params.toString()}`;
+                        console.log(projetoSelecionado);
+                        // Redirecione o usuário para a ação EditarProjetos da HomeController, passando os dados do projeto selecionado como parâmetros.
+                        window.location.href = `/Home/EditarProjetos?id=${projetoSelecionado.Id}&nome=${projetoSelecionado.Nome}&email=${projetoSelecionado.Email}&endereco=${projetoSelecionado.Endereco}&descricao=${projetoSelecionado.Descricao}&preco=${projetoSelecionado.Preco}`;
                     }
                 });
                 //para excluir projeto
@@ -111,7 +108,7 @@
                 // Função para excluir o projeto
                 async function excluirProjeto() {
                     if (projetoSelecionado) {
-                        const idProjeto = projetoSelecionado.id;
+                        const idProjeto = projetoSelecionado.Id;
                         try {
                             const response = await fetch('http://localhost:7216/api/projetos/' + idProjeto, {
                                 method: 'DELETE',

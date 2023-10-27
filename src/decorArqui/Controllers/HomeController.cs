@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Razor.Compilation;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
 using System.Diagnostics;
 using MongoDB.Driver;
+using System.Web.Helpers;
 
 namespace decorArqui.Controllers
 {
@@ -64,8 +65,19 @@ namespace decorArqui.Controllers
         {
             return View("~/Views/Projeto/projetoshome.cshtml");
         }
-        public IActionResult EditarProjetos()
+        public IActionResult EditarProjetos(string Id, string Nome, string Email, string Endereco, string Descricao, string Preco)
         {
+            // Faça o processamento necessário aqui
+            // Passe os valores para a visualização editproject.cshtml
+            ViewData["Id"] = Id;
+            ViewData["Nome"] = Nome;
+            ViewData["Email"] = Email;
+            ViewData["Endereco"] = Endereco;
+            ViewData["Descricao"] = Descricao;
+            ViewData["Preco"] = Preco;
+
+            Console.WriteLine($"Id: {Id}, Nome: {Nome}, Email: {Email}, Endereco: {Endereco}, Descricao: {Descricao}, Preco: {Preco}");
+
             return View("~/Views/Projeto/editproject.cshtml");
         }
         public IActionResult NovoProjetos()
