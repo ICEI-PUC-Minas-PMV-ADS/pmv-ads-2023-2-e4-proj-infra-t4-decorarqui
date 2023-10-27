@@ -15,13 +15,13 @@ namespace decorArqui.Services
             var mongoClient = new MongoClient(projetoServices.Value.ConnectionString);
             var mongoDatabase = mongoClient.GetDatabase(projetoServices.Value.DatabaseName);
 
-            _projetoCollection = mongoDatabase.GetCollection<Projeto>(projetoServices.Value.CollectionName);
+            _projetoCollection = mongoDatabase.GetCollection<Projeto>("projetos");
         }
 
         public async Task<List<Projeto>> GetAsync() => //listagem dos projetos cadastrados
-            await _projetoCollection.Find(x => true).ToListAsync();
+           await _projetoCollection.Find(x => true).ToListAsync();
         public async Task<Projeto> GetAsync(string id) =>
-            await _projetoCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
+           await _projetoCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
         public async Task CreateAsync(Projeto projeto) => //criação de novo projeto
             await _projetoCollection.InsertOneAsync(projeto);
         public async Task UpdateAsync(string id, Projeto projeto) //Editar o projeto cadastrado

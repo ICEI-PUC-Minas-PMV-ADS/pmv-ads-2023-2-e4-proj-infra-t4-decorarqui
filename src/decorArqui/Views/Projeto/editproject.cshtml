@@ -1,33 +1,43 @@
+﻿@page
+@{
+    Layout = null;
+}
 <html lang="pt-br">
-    <head>
-        <link rel="stylesheet" href="../../wwwroot/css/styleEditproject.css">
-        <title>
-            decorArqui | Editar Projeto
-        </title>
-    </head>
-    <div class="container">
-        <div class="cardEdit">
-            <div class="logoproject">
-                <img class="logodecorArqui" src="imgs/Logo_decorArqui_modelo2.png" width="150px" height="90px">
-            </div>
-            <body>
-                <input id="idprojetoforedit">
-                <br><br />
-                <input type="text" id="nomeeditar">
-                <br><br />
-                <input type="email" id="emaileditar">
-                <br><br />
-                <input type="text" id="enderecoeditar">
-                <br><br />
-                <input type="text" id="descricaoeditar">
-                <br><br />
-                <input type="text" id="precoeditar">
-                <br><br />
-                <button id="salvarprojetoeditado">Salvar Alterações</button>
-                <a href="index.html"><button id="voltarparatelainicial">Voltar</button></a>
-            </body>
+<head>
+    <link rel="stylesheet" href="~/css/styleEditproject.css">
+    <title>
+        decorArqui | Editar Projeto
+    </title>
+</head>
+<div class="container">
+    <div class="cardEdit">
+        <div class="logoproject">
+            <img class="logodecorArqui" src="//img/Logo_decorArqui_modelo2.png" width="150px" height="90px">
         </div>
+        <body>
+            <input id="idprojetoforedit">
+            <br>
+            <br />
+            <input type="text" id="nomeeditar">
+            <br>
+            <br />
+            <input type="email" id="emaileditar">
+            <br>
+            <br />
+            <input type="text" id="enderecoeditar">
+            <br>
+            <br />
+            <input type="text" id="descricaoeditar">
+            <br>
+            <br />
+            <input type="text" id="precoeditar">
+            <br>
+            <br />
+            <button id="salvarprojetoeditado">Salvar Alterações</button>
+            <a asp-controller="Home" asp-action="Projetos" id="voltarparatelainicial"><button>Cancelar</button></a>
+        </body>
     </div>
+</div>
 </html>
 <script>
 
@@ -70,7 +80,7 @@
             Preco: precoProjeto,
         };
 
-        fetch('http://localhost:7018/api/projetos/' + idProjeto,{
+        fetch('http://localhost:7216/api/projetos/' + idProjeto, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -86,7 +96,7 @@
             })
             .catch(error => console.error('Erro na solicitação AJAX:', error));
 
-        
+
     });
 
 </script>

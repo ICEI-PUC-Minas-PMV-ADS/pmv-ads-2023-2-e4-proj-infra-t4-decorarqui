@@ -44,7 +44,7 @@
     //carregar todos os itens cadastrados no mongodb e mostrar na tela
     async function carregarProjetos() {
         try {
-            const response = await fetch('/api/projetos');
+            const response = await fetch('http://localhost:7216//api/projetos');
             if (response.ok) {
                 const projetos = await response.json();
                 const projectTableBody = document.querySelector('#projectTable tbody');//preencher todos os itens na tabela

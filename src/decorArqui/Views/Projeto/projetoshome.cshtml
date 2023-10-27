@@ -33,7 +33,7 @@
             </table>
             <br><br />
             <a asp-controller="Home" asp-action="NovoProjetos" id="novoprojeto"><button>Novo Projeto</button></a>
-            <button id="editarprojeto">Editar Projeto</button>
+            <a asp-controller="Home" asp-action="EditarProjetos" id="editarprojeto"><button>Editar Projeto</button></a>
             <button id="excluirprojeto">Excluir Projeto</button>
         </div>
     </div>
@@ -50,6 +50,7 @@
                 projectTableBody.innerHTML = '';
 
                 projetos.forEach(projeto => {
+                    console.log(projeto); // Adicione esta linha
                     const row = document.createElement('tr');
                     row.innerHTML = `
                         <td><input type="checkbox" name="selecionarprojeto" value="${projeto.id}"></td>
@@ -58,9 +59,10 @@
                         <td>${projeto.endereco}</td>
                         <td>${projeto.descricao}</td>
                         <td>${projeto.preco}</td>
-                    `;
+                     `;
                     projectTableBody.appendChild(row);
                 });
+
 
                 let projetoSelecionado = null;
 
@@ -111,7 +113,7 @@
                     if (projetoSelecionado) {
                         const idProjeto = projetoSelecionado.id;
                         try {
-                            const response = await fetch('http://localhost:7018/api/projetos/' + idProjeto, {
+                            const response = await fetch('http://localhost:7216/api/projetos/' + idProjeto, {
                                 method: 'DELETE',
                             });
                             if (response.ok) {

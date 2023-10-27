@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Projeto\editproject.cshtml.cs" />
     <Compile Remove="Views\Projeto\insertprojeto.cshtml.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Remove="Views\Projeto\deleteproject.cshtml" />
-    <Content Remove="Views\Projeto\editproject.cshtml" />
     <Content Remove="Views\Projeto\projetos.cshtml" />
   </ItemGroup>
 
@@ -25,12 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Projeto\Projetos.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="Views\Projeto\deleteproject.cshtml" />
-    <None Include="Views\Projeto\editproject.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

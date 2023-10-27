@@ -13,17 +13,17 @@ namespace decorArqui.Models
         public string? Id { get; set; }
         [BsonElement("Nome")]
         [Required]
-        public string Nome { get; set; } = null;
+        public string Nome { get; set; }
         [Required]
-        [BsonElement("E-mail")]
-        public string Email { get; set; } = null;
+        [BsonElement("Email")]
+        public string Email { get; set; }
         [Required]
-        [BsonElement("Endereço")]
-        public string Endereco { get; set; } = null;
+        [BsonElement("Endereco")]
+        public string Endereco { get; set; }
         [Required]
-        [BsonElement("Descrição")]
-        public string Descricao { get; set; } = null;
-        [BsonElement("Preço")]
+        [BsonElement("Descricao")]
+        public string Descricao { get; set; }
+        [BsonElement("Preco")]
         [Required]
         public decimal Preco { get; set; }
     }
