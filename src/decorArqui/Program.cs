@@ -67,6 +67,7 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllerRoute(
         name: "api",
         pattern: "api/{controller=Projetos}/{action=Get}/{id?}");
+    
 });
 
 // Configure the HTTP request pipeline.
