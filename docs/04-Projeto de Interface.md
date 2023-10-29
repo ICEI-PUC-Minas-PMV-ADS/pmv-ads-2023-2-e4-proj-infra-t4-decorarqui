@@ -14,11 +14,9 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 ### Cliente
 <img width="723" alt="Diagrama_Fluxo_Cliente" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/103225367/c5826c38-3a70-42a0-8069-0854db38ce54">
 
+### Arquiteto
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
-
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
+### Lojas Parceiras
 
 ## Wireframes
 
