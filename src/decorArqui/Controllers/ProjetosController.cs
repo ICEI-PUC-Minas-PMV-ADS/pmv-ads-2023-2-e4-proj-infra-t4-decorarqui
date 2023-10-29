@@ -27,11 +27,6 @@ namespace decorArqui.Controllers
         [HttpPost]//api de cadastro dos projetos
         public async Task<Projeto> PostProjeto(Projeto projeto)
         {
-                var cliente =  await _database.GetCollection<Cliente>("Usuario")
-                .Find(u => u.Nome == "soucliente").FirstOrDefaultAsync();
-
-            projeto.ClienteId = cliente.Id;
-            projeto.ClienteNome = cliente.Nome;
             await _projetoServices.CreateAsync(projeto);
 
             return projeto;
