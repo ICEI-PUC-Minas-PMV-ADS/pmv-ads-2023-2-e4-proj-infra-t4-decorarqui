@@ -15,32 +15,17 @@
     background-size: cover;
 }
 
-.logodecorArqui {
-    width: 250px;
-    height: 150px;
-}
-
 .cardInsert {
-    width: 600px;
-    height: 90%;
-    border-radius: 15px;
-    background-color: #7f7c6bcc;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 1100px;
+    height: 800px;
+    border-radius: 15px;
+    background-color: #7f7c6bcc;
+    align-content: center;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-body {
-    position:center;
-    justify-content:center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: black;
-    
 }
 input {
     font-family: "Roboto-Bold", Helvetica;

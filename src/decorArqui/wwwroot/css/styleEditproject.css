@@ -1,4 +1,11 @@
-﻿.container {
+﻿body {
+    background-image: url(../img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center; /* Alinha verticalmente ao centro */
@@ -7,22 +14,56 @@
     background-image: url('imgs/fundodetela.jpg');
     background-size: cover;
 }
-
-.cardEdit {
-    width: 600px;
-    height: 600px;
+input {
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    align-content: center;
+    background-color: #afbd77bf;
     border-radius: 15px;
-    background-color: lightgray;
+    width: 350px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    border: 2px solid transparent;
+    transition: border;
+}
+
+.logodecorArqui {
+    width: 200px;
+    height: 100px;
+    margin-top: 15px;
+}
+
+#descricao {
+    margin-bottom: 30px;
+    height: 200px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+input::placeholder {
+    color: white;
+}
+.cardEdit {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 1100px;
+    height: 800px;
+    border-radius: 15px;
+    background-color: #7f7c6bcc;
+    align-content: center;
     text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 body {
