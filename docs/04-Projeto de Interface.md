@@ -17,8 +17,6 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 ### Arquiteto
 <img width="732" alt="Diagrama_Fluxo_Arquiteto" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/103225367/fe1021cf-f7d6-45df-9f63-c7c7703010a9">
 
-### Lojas Parceiras
-
 ## Wireframes
 
 ![Exemplo de Wireframe](img/wireframe-example.png)
