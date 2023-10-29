@@ -19,15 +19,23 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
-
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+![Tela Home Page](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/511ee014-3700-4721-a771-420dd3a6d26a)
+![Login Cliente Novo Cadastro](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/1712e452-0131-41c6-b650-353c80106ba5)
+![Tela - Cadastro Profissional Novo Cadastro](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/fd0fb629-b1f0-4dce-9b2c-e6bb113cac58)
+![Login Cliente](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/f58a7484-d26c-40e4-8777-16513662dd31)
+![Tela - Cadastro Profissional Novo Cadastro-1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/5368a6d8-89b2-4cdb-ab49-d7648854ad52)
+![Tela de Busca](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/cc726209-da8c-4659-8150-0a5680763215)
+![Tela de Busca (RESLTADOS)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/58f182e8-6ddb-45cb-bc77-a96143a9cdf8)
+![Tela - Favoritos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/b4a928f4-f94c-44ea-9377-c570db2c7a29)
+![Tela - Meus projetos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/c835eaed-1d6a-457d-af84-0cc27b3be8f5)
+![Tela - Minha Conta Prof](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/e8656847-fb3d-485b-82c2-441152fba9a8)
+![Tela - Minha Conta](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/e98204e3-5283-433e-8b93-262799f3b1d3)
+![Tela - Minha Conta-1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/1fe49ab7-d6d3-43b0-a552-5e817483bda1)
+![Tela - Minhas avaliações](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/75a29995-bee5-4b65-ad48-45939d774bdd)
+![Tela (DETALHES 1)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/a2d13f45-0431-446a-8f72-ba8b3164f416)
+![Tela (DETALHES 2)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/9fed5642-6fa5-44eb-8956-7b7270ec8915)
+![Tela (DETALHES 3)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/1636dbdd-0dcf-42b0-b848-eb16620db776)
+![Tela (DETALHES 4)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/509500a2-2571-442a-9870-1df981a858da)
+![Tela (DETALHES 5)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/f5b28f6f-5fc8-4a83-9ad9-24e63241d6ae)
+![Tela (DETALHES 5)-1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/4f1bacc3-a504-46c9-a315-43700cb3949b)
+![Tela (DETALHES 6)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/4c078926-345b-485a-a852-f0c498ceaa6b)
