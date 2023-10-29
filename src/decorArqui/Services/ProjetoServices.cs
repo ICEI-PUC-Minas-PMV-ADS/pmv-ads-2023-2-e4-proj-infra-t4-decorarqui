@@ -15,7 +15,7 @@ namespace decorArqui.Services
             var mongoClient = new MongoClient(projetoServices.Value.ConnectionString);
             var mongoDatabase = mongoClient.GetDatabase(projetoServices.Value.DatabaseName);
 
-            _projetoCollection = mongoDatabase.GetCollection<Projeto>("projetos");
+            _projetoCollection = mongoDatabase.GetCollection<Projeto>("Projeto");
         }
 
         public async Task<List<Projeto>> GetAsync() => //listagem dos projetos cadastrados

@@ -21,7 +21,7 @@ builder.Services.Configure<ProjetoDatabaseSettings>
 
 builder.Services.AddSingleton<ProjetoServices>();
 
-builder.Services.AddSingleton<ProjetoServices>();
+builder.Services.AddScoped<ArquitetoServices>();
 
 builder.Services.AddMvc().AddSessionStateTempDataProvider();
 

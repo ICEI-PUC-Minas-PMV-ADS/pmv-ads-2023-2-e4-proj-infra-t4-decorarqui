@@ -710,6 +710,21 @@
         text-decoration: underline;
     }
 
+.tela-meus-projetos .text-wrapper-22 {
+    position: relative;
+    width: 171px;
+    height: 41px;
+    margin-top: -1px;
+    font-size: 24px;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    text-decoration: underline;
+}
+
     .tela-meus-projetos .rectangle-11 {
         position: absolute;
         width: 1440px;

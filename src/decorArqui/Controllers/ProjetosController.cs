@@ -12,10 +12,12 @@ namespace decorArqui.Controllers
     public class ProjetosController : ControllerBase
     {
         private readonly ProjetoServices _projetoServices;
+        private IMongoDatabase _database;
 
-        public ProjetosController(ProjetoServices projetoServices)
+        public ProjetosController(IMongoDatabase database, ProjetoServices projetoServices)
         {
             _projetoServices = projetoServices;
+            _database = database;
         }
 
         [HttpGet]//api de listagem dos projetos cadastrados
@@ -25,6 +27,11 @@ namespace decorArqui.Controllers
         [HttpPost]//api de cadastro dos projetos
         public async Task<Projeto> PostProjeto(Projeto projeto)
         {
+                var cliente =  await _database.GetCollection<Cliente>("Usuario")
+                .Find(u => u.Nome == "soucliente").FirstOrDefaultAsync();
+
+            projeto.ClienteId = cliente.Id;
+            projeto.ClienteNome = cliente.Nome;
             await _projetoServices.CreateAsync(projeto);
 
             return projeto;

@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <h1>Criar proposta para o cliente @Proposta.Cliente.Nome (@Proposta.Cliente.Id)</h1>
+        <h1>Criar proposta para o cliente @Proposta.Cliente.Nome (@Proposta.ClienteId)</h1>
     </header>
     <div class="container">
             <form asp-controller="Home" asp-action="PropostaClienteSalvarProposta" method="get">
@@ -22,8 +22,7 @@
         <div class="academic-history">
             <div class="form-group">
                 <input type="text" id="Orcamento" name="Orcamento" placeholder="preço referente a solicitação do cliente">
-                <div class="form-group"><input style="display: none;" name="ArquitetoId" id="ArquitetoId" value="@Proposta.Arquiteto.Id"></div>
-                <div class="form-group"><input style="display: none;" name="ClientId" id="ClientId" value="@Proposta.Cliente.Id"></div>
+                <div class="form-group"><input style="display: none;" name="ClientId" id="ClientId" value="@Proposta.ClienteId"></div>
             </div>
         </div>
 

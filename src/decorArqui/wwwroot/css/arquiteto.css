@@ -27,23 +27,25 @@ h1 {
 }
 
 /* Estilos CSS para os campos de perfil */
-.profile-info {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 10px;
-}
+.reforma_sa {
+    font-size: 36px;
+    font-family: "Roboto";
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+    width: 312px;
+    height: 41px;
 
-label {
-    font-weight: bold;
-}
-
-button {
-    margin-top: 15px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 3px;
-    font-size: 16px;
-    cursor: pointer;
-}
+.status:_co {
+    font-size: 32px;
+    font-family: "Roboto";
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    width: 287px;
+    height: 41px;
+.detalhes {
+    font-size: 32px;
+    font-family: "Roboto";
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    width: 127px;
+    height: 41px;

@@ -1,0 +1,150 @@
+﻿@model ArquitetoViewModel
+@{
+    Layout = null;
+}
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="~/css/styleOrcamentos.css">
+    <title>
+        decorArqui | Projetos
+    </title>
+</head>
+<body>
+    <div class="container">
+        <div class="cardPrincipal">
+            <div class="logoproject">
+                <img class="logodecorArqui" src="~/img/Logo_decorArqui_modelo2.png">
+            </div>
+            <h1>Propostas em Aberto:</h1>
+            <div style="display: flex; justify-content: center; align-items: center;">
+            <table id="PropostasEmAbertoTable">
+                <thead>
+                    <tr>
+                        <th>Selecionar</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Endereco</th>
+                        <th>Descricao</th>
+                        <th>Preco</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            </div>
+            <h1>Propostas Aceitas:</h1>
+            <div style="display: flex; justify-content: center; align-items: center; ">
+            <table id="PropostasAceitasTable">
+                            <thead>
+                                <tr>
+                                    <th>Selecionar</th>
+                                    <th>Nome</th>
+                                    <th>Email</th>
+                                    <th>Endereco</th>
+                                    <th>Descricao</th>
+                                    <th>Preco</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+            </div>
+            <h1>Propostas Recusadas:</h1>
+            <div style="display: flex; justify-content: center; align-items: center;">
+            <table id="PropostasRecusadosTable">
+                            <thead>
+                                <tr>
+                                    <th>Selecionar</th>
+                                    <th>Nome</th>
+                                    <th>Email</th>
+                                    <th>Endereco</th>
+                                    <th>Descricao</th>
+                                    <th>Preco</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+            </div>
+            <h1>Projetos sem Orçamento:</h1>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <table id="ProjetosSemOrcametoTable">
+                    <thead>
+                    <tr>
+                        <th>Selecionar</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Endereco</th>
+                        <th>Descricao</th>
+                        <th>Preco</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <br></br>
+            <a asp-controller="Home" asp-action="ArquitetoOrcamento" asp-route-id="@Model.ArquitetoId"  id="novaproposta"><button>Nova Proposta</button></a>
+            <button id="excluirproposta">Excluir Proposta</button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    
+    const popularTable = (lista, tableBody, checkboxname) => {
+                        lista.forEach(orcamento => {
+                            console.log(orcamento); 
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td><input type="checkbox" id="${checkboxname}-${orcamento.Id}" name="${checkboxname}" value="${orcamento.Id}"></td>
+                                <td>${orcamento.Nome}</td>
+                                <td>${orcamento.Email}</td>
+                                <td>${orcamento.Endereco}</td>
+                                <td>${orcamento.Descricao}</td>
+                                <td>${orcamento.Preco}</td>
+                             `;
+                            tableBody.appendChild(row);
+                        });
+                        
+                        
+                     let projetoSelecionado = null;
+     
+                     tableBody.addEventListener('change', function (event) {
+                         if (event.target.name === `${checkboxname}`) {
+                             const checkboxes = document.querySelectorAll(`input[name=${checkboxname}]`);
+                             const selecionados = Array.from(checkboxes).filter(checkbox => checkbox.checked);
+                             
+                             if (selecionados.length === 1) {
+                                 proposta = lista.find(projeto => projeto.Id === selecionados[0].value);
+                                 console.log(proposta)
+                             }
+                         }
+                     });                   
+                        
+    }
+    
+    async function carregarProjetos() {
+            const url = window.location.href;
+            const id = url.split("/OrcamentosHome/")[1];
+
+            const response = await fetch(`/api/propostas?id=${id}`);
+            if (response.ok) {
+                const arquiteto = await response.json();
+                const orcamentosEmAbertoTableBody = document.querySelector('#PropostasEmAbertoTable tbody');
+                const orcamentosAceitasTableBody = document.querySelector('#PropostasAceitasTable tbody');
+                const orcamentosRecusadasTableBody = document.querySelector('#PropostasRecusadosTable tbody');                                
+                const projetosSemOrcamentoTableBody = document.querySelector('#ProjetosSemOrcametoTable tbody');
+                orcamentosEmAbertoTableBody.innerHTML = '';
+                orcamentosAceitasTableBody.innerHTML = '';
+                orcamentosRecusadasTableBody.innerHTML = '';
+                projetosSemOrcamentoTableBody.innerHTML = '';
+                
+                popularTable(arquiteto.PropostasEmAberto, orcamentosEmAbertoTableBody, "selecionarorcamentosEmAberto");
+                popularTable(arquiteto.PropostasAceitas, orcamentosAceitasTableBody, "selecionarorcamentosAceitas");
+                popularTable(arquiteto.PropostasRecusados, orcamentosRecusadasTableBody, "selecionarorcamentosRecusadas");
+                popularTable(arquiteto.ProjetosSemOrcamento, projetosSemOrcamentoTableBody, "selecionarprojetosSemOrcamento");
+
+         }
+
+    }
+    window.onload = carregarProjetos;
+</script>
+
+

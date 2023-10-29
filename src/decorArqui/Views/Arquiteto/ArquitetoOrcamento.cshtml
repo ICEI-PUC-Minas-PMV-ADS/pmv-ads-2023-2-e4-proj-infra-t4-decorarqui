@@ -1,0 +1,65 @@
+@model ArquitetoViewModel
+@{
+    Layout = null;
+}
+<head>
+    <link rel="stylesheet" href="~/css/styleInsertproject.css">
+    <title>decorArqui | Incluir Novo Projeto</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cardInsert">
+            <div class="logoproject">
+                <img class="logodecorArqui" src="~/img/Logo_decorArqui_modelo2.png">
+            </div>
+            <input type="text" id="nome" placeholder="Nome" autocomplete="off">
+            @* @Html.DropDownListFor(model => model.PropostasEmAberto, ViewBag.ListaDeProjetos as SelectList) *@
+            <br><br>
+            <input type="email" id="email" placeholder="Email" autocomplete="off">
+            <br><br>
+            <input type="text" id="endereco" placeholder="Endereco do projeto" autocomplete="off">           
+            <br><br>
+            <input type="number" id="preco" placeholder="Preco" autocomplete="off">
+            <br><br>
+            <input type="text" id="descricao" placeholder="Escreva uma breve descricao sobre o projeto" autocomplete="off">
+            <button id="salvarprojeto">Salvar</button>
+            <a asp-controller="Home" asp-action="Projetos" id="cancelarprojeto"><button>Cancelar</button></a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('salvarprojeto').addEventListener('click', function () {
+            // coletando os valores de todos os inputs
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var endereco = document.getElementById('endereco').value;
+            var descricao = document.getElementById('descricao').value;
+            var preco = parseFloat(document.getElementById('preco').value);
+
+            //transferindo todos os itens coletados em uma variavel para enviar para o mongodb
+            var projeto = {
+                Nome: nome,
+                Email: email,
+                Endereco: endereco,
+                Descricao: descricao,
+                Preco: preco
+            };
+            var url = 'http://localhost:7216/api/projetos';//url da api
+
+            //usando AJAX para enviar o itens para o backend
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', url, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Aviso para quando der certo para salvar o projeto
+                    alert('Projeto salvo com sucesso!');
+                }
+            };
+
+            console.log(projeto)
+            xhr.send(JSON.stringify(projeto));
+        });
+    </script>
+</body>
+</html>

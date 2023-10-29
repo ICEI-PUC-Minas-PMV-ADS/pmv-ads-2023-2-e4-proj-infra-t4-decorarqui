@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc.ViewEngines;
 using System.Diagnostics;
 using MongoDB.Driver;
 using System.Web.Helpers;
+using decorArqui.Services;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace decorArqui.Controllers
 {
@@ -12,10 +14,13 @@ namespace decorArqui.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private IMongoDatabase _database;
-        public HomeController(IMongoDatabase database, ILogger<HomeController> logger)
+        private readonly ArquitetoServices _arquitetoServices;
+        
+        public HomeController(IMongoDatabase database, ArquitetoServices arquitetoServices, ILogger<HomeController> logger)
         {
             _logger = logger;
             _database = database;
+            _arquitetoServices = arquitetoServices;
         }
 
         public IActionResult Index()
@@ -32,15 +37,22 @@ namespace decorArqui.Controllers
         {
             return View("~/Views/Home/Cadastro.cshtml");
         }
-
-        public IActionResult Arquiteto()
+        
+        public async Task<ActionResult>  Arquiteto(string id)
         {
-            return View("~/Views/Arquiteto/Arquiteto.cshtml");
+            ArquitetoViewModel arquitetoViewModel = await _arquitetoServices.GetArquitetoAsync(id);
+            return View("~/Views/Arquiteto/Arquiteto.cshtml", arquitetoViewModel);
         }
 
         public IActionResult ArquitetoEditar()
         {
             return View("~/Views/Arquiteto/ArquitetoEditar.cshtml");
+        }
+        
+        public async Task<ActionResult> OrcamentosHome(string id)
+        {
+            var arquitetoViewModel = await _arquitetoServices.GetArquitetoAsync(id);
+            return View("~/Views/Arquiteto/OrcamentosHome.cshtml", arquitetoViewModel);
         }
 
         public IActionResult Cliente(Login model)
@@ -85,38 +97,45 @@ namespace decorArqui.Controllers
             return View("~/Views/Projeto/insertproject.cshtml");
         }
 
+        public async Task<ActionResult>  ArquitetoOrcamento(string id)
+        {
+            ArquitetoViewModel arquitetoViewModel = await _arquitetoServices.GetArquitetoAsync(id);
+            var projetos = new List<string>();
+            projetos = arquitetoViewModel.ProjetosSemOrcamento.Select(x => x.Descricao).ToList();
+            ViewBag.ListaDeProjetos = new SelectList(projetos);
+            return View("~/Views/Arquiteto/ArquitetoOrcamento.cshtml", arquitetoViewModel);
+        }
+
+
 
 
         public async Task<ActionResult> PropostaCliente(string ArquitetoId)
         {
-            var clientesAguardandoSuaProposta =  await _database.GetCollection<Arquiteto>("Usuario")
-                .Find(u => u.AceiteProposta == false && u.Tipo == "cliente").ToListAsync();
-            
-            var propostasAguardandoAceiteDeCliente =  await _database.GetCollection<Proposta>("Proposta")
-                .Find(u => u.AceiteProposta == false && u.ArquitetoId == ArquitetoId).ToListAsync();
+            var arquitetoViewModel = await _arquitetoServices.GetArquitetoAsync(ArquitetoId);
 
-            ViewBag.Clientes = clientesAguardandoSuaProposta;
-            ViewBag.Propostas = propostasAguardandoAceiteDeCliente;
-            ViewBag.ArquitetoId = ArquitetoId;
+            ViewBag.Clientes = arquitetoViewModel.ProjetosSemOrcamento;
+            ViewBag.Propostas = arquitetoViewModel.PropostasEmAberto;
+            ViewBag.ArquitetoId = arquitetoViewModel.ArquitetoId;
             
             return View("~/Views/Proposta/Index.cshtml");
         }
         
         public async Task<ActionResult> PropostaClienteGerarProposta(string ArquitetoId, string ClientId)
         {
-            var cliente =  await _database.GetCollection<Usuario>("Usuario")
+            var cliente =  await _database.GetCollection<Cliente>("Usuario")
                 .Find(u => u.Id == ClientId).FirstOrDefaultAsync();
             
-            var arquiteto =  await _database.GetCollection<Usuario>("Usuario")
+            var arquiteto =  await _database.GetCollection<Arquiteto>("Usuario")
                 .Find(u => u.Id == ArquitetoId).FirstOrDefaultAsync();
 
+            var projeto = new Projeto();
             var proposta = new Proposta();
 
-            proposta.Arquiteto = arquiteto;
-            proposta.Cliente = cliente;
-            proposta.ClienteId = cliente.Id;
             proposta.ArquitetoId = arquiteto.Id;
+            projeto.ClienteId = cliente.Id;
+            projeto.ClienteNome = cliente.Nome;
             ViewBag.Proposta = proposta;
+            ViewBag.Projeto = projeto;
 
             return View("~/Views/Proposta/Criar.cshtml");
         }
@@ -124,18 +143,16 @@ namespace decorArqui.Controllers
         public async Task<ActionResult> PropostaClienteSalvarProposta(string ArquitetoId, string ClientId, string Descricao, double Orcamento)
         {
             
-            var cliente =  await _database.GetCollection<Usuario>("Usuario")
+            var cliente =  await _database.GetCollection<Cliente>("Usuario")
                 .Find(u => u.Id == ClientId).FirstOrDefaultAsync();
             
-            var arquiteto =  await _database.GetCollection<Usuario>("Usuario")
+            var arquiteto =  await _database.GetCollection<Arquiteto>("Usuario")
                 .Find(u => u.Id == ArquitetoId).FirstOrDefaultAsync();
             
                 var novaProposta = new Proposta
                 {
-                    Cliente = cliente,
                     ClienteId = cliente.Id,
-                    Arquiteto = arquiteto,
-                    ArquitetoId = arquiteto.Id,
+                    Cliente = cliente,
                     Descricao = Descricao,
                     Orcamento = Orcamento,
                     AceiteProposta = false

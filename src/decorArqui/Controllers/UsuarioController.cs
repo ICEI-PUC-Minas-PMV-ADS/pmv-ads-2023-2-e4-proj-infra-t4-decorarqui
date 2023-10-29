@@ -1,4 +1,5 @@
 ﻿using decorArqui.Models;
+using decorArqui.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
@@ -10,10 +11,12 @@ namespace decorArqui.Controllers
     public class UsuarioController : ControllerBase
     {
         private IMongoDatabase _database;
+        private readonly ArquitetoServices _arquitetoServices;
 
-        public UsuarioController(IMongoDatabase database)
+        public UsuarioController(IMongoDatabase database,  ArquitetoServices arquitetoServices)
         {
             _database = database;
+            _arquitetoServices = arquitetoServices;
         }
 
         [HttpGet]
@@ -27,7 +30,7 @@ namespace decorArqui.Controllers
             return Ok(usuario);
         }
         [HttpPost("Login")]
-        public async Task<ActionResult> Login(Login model)
+        public async Task<ActionResult>  Login(Login model)
         {
             try
             {
@@ -49,14 +52,12 @@ namespace decorArqui.Controllers
                 {
                     // Lógica para login de arquiteto
                     var arquiteto = await _database.GetCollection<Arquiteto>("Usuario")
-                        .Find(a => a.Email == model.Email && a.Senha == model.Senha)
+                        .Find(c => c.Email == model.Email && c.Senha == model.Senha && c.Tipo == model.Tipo)
                         .FirstOrDefaultAsync();
-
+      
                     if (arquiteto != null)
                     {
-                        // Arquiteto logado com sucesso
-                        // Redirecione para a página de arquiteto
-                        return RedirectToAction("Arquiteto", "Home", model);
+                        return RedirectToAction("Arquiteto", "Home", new { id = arquiteto.Id});
                     }
                 }
             }

@@ -65,6 +65,9 @@
             senha,
             tipo
         };
+        
+        console.log(userData);
+        console.log(JSON.stringify(userData));
 
         try {
             const response = await fetch("/api/usuario/Login", {
@@ -81,15 +84,17 @@
                     window.location.href = '@Url.Action("Cliente", "Home")';
                     console.log("Deu bom!! C");
                 }
-                else if (tipo == "arquiteto") {
-                    window.location.href = '@Url.Action("Arquiteto", "Home")';
+                
+                if (tipo == "arquiteto") {
+                    window.location.href = `${response.url}`;
                     console.log("Deu bom!! A");
                 }
 
             } else {
-                const errorData = await response.json();
-                document.getElementById("error-message").innerText = errorData.mensagem;
-                document.getElementById("error-message").style.display = "block"; // Mostrar a mensagem de erro
+                console.log(response)
+                // const errorData = await response.json();
+                // document.getElementById("error-message").innerText = errorData.mensagem;
+                // document.getElementById("error-message").style.display = "block"; // Mostrar a mensagem de erro
             }
         } catch (error) {
             console.error("Erro ao fazer login:", error);
