@@ -51,14 +51,7 @@ JavaScript: Linguagem de programação para tornar as páginas da web interativa
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+Utilizamos a Amazon Web Services (AWS) como nosso provedor de hospedagem. A AWS oferece uma infraestrutura escalável e confiável que nos permite implantar, gerenciar e dimensionar nosso projeto de maneira eficaz. A escolha da AWS como provedor de hospedagem garante que nossa aplicação seja hospedada em um ambiente seguro e de alto desempenho, proporcionando uma experiência estável aos nossos usuários.
 
 ## Qualidade de Software
 
