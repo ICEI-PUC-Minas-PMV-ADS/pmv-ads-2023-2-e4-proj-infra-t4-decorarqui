@@ -36,20 +36,22 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+HTML: Utilizado para criar a estrutura da página da web.
+
+CSS: Responsável pela estilização da aparência das páginas da web.
+
+C#: Linguagem de programação do lado do servidor para a lógica de negócios e manipulação de dados.
+
+ASP .NET: Framework da Microsoft para desenvolvimento web robusto e escalável.
+
+MongoDB: Sistema de gerenciamento de banco de dados NoSQL.
+
+JavaScript: Linguagem de programação para tornar as páginas da web interativas.
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+Utilizamos a Amazon Web Services (AWS) como nosso provedor de hospedagem. A AWS oferece uma infraestrutura escalável e confiável que nos permite implantar, gerenciar e dimensionar nosso projeto de maneira eficaz. A escolha da AWS como provedor de hospedagem garante que nossa aplicação seja hospedada em um ambiente seguro e de alto desempenho, proporcionando uma experiência estável aos nossos usuários.
 
 ## Qualidade de Software
 
