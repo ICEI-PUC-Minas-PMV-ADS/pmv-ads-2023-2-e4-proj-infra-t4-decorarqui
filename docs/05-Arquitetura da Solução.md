@@ -36,9 +36,18 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+HTML: Utilizado para criar a estrutura da página da web.
+
+CSS: Responsável pela estilização da aparência das páginas da web.
+
+C#: Linguagem de programação do lado do servidor para a lógica de negócios e manipulação de dados.
+
+ASP .NET: Framework da Microsoft para desenvolvimento web robusto e escalável.
+
+MongoDB: Sistema de gerenciamento de banco de dados NoSQL.
+
+JavaScript: Linguagem de programação para tornar as páginas da web interativas.
 
 ## Hospedagem
 
