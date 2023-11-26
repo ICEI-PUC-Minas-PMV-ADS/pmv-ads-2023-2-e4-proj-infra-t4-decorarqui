@@ -1,15 +1,15 @@
 # Programação de Funcionalidades
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
-
-Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
-
-Para cada requisito funcional, pode ser entregue um artefato desse tipo
-
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+|ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
+|------|-----------------------------------------|----|
+|RF-01| Permitir que os arquitetos cadastrem seus perfis | ArquitetoController.cs | 
+|RF-02| Possibilitar que os arquitetos incluam histórico acadêmico | ArquitetoController.cs |
+|RF-03| Possibilitar que os arquitetos incluam portfólio de projetos | ArquitetoController.cs |
+|RF-04| Possibilitar que os arquitetos incluam informações profissionais | ArquitetoController.cs |
+|RF-05| Permitir o cadastro de clientes | UsuarioController.cs, ClienteController.cs |
+|RF-06| Possibilitar que os clientes incluam um resumo do pedido | ProjetosController.cs, ProjetoServices.cs |
+|RF-07| Possibilitar que os clientes incluam uma estimativa de preço para seus projetos | ProjetoServices.cs |
+|RF-09| Permitir que os arquitetos enviem orçamentos e propostas detalhadas em resposta aos projetos dos clientes | ArquitetoController.cs,     ArquitetoServices.cs |
+|RF-11| Habilitar clientes a avaliarem os arquitetos| AvaliacaoController.cs |
+|RF-12| Permitir que arquitetos avaliem os clientes | AvaliacaoController.cs |
+|RF-13| Dar aos clientes a capacidade de visualizar informações e projetos passados dos arquitetos  | ProjetosController.cs |
