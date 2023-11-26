@@ -1,0 +1,39 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "expo": "~48.0.21",
+    "expo-status-bar": "~1.4.4",
+    "react": "18.2.0",
+    "react-native": "0.71.14",
+    "moment": "*",
+    "expo-asset": "~8.9.1",
+    "expo-sqlite": "~11.1.1",
+    "expo-constants": "~14.2.1",
+    "expo-file-system": "~15.2.2",
+    "react-native-svg": "13.4.0",
+    "@expo/vector-icons": "^13.0.0",
+    "react-native-paper": "4.9.2",
+    "react-native-screens": "~3.20.0",
+    "@react-navigation/native": "6.0.11",
+    "react-native-vector-icons": "*",
+    "react-native-picker-select": "*",
+    "@react-native-picker/picker": "2.4.8",
+    "@react-navigation/bottom-tabs": "*",
+    "@react-navigation/native-stack": "6.2.5",
+    "react-native-safe-area-context": "4.5.0",
+    "@fortawesome/fontawesome-svg-core": "6.4.0",
+    "@fortawesome/free-solid-svg-icons": "*",
+    "@fortawesome/react-native-fontawesome": "*",
+    "@react-native-community/datetimepicker": "6.7.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}
