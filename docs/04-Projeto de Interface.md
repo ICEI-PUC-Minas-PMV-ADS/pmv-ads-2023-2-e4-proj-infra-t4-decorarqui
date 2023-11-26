@@ -18,6 +18,7 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 <img width="732" alt="Diagrama_Fluxo_Arquiteto" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/103225367/fe1021cf-f7d6-45df-9f63-c7c7703010a9">
 
 ## Wireframes
+## WEB
 
 ![Tela Home Page](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/511ee014-3700-4721-a771-420dd3a6d26a)
 ![Login Cliente Novo Cadastro](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/1712e452-0131-41c6-b650-353c80106ba5)
@@ -39,3 +40,30 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 ![Tela (DETALHES 5)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/f5b28f6f-5fc8-4a83-9ad9-24e63241d6ae)
 ![Tela (DETALHES 5)-1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/4f1bacc3-a504-46c9-a315-43700cb3949b)
 ![Tela (DETALHES 6)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/60409021/4c078926-345b-485a-a852-f0c498ceaa6b)
+
+## MOBILE
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/32f89b9f-eeb4-4beb-a4c4-a23ae705fdbd)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/c6e8daf7-b3b9-435c-908c-2cbaa8d41c39)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/fcc9cd69-3ef2-4f16-aec6-2f3651d288a8)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/8ab9fb53-226c-4a1c-a4e1-00ffd043b422)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/a679d39f-08c4-4311-b5fd-6ce79141f6b1)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/7c4bae81-f66d-4bec-9aaf-ff4ded98de38)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/413290ba-f51d-4486-bd6f-f99d243f0c59)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/86f47a63-6281-4e5e-b714-e22426d61409)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
