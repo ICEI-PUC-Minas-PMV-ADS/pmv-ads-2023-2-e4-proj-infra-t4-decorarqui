@@ -45,11 +45,29 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/32f89b9f-eeb4-4beb-a4c4-a23ae705fdbd)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/c6e8daf7-b3b9-435c-908c-2cbaa8d41c39)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/fcc9cd69-3ef2-4f16-aec6-2f3651d288a8)
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/8ab9fb53-226c-4a1c-a4e1-00ffd043b422)
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/a679d39f-08c4-4311-b5fd-6ce79141f6b1)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/81553a81-db2f-4548-a5d8-c7eb2359b1fb)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/7c4bae81-f66d-4bec-9aaf-ff4ded98de38)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/1e301408-e62b-4e66-9dd3-15a7cbade764)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/2c61aca8-e071-4f82-897f-ae640d8ae4e8)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/164ec66b-c279-4026-ac16-2b1cc3b9dad4)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/e8a1d7e8-0685-4fc9-bc20-be18768b2652)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/38f37c60-36fd-4a62-a8c1-1b957481bca8)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/6a95daba-5509-4116-8f11-8fcce65a7a29)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/a679d39f-08c4-4311-b5fd-6ce79141f6b1)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/413290ba-f51d-4486-bd6f-f99d243f0c59)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/8ab9fb53-226c-4a1c-a4e1-00ffd043b422)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/86f47a63-6281-4e5e-b714-e22426d61409)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/a1ee60e6-3a5a-4011-9409-a731e829b0cf)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/59944150/296587ba-8c31-4ebe-9e51-d542709dc4a6)
+
+
+
+
+
+
+
+
+
 
 
 
