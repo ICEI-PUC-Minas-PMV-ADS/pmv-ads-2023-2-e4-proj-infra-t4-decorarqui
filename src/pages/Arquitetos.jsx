@@ -93,7 +93,7 @@ const Arquitetos = () => {
   };
 
   const renderItem = ({ item }) => (
-    <Card mode="elevated" style={{ width: "100%", marginBottom: "4%" }}>
+    <Card mode="elevated" style={styles.architectCard}>
       <View style={[styles.cardContainer, styles.flexRow]}>
         <Image
           style={styles.profileImage}
@@ -130,13 +130,21 @@ const Arquitetos = () => {
               <Text style={styles.detailsTextButton}>Portifólios</Text>
             </View>
             <View
-              style={{ ...styles.flexRow, justifyContent: "space-between", marginBottom: 5 }}
+              style={{
+                ...styles.flexRow,
+                justifyContent: "space-between",
+                marginBottom: 5,
+              }}
             >
               <View style={{ alignItems: "center" }}>
                 <Text>{item.Avaliacao}/5</Text>
                 {getStarsAmount(item.Avaliacao)}
               </View>
-              <MaterialCommunityIcons name="whatsapp" size={30} color="yellowgreen" />
+              <MaterialCommunityIcons
+                name="whatsapp"
+                size={30}
+                color="yellowgreen"
+              />
             </View>
           </Card.Content>
         </View>
@@ -197,6 +205,12 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     height: "100%",
   },
+  architectCard: {
+    width: "90%",
+    marginBottom: "4%",
+    elevation: 5,
+    alignSelf: "center",
+  },
   cardContainer: {
     paddingLeft: "5%",
     width: "100%",
@@ -214,7 +228,7 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     height: "70%",
-    width: "90%",
+    width: "100%",
     display: "flex",
     alignSelf: "center",
     overflow: "scroll",
