@@ -1,119 +1,231 @@
-import React, { useState } from 'react'
-import {View, Text, Image, StyleSheet, TextInput, Button, Pressab} from 'react-native'
+import { useNavigation } from "@react-navigation/native";
+import React, { useState } from "react";
+import {
+  Image,
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { TextInput } from "react-native-paper";
 
-import {useNavigation} from '@react-navigation/native';
-import { Database } from '../services/DbServices'
+import { Database } from "../services/DbServices";
+
+import Body from "../components/Body.js";
 
 const Login = () => {
   const navigation = useNavigation();
 
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [loginError, setLoginError] = useState('');
+  const [user, setUser] = useState("");
+  const [senha, setSenha] = useState("");
+
+  const [loginErro, setLoginErro] = useState("");
 
   const handleLogin = () => {
     const executeQuery = Database.getConnection();
 
-    executeQuery('SELECT * FROM usuario WHERE nome = ? AND senha = ?', [
-      username,
-      password,
+    executeQuery('SELECT * FROM Cliente WHERE nome = ? AND senha = ?', [
+      user,
+      senha,
     ])
       .then((result) => {
         if (result.rows.length > 0) {
-          // Login bem-sucedido, redirecionar para a tela inicial
-          navigation.navigate('Home');
+          navigation.navigate("Home");
         } else {
-          // Login inválido, exibir mensagem de erro
-          setLoginError('Nome de usuário ou senha inválidos');
+          setLoginErro("Nome de usuário ou senha inválidos");
         }
       })
       .catch((error) => {
-        console.log('Erro ao fazer login:', error);
-        setLoginError('Ocorreu um erro ao fazer login');
+        console.log("Erro ao fazer login:", error);
+        setLoginErro("Ocorreu um erro ao fazer login");
       });
-  }
+  };
 
-  
-  return(
+  return (
+    <>
+      <ImageBackground
+        style={styles.backgroundImage}
+        source={require("../images/backgroundLogin.jpeg")}
+      ></ImageBackground>
+      <View style={styles.container}>
+        <View style={styles.image}>
+          <Image
+            source={require("../images/Logo_decorArqui_modelo2.png")}
+            style={{ width: "100%", aspectRatio: 641 / 259 }}
+          />
+          <Text style={styles.arquiteturaDesignTexto}>
+            Arquitetura e Design
+          </Text>
+          <View style={styles.bemvindoContainer}>
+            <Text style={styles.bemVindoTexto}>Bem Vindo</Text>
+          </View>
+        </View>
 
-    <View style={{ flexDirection: 'column'}}>
-      <View style={styles.css}>
-        <Text>Seja Bem-Vindo ao</Text>
-      </View>
-      
-      <View style={styles.image}> 
-        <Image source={require('../images/Logo_decorArqui_modelo2.png')} 
-        style={{width: 255, height: 100}}
-        />
-      </View>
+        <View style={styles.interactContainer}>
+          <TextInput
+            placeholder="Usuário"
+            animationDuration={0}
+            value={user}
+            mode="outlined"
+            onChangeText={(text) => setUser(text)}
+            style={{
+              width: "250px",
+              height: 45,
+              top: "55%",
+              borderRadius: "5px",
+              textAlign: "center",
+              marginBottom: "10px",
+            }}
+            theme={{
+              colors: { primary: "green", underlineColor: "transparent" },
+            }}
+          />
 
-      <View style={styles.inputs}>
-        <TextInput
-          style={styles.input_login}
-          placeholder="Login"
-          value={username}
-          onChangeText={(text) => setUsername(text)}
-        />
-        <TextInput
-          style={styles.input_password}
-          placeholder="Password"
-          value={password}
-          secureTextEntry
-          onChangeText={(text) => setPassword(text)}
-        />
-      </View>
+          <TextInput
+            placeholder="Senha"
+            secureTextEntry={true}
+            animationDuration={0}
+            value={senha}
+            mode="outlined"
+            onChangeText={(text) => setSenha(text)}
+            style={{
+              width: "250px",
+              height: 45,
+              top: "55%",
+              borderRadius: "5px",
+              textAlign: "center",
+            }}
+            theme={{
+              colors: { primary: "green", underlineColor: "transparent" },
+            }}
+          />
 
-      {loginError ? <Text style={styles.errorText}>{loginError}</Text> : null}
+          {loginErro ? (
+            <Text style={styles.errorText}>{loginErro}</Text>
+          ) : null}
 
-      <View style={styles.buttonlogin}>
-      <Button
-        title="ENTRAR"
-        color="#A8CF45"
-        onPress= {handleLogin}
-      />
+          <View style={styles.buttonEntrar}>
+            <TouchableOpacity style={styles.button} onPress={handleLogin}>
+              <Text
+                style={{
+                  color: "white",
+                  fontSize: 16,
+                  textAlign: "center",
+                  fontWeight: "500",
+                }}
+              >
+                ENTRAR
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.forgotContainer}>
+            <Text
+              style={{
+                color: "white",
+                fontSize: "15px",
+                fontFamily: "Roboto",
+                fontWeight: "500",
+                textDecoration: "underline",
+              }}
+            >
+              Esqueci minha senha
+            </Text>
+          </View>
+
+          <View style={styles.buttonCadastro}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate("Cadastro")}
+            >
+              <Text
+                style={{
+                  color: "white",
+                  fontSize: 16,
+                  fontWeight: "500",
+                  textAlign: "center",
+                }}
+              >
+                NOVO CADASTRO
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
-      <View style={styles.forgotpassword}>
-        <Button
-        title="Novo Cadastro"
-        style={{color: '#373435'}}
-        onPress={() => navigation.navigate('Cadastro')}
-        />
-      </View>
-    </View>
-    
+    </>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  css: {
-    alignItems:'center',
-    padding: 100,
+  image: {
+    position: "relative",
+    top: "15%",
+    alignItems: "center",
+    width: "80%",
+    alignSelf: "center",
   },
-  image:{
-    alignItems:'center',
-    paddingBottom: 20,
+  backgroundImage: {
+    flex: 1,
+    position: "fixed",
+    height: "100%",
+    width: "100%",
+    resizeMode: "cover",
+    opacity: 1,
   },
-  input_login:{
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
+  arquiteturaDesignTexto: {
+    fontSize: "16px",
+    fontWeight: "Bold",
+    color: "#373435",
+    marginTop: "5px",
+    alignSelf: "flex-start",
   },
-  input_password:{
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
+  bemVindoTexto: {
+    fontSize: "30px",
+    fontWeight: "Bold",
+    color: "#373435",
+    textAlign: "center",
   },
-  buttonlogin:{
-    padding: 30,
+  bemvindoContainer: {
+    marginTop: "10px",
+    textAlign: "center",
   },
-  forgotpassword:{
-    backgroundColor: '#373435'
+  interactContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    top: "48%",
+  },
+  buttonEntrar: {
+    width: "300px",
+    height: 45,
+    borderRadius: "5px",
+    top: "65%",
+    right: "1px",
+    justifyContent: "center",
+    backgroundColor: "#A8CF45",
+    fontSize: "16px",
+  },
+  button: {
+    textAlign: "center",
+  },
+  forgotContainer: {
+    top: "68%",
+    textAlign: "center",
+  },
+  buttonCadastro: {
+    width: "300px",
+    height: 45,
+    borderRadius: "5px",
+    top: "80%",
+    right: "1px",
+    textAlign: "center",
+    justifyContent: "center",
+    backgroundColor: "#373435",
+    fontSize: "16px",
   },
   errorText: {
-    color: 'red',
-    textAlign: 'center',
+    color: "red",
+    textAlign: "center",
     marginTop: 10,
   },
 });
