@@ -2,15 +2,14 @@ import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
   Image,
-  Modal,
-  Pressable,
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from "react-native";
 import { TextInput } from "react-native-paper";
 import { Database } from "../services/DbServices";
+import ModalConfirmacao from "../components/ModalConfirmacao";
 
 const CadastroCliente = () => {
   const navigation = useNavigation();
@@ -150,47 +149,37 @@ const CadastroCliente = () => {
                 </Text>
               </TouchableOpacity>
             </View>
-          </View>
-        </View>
-      </View>
-      <Modal
-        animationType="fade"
-        transparent={true}
-        visible={modalConfirmacao}
-        onRequestClose={() => {
-          setModalConfirmacao(!modalConfirmacao);
-        }}
-      >
-        <View style={styles.overlay}>
-          <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-              <Text style={{ fontSize: 22, fontWeight: "bold" }}>
-                Confirmar cadastro
-              </Text>
-              <Text style={styles.modalText}>
-                Você confirma as informações fornecidas? Ao clicar em
-                'Confirmar', você iremos lhe registrar como Cliente do
-                DecorArqui."
-              </Text>
-              <View style={styles.buttonGroup}>
-                <Pressable
-                  onPress={() => setModalConfirmacao(!modalConfirmacao)}
-                >
-                  <Text style={styles.modalButtonText}>Voltar</Text>
-                </Pressable>
-                <Pressable
-                  onPress={() => {
-                    setModalConfirmacao(!modalConfirmacao);
-                    handleCadastro();
+
+            <View style={{...styles.buttonCadastro, marginTop: 20}}>
+              <TouchableOpacity
+                style={styles.button}
+                onPress={() => navigation.navigate("Login")}
+              >
+                <Text
+                  style={{
+                    color: "white",
+                    fontSize: 16,
+                    fontWeight: "500",
+                    textAlign: "center",
                   }}
                 >
-                  <Text style={styles.modalButtonText}>Confirmar</Text>
-                </Pressable>
-              </View>
+                  VOLTAR
+                </Text>
+              </TouchableOpacity>
             </View>
           </View>
         </View>
-      </Modal>
+      </View>
+      <ModalConfirmacao
+        openModal={modalConfirmacao}
+        setOpenModal={setModalConfirmacao}
+        title="Confirmar cadastro"
+        bodyText="Você confirma as informações fornecidas? Ao clicar em 'Confirmar', iremos lhe registrar como Cliente do DecorArqui."
+        leftButtonText="Voltar"
+        leftButtonAction={null}
+        rightButtonText="Confirmar"
+        rightButtonAction={handleCadastro}
+      />
     </>
   );
 };
@@ -205,27 +194,6 @@ const styles = StyleSheet.create({
     height: "15%",
     width: "100%",
     backgroundColor: "#A8CF45",
-  },
-  centeredView: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 20,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
   },
   imageContainer: {
     alignItems: "center",
@@ -257,28 +225,6 @@ const styles = StyleSheet.create({
     color: "red",
     textAlign: "center",
     marginTop: 10,
-  },
-  modalText: {
-    textAlign: "justify",
-    fontSize: 14,
-    marginVertical: 10,
-  },
-  buttonGroup: {
-    display: "flex",
-    flexDirection: "row",
-    width: "100%",
-    justifyContent: "space-around",
-  },
-  overlay: {
-    flex: 1,
-    backgroundColor: "rgba(0, 0, 0, 0.3)",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  modalButtonText: {
-    fontWeight: "bold",
-    fontSize: 16,
-    textDecoration: "underline",
   },
 });
 

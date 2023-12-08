@@ -1,52 +1,13 @@
-import {
-  Feather,
-  MaterialCommunityIcons,
-  FontAwesome,
-} from "@expo/vector-icons";
-import React, { useState, useEffect } from "react";
+import { FontAwesome, MaterialCommunityIcons } from "@expo/vector-icons";
+import React, { useEffect, useState } from "react";
 import { FlatList, Image, StyleSheet, Text, View } from "react-native";
-import { Card, TextInput, DefaultTheme } from "react-native-paper";
+import { Card } from "react-native-paper";
+import InputSearchBar from "../components/inputSearchBar";
 import defaultUser from "../images/defaultUser.png";
+import { architectSeeds, normalizarTexto } from "../shared/utils";
 
 const Arquitetos = () => {
-  const [arquitetos, setArquitetos] = useState([
-    {
-      Id: 10,
-      Imagem: null,
-      Nome: "Paulo Polashka",
-      Cidade: "São Paulo",
-      Estado: "SP",
-      Profissao: "Arquiteto",
-      Avaliacao: 4,
-    },
-    {
-      Id: 11,
-      Imagem: null,
-      Nome: "Douglas França",
-      Cidade: "São Paulo",
-      Estado: "SP",
-      Profissao: "Engenheiro Civil",
-      Avaliacao: 5,
-    },
-    {
-      Id: 12,
-      Imagem: null,
-      Nome: "Rafael Rezende",
-      Cidade: "São Paulo",
-      Estado: "SP",
-      Profissao: "Designer de Interiores",
-      Avaliacao: 3,
-    },
-    {
-      Id: 13,
-      Imagem: null,
-      Nome: "Sarah Ariart",
-      Cidade: "São Paulo",
-      Estado: "SP",
-      Profissao: "Designer de Interiores",
-      Avaliacao: 2.5,
-    },
-  ]);
+  const [arquitetos, setArquitetos] = useState(architectSeeds);
 
   const [search, setSearch] = useState("");
   const [user, setUser] = useState({
@@ -57,12 +18,6 @@ const Arquitetos = () => {
   const [filtroArquitetos, setFiltroArquitetos] = useState([...arquitetos]);
 
   useEffect(() => {
-    const normalizarTexto = (text) => {
-      return String(text)
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase();
-    };
     if (search.length && search.length > 0) {
       setFiltroArquitetos(
         arquitetos.filter(
@@ -152,30 +107,14 @@ const Arquitetos = () => {
     </Card>
   );
 
-  const theme = {
-    ...DefaultTheme,
-    colors: {
-      ...DefaultTheme.colors,
-      primary: "transparent",
-      disabled: "transparent",
-    },
-  };
-
   return (
     <View style={styles.body}>
       <View style={[styles.flexRow, styles.upperSection]}>
-        <View style={[styles.flexRow, styles.textInputContainer]}>
-          <Feather name="search" size={24} color="gray" />
-          <View style={{ flex: 1 }}>
-            <TextInput
-              style={styles.textInput}
-              placeholder="Buscar no decorArqui"
-              theme={theme}
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </View>
-        </View>
+        <InputSearchBar
+          placeholder={"Buscar no decorArqui"}
+          search={search}
+          setSearch={setSearch}
+        />
         <MaterialCommunityIcons
           name="filter-check-outline"
           size={30}

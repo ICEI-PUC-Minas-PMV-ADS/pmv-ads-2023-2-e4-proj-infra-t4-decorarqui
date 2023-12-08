@@ -10,8 +10,8 @@ import homeBackground from "../images/homeBackground.jpg";
 import backgroundCadastro from "../images/backgroundCadastro.jpeg";
 import { ImageBackground, StyleSheet } from "react-native";
 
-const Home = () => {
-  const [index, setIndex] = React.useState(0);
+const Home = ({initialIndex}) => {
+  const [index, setIndex] = React.useState(initialIndex ?? 0);
   const [routes] = React.useState([
     { key: "home", title: "Início", icon: "home" },
     { key: "projetos", title: "Meus Projetos", icon: "pencil-ruler" },

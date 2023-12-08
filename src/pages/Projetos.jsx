@@ -1,7 +1,7 @@
 import { Feather, FontAwesome5 } from "@expo/vector-icons";
 
 import React, { useEffect, useState } from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import { Appbar, Card, FAB } from "react-native-paper";
 
 import Container from "../components/Container";
@@ -13,6 +13,7 @@ const db = SQLite.openDatabase("decorarqui.db");
 import { useIsFocused, useNavigation } from "@react-navigation/native";
 
 import { deleteProjeto } from "../services/QueryDB";
+import CardProjeto from "../components/CardProjeto";
 
 const Projeto = (setIndex) => {
   const navigation = useNavigation();
@@ -56,7 +57,7 @@ const Projeto = (setIndex) => {
               descricaoProjeto: "Reforma curta no banheiro",
               preco: "40000",
               status: "Em andamento",
-            }
+            },
           ];
         }
         setProjetos(projeto);
@@ -64,39 +65,7 @@ const Projeto = (setIndex) => {
     });
   }, [isFocused]);
 
-  const handleExcluir = (idProjeto) => {
-    deleteProjeto(idProjeto).then();
-    navigation.goBack();
-  };
-
-  const renderItem = ({ item }) => (
-    <Card mode="elevated" style={styles.projectCard}>
-      <Card.Title
-        style={styles.cardTitle}
-        title={item.nomeProjeto}
-        subtitle={`Status: ${item.status}`}
-        titleStyle={{
-          fontWeight: "bold",
-          textAlign: "center",
-          fontSize: 24,
-          marginBottom: 10,
-        }}
-        subtitleStyle={{
-          fontWeight: "normal",
-          textAlign: "center",
-          fontSize: 20,
-        }}
-        titleVariant="bodyMedium"
-      />
-      <Card.Content>
-        <Text style={styles.detailsText}>Detalhes</Text>
-        <View style={styles.deleteContainer}>
-          <Feather name="trash-2" size={15} color="red" />
-          <Text style={{ color: "red" }}>Excluir</Text>
-        </View>
-      </Card.Content>
-    </Card>
-  );
+  const renderItem = ({ item }) => <CardProjeto key={item.id} item={item} />;
 
   return (
     <View style={{ flex: 1, backgroundColor: "#FFF" }}>
