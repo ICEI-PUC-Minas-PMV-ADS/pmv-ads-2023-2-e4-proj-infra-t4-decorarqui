@@ -161,24 +161,32 @@ const CadastroCliente = () => {
           setModalConfirmacao(!modalConfirmacao);
         }}
       >
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <Text style={styles.modalText}>
-              Você confirma as informações fornecidas? Ao clicar em 'Confirmar',
-              você iremos lhe registrar como Cliente do DecorArqui."
-            </Text>
-            <View style={styles.buttonGroup}>
-              <Pressable onPress={() => setModalConfirmacao(!modalConfirmacao)}>
-                <Text style={{fontWeight: 'bold'}}>Voltar</Text>
-              </Pressable>
-              <Pressable
-                onPress={() => {
-                  setModalConfirmacao(!modalConfirmacao);
-                  handleCadastro();
-                }}
-              >
-                <Text style={{fontWeight: 'bold'}}>Confirmar</Text>
-              </Pressable>
+        <View style={styles.overlay}>
+          <View style={styles.centeredView}>
+            <View style={styles.modalView}>
+              <Text style={{ fontSize: 22, fontWeight: "bold" }}>
+                Confirmar cadastro
+              </Text>
+              <Text style={styles.modalText}>
+                Você confirma as informações fornecidas? Ao clicar em
+                'Confirmar', você iremos lhe registrar como Cliente do
+                DecorArqui."
+              </Text>
+              <View style={styles.buttonGroup}>
+                <Pressable
+                  onPress={() => setModalConfirmacao(!modalConfirmacao)}
+                >
+                  <Text style={styles.modalButtonText}>Voltar</Text>
+                </Pressable>
+                <Pressable
+                  onPress={() => {
+                    setModalConfirmacao(!modalConfirmacao);
+                    handleCadastro();
+                  }}
+                >
+                  <Text style={styles.modalButtonText}>Confirmar</Text>
+                </Pressable>
+              </View>
             </View>
           </View>
         </View>
@@ -252,10 +260,25 @@ const styles = StyleSheet.create({
   },
   modalText: {
     textAlign: "justify",
+    fontSize: 14,
+    marginVertical: 10,
   },
   buttonGroup: {
     display: "flex",
     flexDirection: "row",
+    width: "100%",
+    justifyContent: "space-around",
+  },
+  overlay: {
+    flex: 1,
+    backgroundColor: "rgba(0, 0, 0, 0.3)",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modalButtonText: {
+    fontWeight: "bold",
+    fontSize: 16,
+    textDecoration: "underline",
   },
 });
 
