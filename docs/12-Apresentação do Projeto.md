@@ -45,10 +45,10 @@ Acompanhar o desenvolvimento de novos frameworks front-end pode ser benéfico pa
 ## Divisão do trabalho
 A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe ficou organizada da seguinte maneira, com todos os membros contribuindo de maneira efetiva no projeto. Obs.: Os membros Thaís e Rafael tiveram problemas de acesso ao repositório do Github criado pela PUC, e suas contribuições foram postadas no Github pelos outros membros da equipe.
 
-•	Scrum Master: Douglas Dellareti Simões;
-•	Product Owner: Karinne Agnes Massensini Pereira;
-•	Equipe de Desenvolvimento: Thaís Gurgel Bezerra, Pedro Henrique Ertal de Oliveira, César Luis Costa Moreira;
-•	Equipe de Design: Rafael de Assis Oliveira, Vinicius de Souza Ponciano;
+Scrum Master: Douglas Dellareti Simões
+Product Owner: Karinne Agnes Massensini Pereira
+Equipe de Desenvolvimento: Thaís Gurgel Bezerra, Pedro Henrique Ertal de Oliveira, César Luis Costa Moreira
+Equipe de Design: Rafael de Assis Oliveira, Vinicius de Souza Ponciano
 
 ## Quadro visual da equipe no Github
 Segue abaixo uma visão geral de todo o trabalho e contribuições divididos pela equipe de desenvolvimento do decorAarqui. As informações contidas aqui são vivas e podem sofrer alterações de acordo com o andamento do projeto.
