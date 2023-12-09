@@ -13,7 +13,7 @@ Nome e marca do projeto
 O grupo deve ter o cuidado em utilizar figuras, imagens, e cores dentro do contexto da solução proposta, de forma a manter a temática do problema.
 
 > - # Considerações Finais
-> - O desenvolvimento do decorArqui abordando a aplicação web, banco de dados e um aplicativo mobile em React Native, representou um grande e significativo desafio, enriquecendo o nosso conhecimento e elevando ainda a nossa ideia de desenvolvedor de sistemas de toda a equipe envolvida. Na conclusão do projeto, ainda gostaríamos de expressar algumas considerações finais em relação aos frameworks e tecnologias por nós utilizadas, bem como propor melhorias com o intuito de aprimorar ainda mais a qualidade do nosso sistema.
+O desenvolvimento do decorArqui abordando a aplicação web, banco de dados e um aplicativo mobile em React Native, representou um grande e significativo desafio, enriquecendo o nosso conhecimento e elevando ainda a nossa ideia de desenvolvedor de sistemas de toda a equipe envolvida. Na conclusão do projeto, ainda gostaríamos de expressar algumas considerações finais em relação aos frameworks e tecnologias por nós utilizadas, bem como propor melhorias com o intuito de aprimorar ainda mais a qualidade do nosso sistema.
 >
 > - ## Avaliação dos Frameworks e Tecnologias Utilizados
 > - ## HTML e CSS
