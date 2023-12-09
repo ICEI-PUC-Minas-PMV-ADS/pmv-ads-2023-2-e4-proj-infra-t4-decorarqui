@@ -17,11 +17,6 @@ O grupo deve ter o cuidado em utilizar figuras, imagens, e cores dentro do conte
 > - [7 dicas de design para criar apresentações de PowerPoint incríveis e eficientes](https://www.shutterstock.com/pt/blog/7-dicas-de-design-para-criar-apresentacoes-de-powerpoint-incriveis-e-eficientes)
 > - [Especialista do TED dá 10 dicas para criar slides eficazes e bonitos](https://soap.com.br/blog/especialista-do-ted-da-10-dicas-para-criar-slides-eficazes-e-bonitos)
 
-## Conjunto de Slides (Estrutura)
-
-O grupo deve distribuir de forma coerente o conteúdo a ser apresentado, dentro do tempo determinado. Importante ressaltar a importância da descrição clara de todo o andamento do projeto, insumos gerados e requisitos atendidos.
- 
-
 > - # Considerações Finais
 > - O desenvolvimento do decorArqui abordando a aplicação web, banco de dados e um aplicativo mobile em React Native, representou um grande e significativo desafio, enriquecendo o nosso conhecimento e elevando ainda a nossa ideia de desenvolvedor de sistemas de toda a equipe envolvida. Na conclusão do projeto, ainda gostaríamos de expressar algumas considerações finais em relação aos frameworks e tecnologias por nós utilizadas, bem como propor melhorias com o intuito de aprimorar ainda mais a qualidade do nosso sistema.
 >
