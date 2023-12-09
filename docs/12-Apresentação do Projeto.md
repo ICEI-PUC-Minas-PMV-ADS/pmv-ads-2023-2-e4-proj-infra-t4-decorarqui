@@ -65,6 +65,7 @@ Todos os membros contribuíram de forma ativa no projeto, as divisões das taref
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/103225907/87af9a7f-caf8-4fe4-9f03-35d48bf1405e)
 
 Abaixo segue o backlog do projeto, para visualizar o status atual, gentileza clicar no link disponível abaixo.
+                               *Backlog completo e atualizado, disponível em: https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/567*
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/103225907/824e2843-f84b-426f-a0f5-c0b4a18ec3d4)
 
