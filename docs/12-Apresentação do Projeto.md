@@ -74,7 +74,7 @@ Abaixo segue o backlog do projeto, para visualizar o status atual, gentileza cli
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/103225907/824e2843-f84b-426f-a0f5-c0b4a18ec3d4)
 
-Ainda reforçamos que os gráficos e as informações são referentes a data que foi atualizado esse documento, pois se trata de informações vivas e mudam a todo momento devido ao desenvolvimento do projeto estar em andamento. 
+Ainda reforçamos que os gráficos e as informações mostradas acima, são referentes a data que foi atualizado esse documento (08/12/2023), pois se trata de informações vivas e mudam a todo momento devido ao desenvolvimento do projeto estar em andamento. 
 Para informações atualizadas, gentileza visualizar em https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/graphs/contributors.
 
 ## Comentários adicionais dos membros
