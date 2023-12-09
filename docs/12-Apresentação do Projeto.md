@@ -74,6 +74,8 @@ Abaixo segue o backlog do projeto, para visualizar o status atual, gentileza cli
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/assets/103225907/824e2843-f84b-426f-a0f5-c0b4a18ec3d4)
 
+Ainda reforçamos que os gráficos e as informações são referentes a data que foi atualizado esse documento, pois se trata de informações vivas e mudam a todo momento devido ao desenvolvimento do projeto estar em andamento. Para informações atualizadas, gentileza visualizar em https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui/graphs/contributors.
+
 ## Comentários adicionais dos membros
 Com a conclusão do projeto, Douglas Simões responsável pela gestão do projeto, fez o seguinte comentário:
 *"Foi muito importante a participação e o desenvolvimento do nosso projeto decorArqui, com ele pude compreender de forma mais abrangente um produto web e mobile de forma mais clara e eficiente, gostei muito de fazer parte desse projeto, nossa equipe é muito empenhada, e isso facilita todo o nosso trabalho, as minhas atribuições foram bem dispostas e bem divididas, e procurei fazer tudo com bastante empenho, parabéns a todos os envolvidos".*
