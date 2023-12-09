@@ -84,17 +84,3 @@ Com tudo, a Equipe de Design: Rafael Oliveira e Vinicius Ponciano, comentaram: *
 ## Conclusão
 Com tudo, a conclusão do projeto decorArqui oferece insights valiosos sobre as tecnologias escolhidas e abre oportunidades para aprimoramentos e melhoria contínua, assim, as tecnologias utilizadas foram adequadas para o projeto e permitiram o desenvolvimento de uma aplicação funcional e de alta qualidade. No entanto, as melhorias propostas neste documento podem ser implementadas para melhorar ainda mais o projeto. Essas melhorias tornarão a aplicação mais eficiente, escalável e fácil de usar. 
 Agradecemos à PUC e ao professor Pedro pela oportunidade de desenvolver este trabalho, e estamos contentes em ter realizado este projeto, adquirindo ainda mais know-how e conhecimento dentro do setor de tecnologia, com o uso das ferramentas e linguagens utilizadas no projeto.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
