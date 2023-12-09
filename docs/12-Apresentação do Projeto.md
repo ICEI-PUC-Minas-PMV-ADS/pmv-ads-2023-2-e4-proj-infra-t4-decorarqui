@@ -21,13 +21,6 @@ O grupo deve ter o cuidado em utilizar figuras, imagens, e cores dentro do conte
 
 O grupo deve distribuir de forma coerente o conteúdo a ser apresentado, dentro do tempo determinado. Importante ressaltar a importância da descrição clara de todo o andamento do projeto, insumos gerados e requisitos atendidos.
  
-> **Links Úteis**:
-> - [A regra 10-20-30 para apresentações de sucesso](https://revistapegn.globo.com/Noticias/noticia/2014/07/regra-10-20-30-para-apresentacoes-de-sucesso.html)
-> - [Top Tips for Effective Presentations](https://www.skillsyouneed.com/present/presentation-tips.html)
-> - [How to make a great presentation](https://www.ted.com/playlists/574/how_to_make_a_great_presentation)
-
-
-
 
 > - # Considerações Finais
 > - O desenvolvimento do decorArqui abordando a aplicação web, banco de dados e um aplicativo mobile em React Native, representou um grande e significativo desafio, enriquecendo o nosso conhecimento e elevando ainda a nossa ideia de desenvolvedor de sistemas de toda a equipe envolvida. Na conclusão do projeto, ainda gostaríamos de expressar algumas considerações finais em relação aos frameworks e tecnologias por nós utilizadas, bem como propor melhorias com o intuito de aprimorar ainda mais a qualidade do nosso sistema.
