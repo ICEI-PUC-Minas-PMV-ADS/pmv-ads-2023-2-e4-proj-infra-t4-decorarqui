@@ -16,12 +16,11 @@ builder.Services.AddScoped<UsuarioService>();
 builder.Services.AddScoped<ProjetoService>();
 builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("Database"));
 
-builder.WebHost.UseUrls("http://0.0.0.0:5000");
+builder.WebHost.UseUrls("http://0.0.0.0:80");
 
 var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
-app.UseHttpsRedirection();
 
 app.Use(async (context, next) =>
 {
