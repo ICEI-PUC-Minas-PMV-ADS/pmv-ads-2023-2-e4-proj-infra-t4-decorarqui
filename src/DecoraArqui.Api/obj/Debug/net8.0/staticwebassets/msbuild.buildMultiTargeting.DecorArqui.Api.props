@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/DecorArqui.Api.props" />
+</Project>
