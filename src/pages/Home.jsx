@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   ActivityIndicator,
@@ -23,9 +23,11 @@ const Home = ({ route }) => {
     { key: "mais", title: "Mais", icon: "cog-outline" },
   ]);
 
+  const [loggedUser, setLoggedUser] = useState(user);
+
   const renderScene = BottomNavigation.SceneMap({
-    home: () => <Arquitetos loggedUser={user} />,
-    projetos: () => <Projeto setIndex={setIndex} loggedUser={user} />,
+    home: () => <Arquitetos loggedUser={loggedUser} setLoggedUser={setLoggedUser} />,
+    projetos: () => <Projeto setIndex={setIndex} loggedUser={loggedUser} />,
     favoritos: Avaliacao,
     notificacoes: () => <></>,
     mais: () => <></>,
