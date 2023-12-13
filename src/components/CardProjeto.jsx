@@ -5,7 +5,7 @@ import { Card } from "react-native-paper";
 import { deleteProjeto } from "../services/QueryDB";
 import ModalConfirmacao from "./ModalConfirmacao";
 
-const CardProjeto = ({ _key, item }) => {
+const CardProjeto = ({ _key, item, setProjetoSelecionado }) => {
   const [modalExclusao, setModalExclusao] = React.useState(false);
 
   const handleExcluir = (idProjeto) => {
@@ -34,7 +34,11 @@ const CardProjeto = ({ _key, item }) => {
           titleVariant="bodyMedium"
         />
         <Card.Content>
-          <Text style={styles.detailsText}>Detalhes</Text>
+          <Pressable
+            onPress={() => setProjetoSelecionado(item)}
+          >
+            <Text style={styles.detailsText}>Detalhes</Text>
+          </Pressable>
           <Pressable
             style={styles.deleteContainer}
             onPress={() => setModalExclusao(true)}

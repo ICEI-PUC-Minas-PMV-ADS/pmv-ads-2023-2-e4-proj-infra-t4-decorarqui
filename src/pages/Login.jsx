@@ -25,13 +25,16 @@ const Login = () => {
   const handleLogin = () => {
     const executeQuery = Database.getConnection();
 
-    executeQuery('SELECT * FROM Cliente WHERE nome = ? AND senha = ?', [
+    executeQuery("SELECT * FROM Cliente WHERE nome = ? AND senha = ?", [
       user,
       senha,
     ])
       .then((result) => {
         if (result.rows.length > 0) {
-          navigation.navigate("Home");
+          navigation.navigate("Home", {
+            initialIndex: 0,
+            user: { ...result.rows[0], ListaFavoritos: [] },
+          });
         } else {
           setLoginErro("Nome de usuário ou senha inválidos");
         }
@@ -101,9 +104,7 @@ const Login = () => {
             }}
           />
 
-          {loginErro ? (
-            <Text style={styles.errorText}>{loginErro}</Text>
-          ) : null}
+          {loginErro ? <Text style={styles.errorText}>{loginErro}</Text> : null}
 
           <View style={styles.buttonEntrar}>
             <TouchableOpacity style={styles.button} onPress={handleLogin}>
