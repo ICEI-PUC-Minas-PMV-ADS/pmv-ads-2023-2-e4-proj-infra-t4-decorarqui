@@ -1,16 +1,19 @@
 import React from "react";
 
-import { BottomNavigation, DefaultTheme } from "react-native-paper";
+import {
+  ActivityIndicator,
+  BottomNavigation,
+  DefaultTheme,
+} from "react-native-paper";
 
-import Arquitetos from "./Arquitetos";
-import Projeto from "./Projetos";
-import Avaliacao from "./Avaliacao";
-import StatusProjeto from "./StatusProjeto";
-import homeBackground from "../images/homeBackground.jpg";
-import backgroundCadastro from "../images/backgroundCadastro.jpeg";
 import { ImageBackground, StyleSheet } from "react-native";
+import homeBackground from "../images/homeBackground.jpg";
+import Arquitetos from "./Arquitetos";
+import Avaliacao from "./Avaliacao";
+import Projeto from "./Projetos";
 
-const Home = ({initialIndex}) => {
+const Home = ({ route }) => {
+  const { initialIndex, user } = route.params;
   const [index, setIndex] = React.useState(initialIndex ?? 0);
   const [routes] = React.useState([
     { key: "home", title: "Início", icon: "home" },
@@ -21,11 +24,9 @@ const Home = ({initialIndex}) => {
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
-    home: Arquitetos,
-    projetos: () => <Projeto setIndex={setIndex} />,
+    home: () => <Arquitetos loggedUser={user} />,
+    projetos: () => <Projeto setIndex={setIndex} loggedUser={user} />,
     favoritos: Avaliacao,
-    notificacoes: Avaliacao,
-    mais: StatusProjeto,
   });
 
   const getBackgroundImage = () => {
@@ -45,11 +46,24 @@ const Home = ({initialIndex}) => {
     },
   };
 
-  return !!getBackgroundImage() ? (
-    <ImageBackground
-      source={getBackgroundImage()}
-      style={styles.backgroundImage}
-    >
+  return user ? (
+    !!getBackgroundImage() ? (
+      <ImageBackground
+        source={getBackgroundImage()}
+        style={styles.backgroundImage}
+      >
+        <BottomNavigation
+          screenOptions={{ activeColor: "#ffffff" }}
+          shifting={false}
+          navigationState={{ index, routes }}
+          onIndexChange={setIndex}
+          renderScene={renderScene}
+          style={styles.bottomNavigation}
+          barStyle={{ backgroundColor: "transparent" }}
+          theme={theme}
+        />
+      </ImageBackground>
+    ) : (
       <BottomNavigation
         screenOptions={{ activeColor: "#ffffff" }}
         shifting={false}
@@ -57,21 +71,12 @@ const Home = ({initialIndex}) => {
         onIndexChange={setIndex}
         renderScene={renderScene}
         style={styles.bottomNavigation}
-        barStyle={{ backgroundColor: "transparent" }}
+        barStyle={{ backgroundColor: "#413F3F" }}
         theme={theme}
       />
-    </ImageBackground>
+    )
   ) : (
-    <BottomNavigation
-      screenOptions={{ activeColor: "#ffffff" }}
-      shifting={false}
-      navigationState={{ index, routes }}
-      onIndexChange={setIndex}
-      renderScene={renderScene}
-      style={styles.bottomNavigation}
-      barStyle={{ backgroundColor: "#413F3F" }}
-      theme={theme}
-    />
+    <ActivityIndicator animating={true} color={"#90AB4A"} />
   );
 };
 

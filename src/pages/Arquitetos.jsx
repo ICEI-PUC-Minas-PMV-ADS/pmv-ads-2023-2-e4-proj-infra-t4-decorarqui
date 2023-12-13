@@ -6,14 +6,11 @@ import InputSearchBar from "../components/inputSearchBar";
 import defaultUser from "../images/defaultUser.png";
 import { architectSeeds, normalizarTexto } from "../shared/utils";
 
-const Arquitetos = () => {
+const Arquitetos = ({ loggedUser }) => {
   const [arquitetos, setArquitetos] = useState(architectSeeds);
 
   const [search, setSearch] = useState("");
-  const [user, setUser] = useState({
-    Id: 1,
-    ListaFavoritos: [10, 12],
-  });
+  const [user, setUser] = useState(loggedUser);
 
   const [filtroArquitetos, setFiltroArquitetos] = useState([...arquitetos]);
 
@@ -66,12 +63,26 @@ const Arquitetos = () => {
                   name="cards-heart"
                   size={24}
                   color="red"
+                  onPress={() => {
+                    setUser({
+                      ...user,
+                      ListaFavoritos: user.ListaFavoritos.filter(
+                        (id) => id != item.Id
+                      ),
+                    });
+                  }}
                 />
               ) : (
                 <MaterialCommunityIcons
                   name="cards-heart-outline"
                   size={24}
                   color="black"
+                  onPress={() => {
+                    setUser({
+                      ...user,
+                      ListaFavoritos: user.ListaFavoritos.push(item.Id),
+                    });
+                  }}
                 />
               )
             }

@@ -1,29 +1,22 @@
-import { Feather, FontAwesome5 } from "@expo/vector-icons";
-
+import { FontAwesome5 } from "@expo/vector-icons";
+import { useIsFocused, useNavigation } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
-import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
-import { Appbar, Card, FAB } from "react-native-paper";
-
-import Container from "../components/Container";
+import { FlatList, StyleSheet, Text, View } from "react-native";
+import { Appbar, FAB } from "react-native-paper";
+import CardProjeto from "../components/CardProjeto";
+import DetalhesProjeto from "./DetalhesProjeto";
 
 import * as SQLite from "expo-sqlite";
 
 const db = SQLite.openDatabase("decorarqui.db");
 
-import { useIsFocused, useNavigation } from "@react-navigation/native";
-
-import { deleteProjeto } from "../services/QueryDB";
-import CardProjeto from "../components/CardProjeto";
-
-const Projeto = (setIndex) => {
+const Projeto = ({setIndex, loggedUser}) => {
   const navigation = useNavigation();
   const isFocused = useIsFocused();
 
   const [projetos, setProjetos] = useState([]);
-  const [user, setUser] = useState({
-    Id: 1,
-    Nome: "John Doe",
-  });
+  const [user, setUser] = useState(loggedUser);
+  const [projetoSelecionado, setProjetoSelecionado] = useState(null);
 
   useEffect(() => {
     db.transaction((tx) => {
@@ -41,7 +34,11 @@ const Projeto = (setIndex) => {
               id: 50,
               nomeProjeto: "Suíte Presidencial",
               descricaoProjeto: "Suite de dois milhões de dólares à noite",
-              preco: 2000000,
+              local: "Casa",
+              gasto: "Entre  R$30.000,00 e  R$50.000,00",
+              comodo: "Quarto",
+              conhecimento: "Tenho ideias do projeto",
+              detalhes: "Preciso de uma reforma bem completa da minha sala, com bastante cudado nas decorações e nos lustres, preciso das paredes exatamente conforme anexo.",
               status: "Concluído",
             },
             {
@@ -50,6 +47,11 @@ const Projeto = (setIndex) => {
               descricaoProjeto: "Reforma da casa toda, tudo que importa",
               preco: 400000,
               status: "Em andamento",
+              local: "Casa",
+              gasto: "Acima de R$50.000,00",
+              comodo: "Outros",
+              conhecimento: "Quero assessoria total do profissional",
+              detalhes: "Quero reformar a casa toda! Quartos, sala, banheiros, preciso também de uma repaginada na fachada.",
             },
             {
               id: 88,
@@ -57,6 +59,11 @@ const Projeto = (setIndex) => {
               descricaoProjeto: "Reforma curta no banheiro",
               preco: "40000",
               status: "Em andamento",
+              local: "Casa",
+              gasto: "Menos de R$1.000,00",
+              comodo: "Banheiro",
+              conhecimento: "Não tenho certeza",
+              detalhes: "Preciso de uma reforma bem completa da minha sala, com bastante cudado nas decorações e nos lustres, preciso das paredes exatamente conforme anexo.",
             },
           ];
         }
@@ -65,56 +72,76 @@ const Projeto = (setIndex) => {
     });
   }, [isFocused]);
 
-  const renderItem = ({ item }) => <CardProjeto key={item.id} item={item} />;
+  const renderItem = ({ item }) => (
+    <CardProjeto
+      key={item.id}
+      item={item}
+      setProjetoSelecionado={setProjetoSelecionado}
+    />
+  );
 
   return (
-    <View style={{ flex: 1, backgroundColor: "#FFF" }}>
-      <Appbar.Header style={styles.header}>
-        <View
-          style={{ flexDirection: "row", alignItems: "center", width: "100%" }}
-        >
-          <Appbar.Content
-            title={`Olá, ${user.Nome}`}
-            style={{ color: "white", fontWeight: "normal" }}
-          />
-          <Appbar.Action
-            icon="magnify"
-            color="white"
-            onPress={() => {
-              setIndex(0);
-              navigation.navigate("Home");
-            }}
-          />
-        </View>
-        <View style={styles.pageLabel}>
-          <FontAwesome5 name="pencil-ruler" size={16} color="white" />
-          <Text
-            style={{
-              color: "white",
-              fontSize: 16,
-              fontWeight: "medium",
-              marginLeft: 10,
-            }}
-          >
-            Meus Projetos
-          </Text>
-        </View>
-      </Appbar.Header>
-      <View style={styles.centerSection}>
-        <FlatList
-          data={projetos}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id}
+    <>
+      {projetoSelecionado ? (
+        <DetalhesProjeto
+          projeto={projetoSelecionado}
+          setProjeto={setProjetoSelecionado}
+          user={user}
         />
-        <FAB
-          style={styles.fab}
-          small
-          icon="plus"
-          color="#FFF"
-          onPress={() => navigation.navigate("AdicionaProjeto")}
-        />
-      </View>
-    </View>
+      ) : (
+        <View style={{ flex: 1, backgroundColor: "#FFF" }}>
+          <Appbar.Header style={styles.header}>
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                width: "100%",
+              }}
+            >
+              <Appbar.Content
+                title={`Olá, ${user.nome}`}
+                style={{ color: "white", fontWeight: "normal" }}
+              />
+              <Appbar.Action
+                icon="magnify"
+                color="white"
+                onPress={() => {
+                  setIndex(0);
+                  navigation.navigate("Home");
+                }}
+              />
+            </View>
+            <View style={styles.pageLabel}>
+              <FontAwesome5 name="pencil-ruler" size={16} color="white" />
+              <Text
+                style={{
+                  color: "white",
+                  fontSize: 16,
+                  fontWeight: "medium",
+                  marginLeft: 10,
+                }}
+              >
+                Meus Projetos
+              </Text>
+            </View>
+          </Appbar.Header>
+          <View style={styles.centerSection}>
+            <FlatList
+              data={projetos}
+              renderItem={renderItem}
+              keyExtractor={(item) => item.id}
+            />
+            <FAB
+              style={styles.fab}
+              small
+              icon="plus"
+              color="#FFF"
+              onPress={() => navigation.navigate("AdicionaProjeto")}
+            />
+          </View>
+        </View>
+      )}
+    </>
   );
 };
 

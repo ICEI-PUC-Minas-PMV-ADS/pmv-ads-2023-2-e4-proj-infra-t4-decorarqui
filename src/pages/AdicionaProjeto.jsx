@@ -21,7 +21,7 @@ import defaultUser from "../images/defaultUser.png";
 import { insertProjeto } from "../services/QueryDB";
 import { architectSeeds, formOption, normalizarTexto } from "../shared/utils";
 
-const AdicionaProjeto = ({ route }) => {
+const AdicionaProjeto = ({ loggedUser }) => {
   const navigation = useNavigation();
   const [nomeProjeto, setNomeProjeto] = useState("");
   const [descricaoProjeto, setDescricaoProjeto] = useState("");
@@ -50,11 +50,7 @@ const AdicionaProjeto = ({ route }) => {
     }
   }, [arquitetos, search]);
 
-  const [user, setUser] = useState({
-    Id: 1,
-    Nome: "John Doe",
-    ListaFavoritos: [],
-  });
+  const [user, setUser] = useState(loggedUser);
 
   const [stage, setStage] = useState(1);
 
@@ -317,7 +313,7 @@ const AdicionaProjeto = ({ route }) => {
           style={{ flexDirection: "row", alignItems: "center", width: "100%" }}
         >
           <Appbar.Content
-            title={`Olá, ${user.Nome}`}
+            title={`Olá, ${user.nome}`}
             style={{ color: "white", fontWeight: "normal" }}
           />
           <Appbar.Action
@@ -325,7 +321,7 @@ const AdicionaProjeto = ({ route }) => {
             color="white"
             onPress={() => {
               setIndex(0);
-              navigation.navigate("Home", { initialIndex: 1 });
+              navigation.navigate("Home", { initialIndex: 1, user: user });
             }}
           />
         </View>
