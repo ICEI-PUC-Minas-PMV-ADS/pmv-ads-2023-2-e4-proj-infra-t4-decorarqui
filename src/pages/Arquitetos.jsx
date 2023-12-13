@@ -7,11 +7,16 @@ import defaultUser from "../images/defaultUser.png";
 import { architectSeeds, normalizarTexto } from "../shared/utils";
 import CardArquiteto from "../components/CardArquiteto";
 
-const Arquitetos = ({ loggedUser }) => {
-  const [arquitetos, setArquitetos] = useState(architectSeeds);
-
+const Arquitetos = ({ loggedUser, setLoggedUser }) => {
   const [search, setSearch] = useState("");
   const [user, setUser] = useState(loggedUser);
+  const [arquitetos, setArquitetos] = useState(
+    architectSeeds.map((arquiteto) =>
+      user && user.ListaFavoritos.includes(arquiteto.Id)
+        ? { ...arquiteto, favorito: true }
+        : arquiteto
+    )
+  );
 
   const [filtroArquitetos, setFiltroArquitetos] = useState([...arquitetos]);
 
@@ -29,10 +34,20 @@ const Arquitetos = ({ loggedUser }) => {
     }
   }, [arquitetos, search]);
 
-
+  useEffect(() => {
+    setLoggedUser({...loggedUser, ListaFavoritos: user.ListaFavoritos})
+  }, [user.ListaFavoritos])
 
   const renderItem = ({ item }) => {
-    return <CardArquiteto user={user} item={item} setArquitetos={setArquitetos} setUser={setUser} />;
+    return (
+      <CardArquiteto
+        user={user}
+        item={item}
+        arquitetos={arquitetos}
+        setArquitetos={setArquitetos}
+        setUser={setUser}
+      />
+    );
   };
 
   return (
