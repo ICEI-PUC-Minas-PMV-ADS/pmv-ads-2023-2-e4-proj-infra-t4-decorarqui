@@ -27,6 +27,8 @@ const Home = ({ route }) => {
     home: () => <Arquitetos loggedUser={user} />,
     projetos: () => <Projeto setIndex={setIndex} loggedUser={user} />,
     favoritos: Avaliacao,
+    notificacoes: () => <></>,
+    mais: () => <></>,
   });
 
   const getBackgroundImage = () => {

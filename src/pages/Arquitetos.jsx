@@ -5,6 +5,7 @@ import { Card } from "react-native-paper";
 import InputSearchBar from "../components/inputSearchBar";
 import defaultUser from "../images/defaultUser.png";
 import { architectSeeds, normalizarTexto } from "../shared/utils";
+import CardArquiteto from "../components/CardArquiteto";
 
 const Arquitetos = ({ loggedUser }) => {
   const [arquitetos, setArquitetos] = useState(architectSeeds);
@@ -28,95 +29,11 @@ const Arquitetos = ({ loggedUser }) => {
     }
   }, [arquitetos, search]);
 
-  const getStarsAmount = (amount) => {
-    let stars = [];
-    for (let i = 1; i <= 5; i++) {
-      if (amount - i >= 1) {
-        stars.push(<FontAwesome name="star" size={20} color="greenyellow" />);
-      } else if (amount - i < 1 && amount - i > 0) {
-        stars.push(
-          <FontAwesome name="star-half-empty" size={20} color="greenyellow" />
-        );
-      } else if (amount - i <= 0) {
-        stars.push(<FontAwesome name="star-o" size={20} color="black" />);
-      }
-    }
-    return <View style={styles.flexRow}>{stars}</View>;
-  };
 
-  const renderItem = ({ item }) => (
-    <Card mode="elevated" style={styles.architectCard}>
-      <View style={[styles.cardContainer, styles.flexRow]}>
-        <Image
-          style={styles.profileImage}
-          source={item.Imagem ? item.Imagem : defaultUser}
-        />
-        <View style={{ width: "70%" }}>
-          <Card.Title
-            style={styles.cardTitle}
-            title={item.Nome}
-            titleStyle={{ fontWeight: "bold", textAlign: "center" }}
-            titleVariant="bodyMedium"
-            right={() =>
-              user.ListaFavoritos.includes(item.Id) ? (
-                <MaterialCommunityIcons
-                  name="cards-heart"
-                  size={24}
-                  color="red"
-                  onPress={() => {
-                    setUser({
-                      ...user,
-                      ListaFavoritos: user.ListaFavoritos.filter(
-                        (id) => id != item.Id
-                      ),
-                    });
-                  }}
-                />
-              ) : (
-                <MaterialCommunityIcons
-                  name="cards-heart-outline"
-                  size={24}
-                  color="black"
-                  onPress={() => {
-                    setUser({
-                      ...user,
-                      ListaFavoritos: user.ListaFavoritos.push(item.Id),
-                    });
-                  }}
-                />
-              )
-            }
-          />
-          <Card.Content>
-            <Text style={styles.infoText}> Profissão: {item.Profissao}</Text>
-            <Text style={styles.infoText}> Estado: {item.Estado}</Text>
-            <Text style={styles.infoText}> Cidade: {item.Cidade}</Text>
-            <View style={[styles.flexRow, styles.spaceBetween]}>
-              <Text style={styles.detailsTextButton}>Projetos Concluídos</Text>
-              <Text style={styles.detailsTextButton}>Portifólios</Text>
-            </View>
-            <View
-              style={{
-                ...styles.flexRow,
-                justifyContent: "space-between",
-                marginBottom: 5,
-              }}
-            >
-              <View style={{ alignItems: "center" }}>
-                <Text>{item.Avaliacao}/5</Text>
-                {getStarsAmount(item.Avaliacao)}
-              </View>
-              <MaterialCommunityIcons
-                name="whatsapp"
-                size={30}
-                color="yellowgreen"
-              />
-            </View>
-          </Card.Content>
-        </View>
-      </View>
-    </Card>
-  );
+
+  const renderItem = ({ item }) => {
+    return <CardArquiteto user={user} item={item} setArquitetos={setArquitetos} setUser={setUser} />;
+  };
 
   return (
     <View style={styles.body}>
