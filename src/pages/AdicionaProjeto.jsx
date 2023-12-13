@@ -51,7 +51,6 @@ const AdicionaProjeto = ({ route }) => {
     }
   }, [arquitetos, search]);
 
-  console.log(loggedUser);
   const [user, setUser] = useState(loggedUser);
 
   const [stage, setStage] = useState(1);
