@@ -28,7 +28,7 @@ const CadastroProfissional = () => {
           <Text
             style={{
               position: 'relative',
-              fontSize: '16px',
+              fontSize: 16,
               fontWeight: 'Bold',
               color: '#373435',
               marginTop: '5px',
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     justifyContent: 'center',
     backgroundColor: '#373435',
-    fontSize: '16px',
+    fontSize: 16,
   },
   button: {
     textAlign: 'center',

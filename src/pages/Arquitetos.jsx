@@ -2,7 +2,7 @@ import { FontAwesome, MaterialCommunityIcons } from "@expo/vector-icons";
 import React, { useEffect, useState } from "react";
 import { FlatList, Image, StyleSheet, Text, View } from "react-native";
 import { Card } from "react-native-paper";
-import InputSearchBar from "../components/inputSearchBar";
+import InputSearchBar from "../components/InputSearchBar";
 import defaultUser from "../images/defaultUser.png";
 import { architectSeeds, normalizarTexto } from "../shared/utils";
 

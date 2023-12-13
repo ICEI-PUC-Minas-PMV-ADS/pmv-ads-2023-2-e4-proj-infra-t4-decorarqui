@@ -20,11 +20,10 @@ const Cadastro = () => {
 
   return (
     <>
-      <View style={styles.body}> </View>
       <ImageBackground
         style={styles.backgroundImage}
         source={require("../images/backgroundCadastro.jpeg")}
-      ></ImageBackground>
+      >
       <View style={styles.contentContainer}>
         <View style={styles.imageContainer}>
           <Image
@@ -34,10 +33,10 @@ const Cadastro = () => {
 
           <Text
             style={{
-              fontSize: "16px",
-              fontWeight: "Bold",
+              fontSize: 16,
+              fontWeight: "bold",
               color: "#373435",
-              marginTop: "5px",
+              marginTop: 5,
               left: "-15%",
             }}
           >
@@ -47,10 +46,10 @@ const Cadastro = () => {
         <View style={styles.contentBody}>
           <Text
             style={{
-              fontWeight: "Bold",
-              fontSize: "14px",
+              fontWeight: "bold",
+              fontSize: 14,
               textAlign: "center",
-              marginBottom: "35px",
+              marginBottom: 35,
             }}
           >
             Encontre com facilidade profissionais altamente qualificados em
@@ -76,11 +75,11 @@ const Cadastro = () => {
 
           <Text
             style={{
-              fontWeight: "Bold",
-              fontSize: "14px",
+              fontWeight: "bold",
+              fontSize: 14,
               textAlign: "center",
-              marginTop: "55px",
-              marginBottom: "35px",
+              marginTop: 55,
+              marginBottom: 35,
             }}
           >
             Amplie sua clientela, promova seus serviços, envie orçamentos e
@@ -104,6 +103,7 @@ const Cadastro = () => {
           </TouchableOpacity>
         </View>
       </View>
+      </ImageBackground>
     </>
   );
 };
@@ -114,14 +114,14 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     flex: 1,
-    position: "fixed",
+    justifyContent: "center",
     height: "100%",
     width: "100%",
     resizeMode: "cover",
     opacity: 0.7,
   },
   contentContainer: {
-    position: "absolute",
+    justifyContent: "center",
     top: "10%",
     width: "100%",
     height: "80%",
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     flex: 1,
     alignItems: "center",
-    marginTop: "15px",
+    marginTop: 15,
   },
   contentBody: {
     flex: 1,
@@ -138,13 +138,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   button: {
-    width: "300px",
+    width: 300,
     height: 45,
-    borderRadius: "5px",
-    right: "1px",
+    borderRadius: 5,
+    right: 1,
     justifyContent: "center",
     backgroundColor: "#A8CF45",
-    fontSize: "16px",
+    fontSize: 16,
   },
 });
 export default Cadastro;

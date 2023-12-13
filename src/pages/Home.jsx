@@ -78,7 +78,7 @@ const Home = ({initialIndex}) => {
 const styles = StyleSheet.create({
   backgroundImage: {
     backgroundColor: "transparent",
-    flex: 5,
+    flex: 1,
     resizeMode: "cover",
     justifyContent: "center",
   },

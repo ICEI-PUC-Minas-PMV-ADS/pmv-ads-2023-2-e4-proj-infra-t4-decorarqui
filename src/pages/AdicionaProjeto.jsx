@@ -16,7 +16,7 @@ import {
   TextInput as TextInputPaper,
 } from "react-native-paper";
 import RadioButtonGroup from "../components/RadioButtonGroup";
-import InputSearchBar from "../components/inputSearchBar";
+import InputSearchBar from "../components/InputSearchBar";
 import defaultUser from "../images/defaultUser.png";
 import { insertProjeto } from "../services/QueryDB";
 import { architectSeeds, formOption, normalizarTexto } from "../shared/utils";
@@ -414,7 +414,7 @@ const styles = StyleSheet.create({
   button: {
     elevation: 5,
     width: "35%",
-    height: "40px",
+    height: 40,
     justifyContent: "center",
   },
   buttonText: {
@@ -435,7 +435,7 @@ const styles = StyleSheet.create({
   divider: {
     width: "80%",
     alignSelf: "center",
-    margin: "24px",
+    margin: 24,
     backgroundColor: "rgba(0, 0, 0, 0.4)",
   },
   formCard: {
@@ -448,7 +448,6 @@ const styles = StyleSheet.create({
     placeholderTextColor: "rgba(0, 0, 0, 0.54)",
     fontSize: 16,
     color: "black",
-    verticalAlign: "top",
     textAlign: "left",
     height: "30vh",
     margin: 14,

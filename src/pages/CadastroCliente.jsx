@@ -1,12 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import {
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View
-} from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { TextInput } from "react-native-paper";
 import { Database } from "../services/DbServices";
 import ModalConfirmacao from "../components/ModalConfirmacao";
@@ -54,25 +48,25 @@ const CadastroCliente = () => {
           <Text
             style={{
               position: "relative",
-              fontSize: "16px",
-              fontWeight: "Bold",
+              fontSize: 16,
+              fontWeight: "bold",
               color: "#373435",
-              marginTop: "5px",
+              marginTop: 5,
               left: "-15%",
             }}
           >
-            Arquitetura e Design
+            {"Arquitetura e Design"}
           </Text>
           <Text
             style={{
               textAlign: "center",
-              marginTop: "15px",
+              marginTop: 15,
               color: "#4F4D4E",
-              fontWeight: "Bold",
+              fontWeight: "bold",
               textDecorationLine: "underline",
             }}
           >
-            CLIENTE
+            {"CLIENTE"}
           </Text>
           <View style={styles.inputContainer}>
             <TextInput
@@ -150,7 +144,7 @@ const CadastroCliente = () => {
               </TouchableOpacity>
             </View>
 
-            <View style={{...styles.buttonCadastro, marginTop: 20}}>
+            <View style={{ ...styles.buttonCadastro, marginTop: 20 }}>
               <TouchableOpacity
                 style={styles.button}
                 onPress={() => navigation.navigate("Login")}
@@ -200,7 +194,7 @@ const styles = StyleSheet.create({
     top: "25%",
   },
   input: {
-    width: "300px",
+    width: 300,
     backgroundColor: "white",
     textAlign: "center",
   },
@@ -208,15 +202,15 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   buttonCadastro: {
-    width: "300px",
+    width: 300,
     height: 45,
-    borderRadius: "5px",
-    marginTop: "55px",
-    right: "1px",
+    borderRadius: 5,
+    marginTop: 55,
+    right: 1,
     textAlign: "center",
     justifyContent: "center",
     backgroundColor: "#373435",
-    fontSize: "16px",
+    fontSize: 16,
   },
   button: {
     textAlign: "center",
