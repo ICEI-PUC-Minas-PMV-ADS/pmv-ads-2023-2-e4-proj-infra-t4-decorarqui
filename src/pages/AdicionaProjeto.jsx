@@ -21,7 +21,8 @@ import defaultUser from "../images/defaultUser.png";
 import { insertProjeto } from "../services/QueryDB";
 import { architectSeeds, formOption, normalizarTexto } from "../shared/utils";
 
-const AdicionaProjeto = ({ loggedUser }) => {
+const AdicionaProjeto = ({ route }) => {
+  const { loggedUser } = route.params;
   const navigation = useNavigation();
   const [nomeProjeto, setNomeProjeto] = useState("");
   const [descricaoProjeto, setDescricaoProjeto] = useState("");
@@ -148,7 +149,7 @@ const AdicionaProjeto = ({ loggedUser }) => {
           justifyContent: "space-around",
         }}
       >
-        <View style={{height: "70%"}}>
+        <View style={{ height: "70%" }}>
           <FlatList
             style={styles.listContainer}
             data={filtroArquitetos}
@@ -346,7 +347,12 @@ const AdicionaProjeto = ({ loggedUser }) => {
             <Button
               mode="contained"
               color="#A8CF45"
-              onPress={() => navigation.navigate("Home")}
+              onPress={() =>
+                navigation.navigate("Home", {
+                  initialIndex: 1,
+                  user: loggedUser,
+                })
+              }
               style={styles.button}
               labelStyle={styles.buttonText}
             >
@@ -382,7 +388,12 @@ const AdicionaProjeto = ({ loggedUser }) => {
             <Button
               mode="contained"
               color="#A8CF45"
-              onPress={() => navigation.navigate("Home")}
+              onPress={() =>
+                navigation.navigate("Home", {
+                  initialIndex: 1,
+                  user: loggedUser,
+                })
+              }
               style={styles.button}
               labelStyle={styles.buttonText}
             >

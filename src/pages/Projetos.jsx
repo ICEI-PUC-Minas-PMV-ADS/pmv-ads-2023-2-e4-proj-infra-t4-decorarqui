@@ -136,7 +136,7 @@ const Projeto = ({setIndex, loggedUser}) => {
               small
               icon="plus"
               color="#FFF"
-              onPress={() => navigation.navigate("AdicionaProjeto")}
+              onPress={() => navigation.navigate("AdicionaProjeto", { loggedUser })}
             />
           </View>
         </View>
