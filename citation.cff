@@ -1,0 +1,29 @@
+message: Please cite this software using these metadata.
+title: decorArqui
+authors:
+  - family-names: de Assis Oliveira
+    given-names:  Rafael
+  - family-names: Gurgel Bezerra
+    given-names:  Thais
+  - family-names: Luis Costa Moreira
+    given-names:  César
+  - family-names: Delareti Simões
+    given-names:  Douglas
+  - family-names: Agnes Massensini Pereira
+    given-names:  Karinne
+  - family-names: Henriqu Ertal de Oliveira
+    given-names:  Pedro
+  - family-names: de Souza Ponciano
+    given-names:  Vinicius
+  - name-suffix:  Professor
+    affiliation:  PUC Minas
+    family-names: Alves de Oliveira
+    given-names:  Pedro
+  keywords:
+  - Decoração
+  - Design
+  - Clientes
+  - Sustentabilidade
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-decorarqui
+version: 1.0.0
+date-released: 2023-12-01
